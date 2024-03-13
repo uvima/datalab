@@ -1,0 +1,24 @@
+---
+title: "GRUPOS_TABLA"
+sidebar: api-json
+---
+
+Obtener todos los grupos para una tabla específica. Una tabla está definida por diferentes grupos o combos de selección y cada uno de ellos por los valores que toman una o varias variables
+
+## Input
+
+Código identificativo de la tabla. Para obtener el código de una tabla vea [Obtención del identificador de una tabla utilizando INEbase](../codigos_identificadores.html)
+
+## Parámetros
+
+Ninguno
+
+## Salida
+
+Grupos de valores que definen la tabla: identificador Tempus3 del grupo y nombre del grupo.
+
+## Ejemplos
+
+Grupos o combos de selección que definen a la tabla "[Índices por comunidades autónomas: general y de grupos ECOICOP](https://www.ine.es/jaxiT3/Tabla.htm?t=50913)" (Id 50913)
+
+<https://servicios.ine.es/wstempus/js/ES/GRUPOS_TABLA/50913>

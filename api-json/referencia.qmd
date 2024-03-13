@@ -1,0 +1,107 @@
+---
+title: "Referencia de la API"
+---
+
+Se accede a la información disponible en INEbase mediante peticiones URL. Las peticiones URL tienen la siguiente estructura:
+
+**https://servicios.ine.es/wstempus/js/{idioma}/{función}/{input}\[?parámetros\]**
+
+Los campos que aparecen entre llaves, { }, son obligatorios.  Los campos que aparecen entre corchetes, \[ \], son opcionales y cambian en relación a la función considerada.
+
+-   **{idioma}**. Puede tomar los siguientes valores:
+
+    -   ES: español
+
+    -   EN: inglés
+
+-   **{función}**. Funciones implementadas en el sistema para poder realizar diferentes tipos de consulta.
+
+    **{input}**. Identificadores de los elementos de entrada de las funciones. Estos inputs varían en base a la función utilizada.
+
+-   **\[¿parámetros\]**. Los parámetros en la URL se establecen a partir del símbolo ?. Cuando haya más de un parámetro, el símbolo & se utiliza como separador. No todas las funciones admiten todos los parámetros posibles.
+
+## Lista de funciones
+
+### [DATOS_TABLA](funciones/datos_tabla.html)
+
+Obtener datos para una tabla específica
+
+### [DATOS_SERIE](funciones/datos_serie.html)
+
+Obtener datos para una serie específica
+
+### [DATOS_METADATAOPERACION](funciones/datos_metadataoperacion.html)
+
+Obtener datos de series pertenecientes a una operación dada utilizando un filtro
+
+### [OPERACIONES_DISPONIBLES](funciones/operaciones_disponibles.html)
+
+Obtener todas las operaciones disponibles
+
+### [OPERACION](funciones/operacion.html)
+
+Obtener una operación
+
+### [VARIABLES](funciones/variables.html)
+
+Obtener todas las variables disponibles
+
+### [VARIABLES_OPERACION](funciones/variables_operacion.html)
+
+Obtener todas las variables utilizadas en una operación dada
+
+### [VALORES_VARIABLE](funciones/valores_variable.html)
+
+Obtener todos los valores para una variable específica
+
+### [VALORES_VARIABLEOPERACION](funciones/valores_variableoperacion.html)
+
+Obtener todos los valores para una variable específica de una operación dada
+
+### [TABLAS_OPERACION](funciones/tablas_operacion.html)
+
+Obtener todas las tablas de una operación
+
+### [GRUPOS_TABLA](funciones/grupos_tabla.html)
+
+Obtener todos los grupos para una tabla específica
+
+### [VALORES_GRUPOSTABLA](funciones/valores_grupostabla.html)
+
+Obtener todos los valores de un grupo específico para una tabla dada
+
+### [SERIE](funciones/serie.html)
+
+Obtener una serie específica
+
+### [SERIES_OPERACION](series_operacion.html)
+
+Obtener todas las series de una operación
+
+### [VALORES_SERIE](funciones/valores_serie.html)
+
+Obtener los valores y variables que definen una serie
+
+### [SERIES_TABLA](funciones/series_tabla.html)
+
+Obtener todas las series de una tabla específica
+
+### [SERIE_METADATAOPERACION](funciones/serie_metadataoperacion.html)
+
+Obtener series pertenecientes a una operación dada utilizando un filtro
+
+### [PERIODICIDADES](funciones/periodicidades.html)
+
+Obtener las periodicidades disponibles
+
+### [PUBLICACIONES](funciones/publicaciones.html)
+
+Obtener todas las publicaciones
+
+### [PUBLICACIONES_OPERACION](funciones/publicaciones_operacion.html)
+
+Obtener todas las publicaciones para una operación dada
+
+### [PUBLICACIONFECHA_PUBLICACION](funciones/publicacionfecha_publicacion.html)
+
+Obtener las fechas de publicación para una publicación dada

@@ -1,0 +1,51 @@
+---
+title: "Códigos identificadores de tablas y series"
+---
+
+## Obtención del identificador de una tabla utilizando INEbase
+
+Navegando a través de INEbase, se acceden a las tablas estadísticas. Se distinguen los identificadores en base a la fuente de procedencia de las mismas.
+
+**Tablas Tempus3**
+
+-   [Tabla]{.underline}: Índices nacionales: general y de grupos ECOICOP
+
+-   [Enlace]{.underline}: <https://www.ine.es/jaxiT3/Tabla.htm?t=50902>
+
+-   [Identificador]{.underline}: el parámetro t de la URL: 50902
+
+![](../img/code_table_1.png){width="100%"}
+
+**Tablas PC-Axis**
+
+-   [Tabla]{.underline}: Población por edad (3 grupos de edad), Españoles/Extranjeros, Sexo y Año
+
+-   [Enlace]{.underline}: <https://www.ine.es/jaxi/Tabla.htm?path=/t20/e245/p08/l0/&file=01001.px>
+
+-   [Identificador]{.underline}: concatenación de los parámetros path (t20/e245/p08/l0/) y file (01001.px) resultando t20/e245/p08/l0/01001.px
+
+![](../img/code_table_2.png){width="100%"}
+
+**Tablas tpx**
+
+-   [Tabla]{.underline}: Extracción nacional por tipo de material y años
+
+-   [Enlace]{.underline}: <https://www.ine.es/jaxi/Tabla.htm?tpx=33387&L=0>
+
+-   [Identificador]{.underline}: el parámetro tpx de la URL: 33387
+
+![](../img/code_table_3.png){width="100%"}
+
+## Obtención del identificador de una serie utilizando INEbase (sólo Tempus3)
+
+Sólo se dispone de identificadores de series para aquella información cuya fuente de datos es Tempus3. Por tanto, lo que a continuación se cuenta sólo es aplicable a las tablas de Tempus3.
+
+El identificador de una serie de Tempus3 se obtiene a través de las tablas de INEbase:
+
+-   [Serie]{.underline}: serie correspondiente a la variación anual del Índice de Precios de Consumo general.
+
+-   [Tabla]{.underline}: Navegar a la tabla que contiene la serie en la que se tiene interés: " Índices nacionales: general y de grupos ECOICOP"
+
+-   [Enlace de la tabla]{.underline}: <https://www.ine.es/jaxiT3/Datos.htm?t=50902>
+
+![](../img/code_series_1.png){width="100%"}

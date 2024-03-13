@@ -1,0 +1,30 @@
+---
+title: "VALORES_VARIABLEOPERACION"
+sidebar: api-json
+---
+
+Obtener todos los valores para una variable específica de una operación dada
+
+## Input
+
+códigos identificadores de la variable y de la operación. Para consultar las operaciones disponibles vea [OPERACIONES_DISPONIBLES](operaciones_disponibles.html) y para consultar las variables disponibles vea [VARIABLES_OPERACION](variables_operacion.html)
+
+## Parámetros
+
+### **det**
+
+Ofrece mayor nivel de detalle de la información mostrada. Valores válidos del parámetro: 0, 1 y 2
+
+## Salida
+
+Información de los valores que puede tomar la variable para describir la operación: identificador Tempus3 del valor, objeto variable Tempus3 a la que pertenece, nombre del valor y código oficial.
+
+## Ejemplos
+
+Valores de la variable “Grupos ECOICOP" (Id=762) para la operación IPC (IOE30138 / IPC / 25).
+
+<https://servicios.ine.es/wstempus/js/ES/VALORES_VARIABLEOPERACION/762/25>
+
+Consulta con máximo nivel de detalle
+
+<https://servicios.ine.es/wstempus/js/ES/VALORES_VARIABLEOPERACION/762/25?det=2>

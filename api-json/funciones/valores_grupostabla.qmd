@@ -1,0 +1,30 @@
+---
+title: "VALORES_GRUPOSTABLA"
+sidebar: api-json
+---
+
+Obtener todos los valores de un grupo específico para una tabla dada. Una tabla está definida por diferentes grupos o combos de selección y cada uno de ellos por los valores que toman una o varias variables
+
+## Input
+
+Códigos identificativos de la tabla y del grupo. Para consultar los grupos de una tabla vea [GRUPOS_TABLA](grupos_tabla.html)
+
+## Parámetros
+
+### **det**
+
+Ofrece mayor nivel de detalle de la información mostrada. Valores válidos del parámetro: 0, 1 y 2
+
+## Salida
+
+Información de los valores pertenecientes al grupo:  identificador Tempus3 del valor, identificador Tempus 3 de la variable a la que pertenece, nombre del valor y código oficial.
+
+## Ejemplos
+
+Valores del grupo "Comunidades y Ciudades Autónomas" (Id=110924) perteneciente a la tabla tabla "[Índices por comunidades autónomas: general y de grupos ECOICOP](https://www.ine.es/jaxiT3/Tabla.htm?t=50913)" (Id 50913)
+
+<https://servicios.ine.es/wstempus/js/ES/VALORES_GRUPOSTABLA/50913/110924>
+
+Consulta con máximo nivel de detalle
+
+<https://servicios.ine.es/wstempus/js/ES/VALORES_GRUPOSTABLA/50913/110924?det=2>

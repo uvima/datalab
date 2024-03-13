@@ -1,0 +1,44 @@
+---
+title: "OPERACION"
+sidebar: api-json
+---
+
+Obtener una operación
+
+## Input
+
+Código identificativo de la operación. Para consultar las operaciones disponibles vea [OPERACIONES_DISPONIBLES](operaciones_disponibles.html)
+
+## Parámetros
+
+### **det**
+
+Ofrece mayor nivel de detalle de la información mostrada. Valores válidos del parámetro: 0, 1 y 2
+
+## Salida
+
+Información de la operación estadística IPC: identificador Tempus3, código del IOE y nombre de la operación. Existen tres códigos para la identificación de la operación estadística "Índice de Precios de Consumo (IPC)":
+
+-   código numérico Tempus3 interno (Id=25)
+
+-   código de la operación estadística en el Inventario de Operaciones Estadísticas (IOE30138)
+
+-   código alfabético Tempus3 interno (IPC)
+
+## Ejemplos
+
+Devuelve la operación IPC utilizando el código alfabético Tempus3 interno (IPC)
+
+<https://servicios.ine.es/wstempus/js/ES/OPERACION/IPC>
+
+Devuelve la operación IPC utilizando el identificador interno Tempus 3 (id=25)
+
+<https://servicios.ine.es/wstempus/js/ES/OPERACION/25>
+
+Devuelve la operación IPC utilizando el código de la operación estadística en el Inventario de Operaciones Estadísticas (IOE30138).
+
+<https://servicios.ine.es/wstempus/js/ES/OPERACION/IOE30138>
+
+Devuelve la operación IPC y nivel de detalle 2
+
+<https://servicios.ine.es/wstempus/js/ES/OPERACION/IPC?det=2>

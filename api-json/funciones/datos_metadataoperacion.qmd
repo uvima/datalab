@@ -1,0 +1,52 @@
+---
+title: "DATOS_METADATAOPERACION"
+sidebar: api-json
+---
+
+Obtener datos de series pertenecientes a una operación dada utilizando un filtro
+
+### Input
+
+Código identificativo de la operación. Para consultar las operaciones disponibles vea [OPERACIONES_DISPONIBLES](operaciones_disponibles.html)
+
+### Parámetros
+
+P id de la periodicidad de las series. Periodicidades comunes:  1 (mensual), 3 (trimestral), 6 (semestral), 12 (anual). Para ver una lista de las periodicidades vea [PERIODICIDADES](periodicidades.html).
+
+### **nult**
+
+Devolver los n últimos datos o periodos.
+
+### **det**
+
+Ofrece mayor nivel de detalle de la información mostrada. Valores válidos son 0, 1 y 2
+
+### **tip**
+
+Obtener la respuesta de las peticiones de modo más amigable (‘A’), incluir metadatos (‘M’) o ambos (‘AM’)
+
+### **g1**
+
+Primer filtro de variables y valores. El formato es g1=id_variable_1:id_valor_1. Cuando no se especifica el id_valor_1 se devuelven todos los valores de id_variable_1 (g1=id_variable_1:). .Para obtener las variables de una operación dada vea <https://servicios.ine.es/wstempus/js/ES/VARIABLES_OPERACION/IPC> . Para obtener los valores de una variable específica de una operación data vea <https://servicios.ine.es/wstempus/js/ES/VALORES_VARIABLEOPERACION/762/IPC>
+
+### **g2**
+
+Segundo filtro de variables y valores. El formato es g2=id_variable_2:id_valor_2. Cuando no se especifica el id_valor_2 se devuelven todos los valores de id_variable_2 (g2=id_variable_2:). Seguiríamos con g3, g4,… según el número de filtros que se utilicen sobre variables.
+
+## Ejemplos
+
+Devuelve el último periodo de las series de la operación del IPC referentes a la provincia de Madrid (g1=115:29) para la variación mensual (g2=3:84) y todos los grupos ECOICOP (g3=762:).
+
+<https://servicios.ine.es/wstempus/js/ES/DATOS_METADATAOPERACION/IPC?g1=115:29&g2=3:84&g3=762:&p=1&nult=1>
+
+Devuelve los últimos 5 periodos de las series de la operación del IPC referentes a la provincia de Madrid (g1=115:29) para la variación mensual (g2=3:84) y todos los grupos ECOICOP (g3=762:).
+
+<https://servicios.ine.es/wstempus/js/ES/DATOS_METADATAOPERACION/IPC?g1=115:29&g2=3:84&g3=762:&p=1&nult=5>
+
+Consulta con salida amigable y metadatos.
+
+<https://servicios.ine.es/wstempus/js/ES/DATOS_METADATAOPERACION/IPC?g1=115:29&g2=3:84&g3=762:&p=1&nult=1&tip=AM>
+
+Consulta con nivel de detalle 2.
+
+<https://servicios.ine.es/wstempus/js/ES/DATOS_METADATAOPERACION/IPC?g1=115:29&g2=3:84&g3=762:&p=1&nult=1&det=2>

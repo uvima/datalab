@@ -1,0 +1,123 @@
+---
+title: "Referencia de la API"
+---
+
+Se accede a la información disponible en INEbase mediante peticiones URL. Las peticiones URL tienen la siguiente estructura:
+
+**https://servicios.ine.es/wstempus/js/{idioma}/{función}/{input}\[?parámetros\]**
+
+Los campos que aparecen entre llaves, { }, son obligatorios.  Los campos que aparecen entre corchetes, \[ \], son opcionales y cambian en relación a la función considerada.
+
+-   **{idioma}**. Puede tomar los siguientes valores:
+
+    -   ES: español
+
+    -   EN: inglés
+
+-   **{función}**. La única función implementada es **DATASET**. Con ella se obtienen los datos y metadatos de una tabla.
+
+    **{input}**. El input es el identificador de la tabla estadística. Éste varía en relación a la fuente de datos. Para más información, consultar [Obtención del identificador de una tabla utilizando INEbase](codigos_identificadores.html#obtenci%C3%B3n-del-identificador-de-una-tabla-utilizando-inebase).
+
+-   **\[¿parámetros\]**. Los parámetros en la URL se establecen a partir del símbolo ?. Cuando haya más de un parámetro, el símbolo & se utiliza como separador. No todas las funciones admiten todos los parámetros posibles.
+
+# LISTA DE FUNCIONES
+
+## **DATASET**
+
+Obtener los datos y metadatos de una tabla.
+
+### Input
+
+Código identificativo de la tabla. Para obtener el código de una tabla vea [Obtención del identificador de una tabla utilizando INEbase](codigos_identificadores.html#obtenci%C3%B3n-del-identificador-de-una-tabla-utilizando-inebase)
+
+### Parámetros
+
+#### **download**
+
+Cualquier petición puede descargarse en un fichero plano con extensión .json
+
+#### **nult**
+
+Devolver los n últimos datos o periodos.
+
+#### **date**
+
+Sólo para tablas Tempus3. Permite filtrar los datos por fecha según diferentes opciones:
+
+-   [Fecha concreta]{.underline}: **date=YYYYMMDD**
+
+-   [Lista de fechas concretas]{.underline}: **date=YYYYMMDD&date=YYYYMMDD**
+
+-   [Rango de fechas]{.underline}: **date=YYYYMMDD:YYYYMMDD** (permite omitir Fecha Inicio, Fecha Fin y ambas).
+
+#### **tv**
+
+Parámetro para filtrar, utilizado con el formato [tv=id_variable:id_valor]{.underline}. Más información en [Como filtrar datos de una tabla](obtener_datos_tabla.html#como-filtrar-datos-de-una-tabla).
+
+### Salida
+
+JSON-stat se basa en un modelo de cubo o tablas estadísticas. A continuación, se explican los campos que devuelven las llamadas al servicio JSON-stat
+
+-   **version: 2.0**
+
+-   **class:** dataset
+
+-   **label:** título de la tabla.
+
+-   **note:** unidades de las tablas y notas asociadas a la tabla.
+
+-   **source**: fuente de datos, operación estadística y capítulo de [INEbase](https://www.ine.es/dyngs/INEbase/listaoperaciones.htm) asociados a la tabla*.*
+
+-   **link**: enlace a la tabla de datos. 
+
+-   **extension**: enlace al aviso legal.
+
+-   **updated:** fecha última actualización de los datos de la tabla.
+
+-   **id**: lista ordenada de los identificadores de las dimensiones de la tabla o grupos de selección que definen la tabla.
+
+-   **size:** número de categorías contenidas en cada una de las dimensiones anteriores.
+
+-   **role:** se usa para asignar roles especiales a las dimensiones. No todas las dimensiones tienen por qué tener un rol asignado. En la API JSON-stat INE se distinguen dos roles:
+
+    -   [*time*]{.underline}*:* para las dimensiones asociada al periodo (años, semestres, trimestres, meses...).
+
+    -   [*geo*]{.underline}*:* para aquellas dimensiones asociadas a categorías geográficas (Comunidades Autónomas, provincias, municipios, distritos, secciones censales...).
+
+    -   [sin rol establecido]{.underline}*:* el resto son dimensiones que por definición tienen un rol genérico, por ser meramente clasificatorias.
+
+-   **value:** contiene los datos ordenados según las dimensiones de la tabla.
+
+-   **status:** estado de cada dato. Puede ser: definitivo (D), provisional (P), estimado (E), ...
+
+-   **dimension:** contiene información sobre las dimensiones que definen la tabla:
+
+    -   **label***:* nombre de la dimensión.
+
+    -   **category***:* codificación (**index**) y nombres (**label**) de las categorías asociadas a la dimensión.
+
+### Ejemplos
+
+Devuelve todos los periodos de la tabla con Id=50902
+
+<https://servicios.ine.es/wstempus/jsstat/ES/DATASET/50902>
+
+Devuelve el último periodo de la tabla con Id=50902
+
+<https://servicios.ine.es/wstempus/jsstat/ES/DATASET/50902?nult=1>
+
+Devuelve los últimos 5 periodos de la tabla con Id=50902
+
+<https://servicios.ine.es/wstempus/jsstat/ES/DATASET/50902?nult=5>
+
+Devuelve los datos entre el 01/01/2023 y el 31/12/2023
+
+<https://servicios.ine.es/wstempus/jsstat/ES/DATASET/50902?date=20230101:20231231>
+
+Devuelve los datos a partir del 01/01/2024
+
+<https://servicios.ine.es/wstempus/jsstat/ES/DATASET/50902?date=20240101>:
+
+Descargar la consulta en un archivo .json
+
+<https://servicios.ine.es/wstempus/jsstat/ES/DATASET/50902?download=MiDescarga.json>

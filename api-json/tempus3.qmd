@@ -1,0 +1,87 @@
+---
+title: "Base de datos Tempus3"
+---
+
+Tempus3 contiene la información de todas las operaciones estadísticas coyunturales del INE, aquellas cuya periodicidad de difusión de resultados es inferior al año, además de algunas operaciones estadísticas estructurales.
+
+La relación de operaciones en Tempus3 cambia a medida que éstas se van integrando en la base de datos.  Se pueden consultar las operaciones disponibles en el sistema Tempus3 a través de la siguiente URL: <https://servicios.ine.es/wstempus/js/ES/OPERACIONES_DISPONIBLES>
+
+Tempus3 es una base de datos relacional que utiliza un conjunto de objetos organizados dentro de una jerarquía para almacenar y gestionar la información estadística. Su elemento principal es la serie temporal, único objeto con datos asociados, en torno a él surgen el resto de los elementos. Operaciones y tablas estadísticas serán objetos contenedores de series temporales.
+
+![](/img/TEMPUS3.jpg){fig-alt="TEMPUS3"}
+
+## Conceptos fundamentales
+
+Para hacer un uso adecuado del servicio es necesario describir los siguientes conceptos, cuyos identificadores serán los inputs (valores de entrada) en la construcción de URLs.
+
+La información en el Sistema se estructura en torno a la serie temporal, como elemento principal de Tempus3, y se organiza de la siguiente forma:
+
+![](/img/Elementos_TEMPUS3.jpg){fig-alt="Elementos de TEMPUS3" fig-align="center" width="70%"}
+
+### Variables
+
+Una variable es una característica que puede fluctuar y cuya variación es susceptible de adoptar diferentes valores.
+
+Las variables o listas de valores contenidas en Tempus3 y utilizadas en la difusión, son comunes a todas las operaciones estadísticas, es decir, no están duplicadas en el sistema, su identificador en Tempus3 (Id) y sus descriptores son únicos. Se pueden consultar las variables con la función [VARIABLES](funciones/variables.html).
+
+Son ejemplos de variables las listas: Grupos COICOP,  Sexo, CCAA,  Provincias,...
+
+![](/img/variable.jpg){fig-alt="Variable" fig-align="center" width="20%"}
+
+### Valores
+
+Los valores son los estados que puede presentar una variable determinada. Por ejemplo, la variable Provincias contiene los valores: Áraba/Álava,  Albacete, Alicante/Alacant,...etc.
+
+Los valores contenidos en Tempus3 y utilizados en la difusión, son comunes a todas las operaciones estadísticas, es decir, no están duplicadas en el sistema, su identificador en Tempus3 (Id) y sus descriptores son únicos. Se pueden consultar los valores con la función [VALORES_VARIABLE](funciones/valores_variable.html).
+
+![](/img/valores.jpg){fig-alt="Valores" fig-align="center" width="70%"}
+
+### Series
+
+**¿Qué son las series temporales?**
+
+Conjunto de observaciones medidas en determinados momentos del tiempo, ordenados cronológica y normalmente espaciados entre sí de manera uniforme. 
+
+Como entidad principal de la base de datos Tempus3, la serie tiene unas propiedades que la definen y que no cambian a lo largo del tiempo:
+
+**Identificador único y características de la serie:** *id, nombre, periodicidad, escala, unidad, clasificación, decimales, …*
+
+![](/img/serie_prop.jpg){fig-alt="Propiedades series" fig-align="center" width="30%"}
+
+Pero un literal o un id nos dice poco. Para dotar a la serie de significado, necesitamos definirla por una combinación de variables-valores, lo que llamaremos los *metadatos de la serie.* Se puede consultar la información de una serie con la función [SERIE](funciones/serie.html) y sus metadatos con la función [VALORES_SERIE](funciones/valores_serie.html).
+
+La serie *"Variación mensual del IPC en Andalucía"* es el resultado del cruce de los valores Total *(de la variable Grupos COICOP)*, Andalucía *(de la variable CCAA)*, variación mensual *(de la variable Tipo de dato), ...*
+
+![](/img/variables_valores.jpg){fig-alt="Variables y valores" fig-align="center" width="80%"}
+
+![](/img/meta_serie.jpg){fig-alt="Metadatos serie" fig-align="center" width="60%"}
+
+### Tablas
+
+Una de las ventajas de este Sistema es la facilidad que ofrece a la hora de gestionar las diferentes formas de presentación, que corresponden a las distintas formas en las que se pueden agrupar las series. Una de ellas es la agrupación en **tabla** (o cubo). Es la más utilizada por los usuarios, que acceden a las tablas estadísticas a través de INEbase.
+
+Una tabla es el resultado del cruce de grupos de valores contenidos en una o varias variables, es decir, son una agrupación de series temporales definidas por estos grupos. 
+
+Por ejemplo, se navega por [INEbase](https://www.ine.es/inebmenu/indice.htm "Enlace a INEbase. Abre ventana nueva") para llegar a la tabla "[Índices por comunidades autónomas: general y de grupos ECOICOP](https://www.ine.es/jaxiT3/Tabla.htm?t=50913)" del Índice de Precios de Consumo, Base 2021. Una vez se ha accedido a la tabla, se observa que ésta contiene todas las series que resultan de la combinación de los grupos de valores contenidos en las siguientes variables:
+
+**{Comunidades y Ciudades Autónomas} x {Grupos ECOICOP} x {Tipo de dato}**
+
+Como entidad, la tabla tiene unas características propias como nombre, los periodos que comprende y su un identificador, que es único. Puede obtener un listado de todas las tablas de una operación con la función [TABLAS_OPERACION](funciones/tablas_operacion.html).
+
+### Fecha de publicación
+
+Los datos en Tempus3 se publican a nivel de serie y están asociados a un instante de tiempo o **fecha de referenci**a **(periodo /año)**
+
+![](/img/fecharef.jpg){fig-alt="Fecha de referencia" fig-align="center" width="80%"}
+
+Pero **¿cuándo se publican los datos? ¿cuándo se actualizan?**
+
+Cada operación tiene asociada una o varias **publicaciones** según sus diferentes periodicidades, por ejemplo, hay dos publicaciones para el IPC, una con periodicidad mensual y otra anual. Y éstas siguen el calendario de publicaciones del INE.
+
+De esta manera, una **publicación** contiene los momentos en los que se publican los datos de una operación estadística: **fechas de publicación**.
+
+![](/img/fechas_publi.jpg){fig-alt="Fechas publicación" fig-align="center" width="80%"}
+
+Con el identificador de la publicación se puede consultar la **fecha de publicación** de todas las operaciones estadísticas que se disponen en el calendario de publicaciones con la función [PUBLICACIONFECHA_PUBLICACION](funciones/publicacionfecha_publicacion.html). Cada una de estas **fechas de publicación** tiene unas características:
+
+![](/img/publicacion.jpg){fig-alt="Publicación" fig-align="center" width="60%"}

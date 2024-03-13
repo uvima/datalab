@@ -1,0 +1,38 @@
+---
+title: "PUBLICACIONES"
+sidebar: api-json
+---
+
+Obtener las publicaciones disponibles
+
+## Input
+
+Ninguno
+
+## Parámetros
+
+### **det**
+
+Ofrece mayor nivel de detalle de la información mostrada. Valores válidos del parámetro: 0, 1 y 2
+
+### **tip**
+
+Obtener la respuesta de las peticiones de modo más amigable (‘A’)
+
+## Salida
+
+Información de todas las publicaciones: identificador Tempus3 de la publicación, nombre, identificador Tempus3 de la periodicidad e identificador Tempus3 de la publicación fecha.
+
+## Ejemplos
+
+Devuelve todas las publicaciones
+
+<https://servicios.ine.es/wstempus/js/ES/PUBLICACIONES>
+
+Consulta con máximo nivel de detalle
+
+<https://servicios.ine.es/wstempus/js/ES/PUBLICACIONES?det=2>
+
+Consulta con salida amigable
+
+<https://servicios.ine.es/wstempus/js/ES/PUBLICACIONES?det=2&tip=A>

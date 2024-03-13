@@ -1,0 +1,38 @@
+---
+title: "PUBLICACIONES_OPERACION"
+sidebar: api-json
+---
+
+Obtener todas las publicaciones para una operación dada
+
+## Input
+
+Código identificativo de la operación. Para consultar las operaciones disponibles vea [OPERACIONES_DISPONIBLES](operaciones_disponibles.html)
+
+## Parámetros
+
+### **det**
+
+Ofrece mayor nivel de detalle de la información mostrada. Valores válidos del parámetro: 0, 1 y 2
+
+### **tip**
+
+Obtener la respuesta de las peticiones de modo más amigable. Valor ‘A
+
+## Salida
+
+Información de todas las publicaciones de una operación: identificador Tempus3 de la publicación, nombre, identificador Tempus3 de la periodicidad e identificador Tempus3 de la publicación fecha.
+
+## Ejemplos
+
+Devuelve todas las publicaciones de la operación del IPC (IOE30138 / IPC / 25)
+
+<https://servicios.ine.es/wstempus/js/ES/PUBLICACIONES_OPERACION/IPC>
+
+Consulta con nivel máximo de detalle
+
+<https://servicios.ine.es/wstempus/js/ES/PUBLICACIONES_OPERACION/IPC?det=2>
+
+Consulta con salida amigable
+
+<https://servicios.ine.es/wstempus/js/ES/PUBLICACIONES_OPERACION/IPC?det=2&tip=A>

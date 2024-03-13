@@ -1,0 +1,46 @@
+---
+title: "SERIE"
+sidebar: api-json
+---
+
+Obtener una serie específica
+
+## Input
+
+Código identificativo de la serie. Para obtener el código de una serie vea [Obtención del identificador de una serie utilizando INEbase](../codigos_identificadores.html#obtenci%C3%B3n-del-identificador-de-una-serie-utilizando-inebase-s%C3%B3lo-tempus3)
+
+## Parámetros
+
+### **det**
+
+Ofrece mayor nivel de detalle de la información mostrada. Valores válidos del parámetro: 0, 1 y 2
+
+### **tip**
+
+Obtener la respuesta de las peticiones de modo más amigable (‘A’), incluir metadatos (‘M’) o ambos (‘AM’)
+
+## Salida
+
+Información de la serie: identificadores Tempus3 de la serie, objeto Tempus3 operación, nombre de la serie, número de decimales que se van a visualizar para los datos de esa serie, objeto Tempus3  periodicidad, objeto Tempus3 publicación, PubFechaAct dentro de la publicación, objeto Tempsu3 clasificación, objeto Tempus3  escala y objeto Tempus3 unidad.
+
+PubFechaAct = contiene la última fecha de actualización de la serie y el último periodo-año publicado.
+
+clasificación =  nos da información de la versión temporal de la serie, por ejemplo, la clasificación nacional que en algunos casos sigue, marco poblacional, base utilizada en el cálculo de los índices,...
+
+## Ejemplos
+
+Consulta de la serie [IPC251852](https://www.ine.es/consul/serie.do?s=IPC251852) que recoge la variación mensual del Índice de precios de consumo
+
+<https://servicios.ine.es/wstempus/js/ES/SERIE/IPC251852>
+
+Consulta con máximo nivel de detalle
+
+<https://servicios.ine.es/wstempus/js/ES/SERIE/IPC251852?det=2>
+
+Consulta con salida amigable
+
+<https://servicios.ine.es/wstempus/js/ES/SERIE/IPC251852?det=2&tip=A>
+
+Consulta con metadatos y salida amigable
+
+<https://servicios.ine.es/wstempus/js/ES/SERIE/IPC251852?tip=AM>

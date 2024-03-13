@@ -1,0 +1,38 @@
+---
+title: "PUBLICACIONFECHA_PUBLICACION"
+sidebar: api-json
+---
+
+Obtener las fechas de publicación para una publicación dada.
+
+## Input
+
+Código identificativo de la publicación. Para obtener una lista de las publicaciones vea [PUBLICACIONES](publicaciones.html) o [PUBLICACIONES_OPERACION](publicaciones_operacion.html)
+
+## Parámetros
+
+### **det**
+
+Ofrece mayor nivel de detalle de la información mostrada. Valores válidos del parámetro: 0, 1 y 2
+
+### **tip**
+
+Obtener la respuesta de las peticiones de modo más amigable. Valor ‘A
+
+## Salida
+
+Información de todas las publicaciones de una operación: identificador Tempus3 de la publicación, nombre, identificador Tempus3 de la periodicidad e identificador Tempus3 de la publicación fecha.
+
+## Ejemplos
+
+Obtener las fechas de la publicación "Índice de Precios de Consumo" (Id=8)
+
+<https://servicios.ine.es/wstempus/js/ES/PUBLICACIONFECHA_PUBLICACION/8>
+
+Consulta con máximo nivel de detalle
+
+<https://servicios.ine.es/wstempus/js/ES/PUBLICACIONFECHA_PUBLICACION/8?det=2>
+
+Consulta con salida amigable
+
+<https://servicios.ine.es/wstempus/js/ES/PUBLICACIONFECHA_PUBLICACION/8?tip=A>

@@ -1,0 +1,30 @@
+---
+title: "VALORES_VARIABLE"
+sidebar: api-json
+---
+
+Obtener todos los valores para una variable específica
+
+## Input
+
+Código identificador de la variable. Para consultar las variables disponibles vea [VARIABLES](variables.html)
+
+## Parámetros
+
+### **det**
+
+Ofrece mayor nivel de detalle de la información mostrada. Valores válidos del parámetro: 0, 1 y 2
+
+## Salida
+
+Información de los valores que puede tomar la variable: identificador Tempus3 del valor, identificador Tempus 3 de la variable a la que pertenece, nombre del valor y código oficial.
+
+## Ejemplos
+
+Devuelve los valores de la variable Provincias (Id=115)
+
+<https://servicios.ine.es/wstempus/js/ES/VALORES_VARIABLE/115>
+
+Consulta con máximo nivel de detalle
+
+<https://servicios.ine.es/wstempus/js/ES/VALORES_VARIABLE/115?det=2>

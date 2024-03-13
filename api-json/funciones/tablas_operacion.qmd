@@ -1,0 +1,54 @@
+---
+title: "TABLAS_OPERACION"
+sidebar: api-json
+---
+
+Obtener un listado de todas las tablas de una operación
+
+## Input
+
+Código identificativo de la operación. Para consultar las operaciones disponibles vea [OPERACIONES_DISPONIBLES](operaciones_disponibles.html)
+
+## Parámetros
+
+### **det**
+
+Ofrece mayor nivel de detalle de la información mostrada. Valores válidos del parámetro: 0, 1 y 2
+
+### **geo**
+
+Para obtener resultados en función del ámbito geográfico:
+
+-   geo=1: Resultados por comunidades autónomas, provincias, municipios y otras desagregaciones.
+
+-   geo=0: Resultados nacionales
+
+### **tip**
+
+Obtener la respuesta de las peticiones de modo más amigable (‘A’)
+
+## Salida
+
+Información de las tablas asociadas a la operación: identificador Tempus3 de la tabla, nombre de la tabla, código con información del nivel geográfico y clasificación, objeto Tempus3  periodicidad, objeto Tempus3 publicación, objeto Tempus3 periodo inicio, año inicio, PubFechaAct dentro de la publicación , FechaRef_fin y última modificación.
+
+FechaRef_fin: nulo cuando el último periodo publicado coincide con el de la publicación fecha, en otro caso, cuando la tabla está cortada en un periodo anterior al de la publicación fecha, es sustituido por Fk_perido_fin/ Anyo_perido_fin (fecha del último dato publicado). Ver: <https://servicios.ine.es/wstempus/js/ES/TABLAS_OPERACION/33>
+
+PubFechaAct = contiene la última fecha de actualización de la tabla y el último periodo-año publicado.
+
+## Ejemplos
+
+Tablas estadísticas asociadas a la operación estadística IPC (IOE30138 / IPC / 25)
+
+<https://servicios.ine.es/wstempus/js/ES/TABLAS_OPERACION/IPC>
+
+Consulta con máximo nivel de detalle
+
+<https://servicios.ine.es/wstempus/js/ES/TABLAS_OPERACION/IPC?det=2>
+
+Salida amigable
+
+<https://servicios.ine.es/wstempus/js/ES/TABLAS_OPERACION/IPC?det=2&tip=A>
+
+Tablas con contenido geográfico
+
+<https://servicios.ine.es/wstempus/js/ES/TABLAS_OPERACION/IPC?geo=1>

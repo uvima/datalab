@@ -1,0 +1,30 @@
+---
+title: "VARIABLES"
+sidebar: api-json
+---
+
+Obtener todas las variables utilizadas en una operación dada
+
+## Input
+
+Código identificativo de la operación. Para consultar las operaciones disponibles vea [OPERACIONES_DISPONIBLES](operaciones_disponibles.html)
+
+## Parámetros
+
+### **page**
+
+La respuesta está paginada. Se ofrece un máximo de 500 elementos por página para no ralentizar la respuesta. Para consultar las páginas siguientes, se utiliza el parámetro page.
+
+## Salida
+
+Información de las variables que describen la operación: identificador Tempus3, nombre de la variable y código oficial.
+
+## Ejemplos
+
+Devuelve las variables de la operación IPC
+
+<https://servicios.ine.es/wstempus/js/ES/VARIABLES_OPERACION/IPC>
+
+Devuelve las variables de la operación IPC (primeros 500 resultados). Consulta igual a la anterior
+
+<https://servicios.ine.es/wstempus/js/ES/VARIABLES_OPERACION/IPC?page=1>

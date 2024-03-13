@@ -1,0 +1,30 @@
+---
+title: "VARIABLES"
+sidebar: api-json
+---
+
+Obtener todas las variables disponibles
+
+## Input
+
+Ninguno
+
+## Parámetros
+
+### **page**
+
+La respuesta está paginada. Se ofrece un máximo de 500 elementos por página para no ralentizar la respuesta. Para consultar las páginas siguientes, se utiliza el parámetro page.
+
+## Salida
+
+Información de todas las variables del Sistema: identificador Tempus3, nombre de la variable y código oficial.
+
+## Ejemplos
+
+Devuelve las variables disponibles (primeros 500 resultados)
+
+<https://servicios.ine.es/wstempus/js/ES/VARIABLES>
+
+Devuelve las variables disponibles (segundos 500 resultados)
+
+<https://servicios.ine.es/wstempus/js/ES/VARIABLES?page=2>

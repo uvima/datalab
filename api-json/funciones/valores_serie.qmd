@@ -1,0 +1,30 @@
+---
+title: "VALORES_SERIE"
+sidebar: api-json
+---
+
+Obtener los valores y variables que definen una serie
+
+## Input
+
+Código identificativo de la serie. Para obtener el código de una serie vea [Obtención del identificador de una serie utilizando INEbase](../codigos_identificadores.html#obtenci%C3%B3n-del-identificador-de-una-serie-utilizando-inebase-s%C3%B3lo-tempus3)
+
+## Parámetros
+
+### **det**
+
+Ofrece mayor nivel de detalle de la información mostrada. Valores válidos del parámetro: 0, 1 y 2
+
+## Salida
+
+Información de los metadatos que definen a la serie: identificador Tempus3 del valor, identificador Tempus3 de la variable a la que pertenece, nombre del valor y código oficial del valor.
+
+## Ejemplos
+
+Consulta de las variables y valores de la serie que recoge los datos del índice general el IPC ([IPC251852](https://www.ine.es/consul/serie.do?s=IPC251852))
+
+<https://servicios.ine.es/wstempus/js/ES/VALORES_SERIE/IPC251852>
+
+Consulta con nivel de detalle
+
+<https://servicios.ine.es/wstempus/js/ES/VALORES_SERIE/IPC251852?det=1>

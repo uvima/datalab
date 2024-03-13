@@ -1,0 +1,46 @@
+---
+title: "SERIES_TABLA"
+sidebar: api-json
+---
+
+Obtener todas las series de una tabla específica
+
+## Input
+
+Código identificativo de la tabla. Para obtener el código de una tabla vea [Obtención del identificador de una tabla utilizando INEbase](../codigos_identificadores.html)
+
+## Parámetros
+
+### **det**
+
+Ofrece mayor nivel de detalle de la información mostrada. Valores válidos del parámetro: 0, 1 y 2
+
+### **tip**
+
+Obtener la respuesta de las peticiones de modo más amigable (‘A’), incluir metadatos (‘M’) o ambos (‘AM’)
+
+### **tv**
+
+Parámetro para filtrar, utilizado con el formato [tv=id_variable:id_valor]{.underline}. Más información en [Como filtrar datos de una tabla](../obtener_datos_tabla.html#como-filtrar-datos-de-una-tabla).
+
+## Salida
+
+Información de las series de la tabla: identificadores Tempus3 de la serie, identificador Tempus3 de la operación, nombre de la serie, número de decimales que se van a visualizar para los datos de esa serie, identificador Tempus3 de la periodicidad, identificador Tempus3 de la publicación, identificador Tempsu3 de la clasificación, identificador Tempus3 de la escala e identificador Tempus3 de la unidad.
+
+## Ejemplos
+
+Series que aparecen en la tabla "[Índices por comunidades autónomas: general y de grupos ECOICOP](https://www.ine.es/jaxiT3/Datos.htm?t=50913)" de la operación IPC (Id 50913).
+
+<https://servicios.ine.es/wstempus/jsCache/ES/SERIES_TABLA/50913>
+
+Consulta con nivel de detalle máximo
+
+<https://servicios.ine.es/wstempus/jsCache/ES/SERIES_TABLA/50913?det=2>
+
+Consulta con salida amigable
+
+<https://servicios.ine.es/wstempus/jsCache/ES/SERIES_TABLA/50913?det=2&tip=A>
+
+Consulta de metadatos y salida amigable
+
+<https://servicios.ine.es/wstempus/jsCache/ES/SERIES_TABLA/50913?tip=AM>

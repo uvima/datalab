@@ -1,0 +1,49 @@
+---
+title: "Obtener datos de una tabla"
+---
+
+Para obtener los datos de una tabla es necesario conocer su código identificativo (vea [Obtención del identificador de una tabla utilizando INEbase](codigos_identificadores.html#obtenci%C3%B3n-del-identificador-de-una-tabla-utilizando-inebase)).
+
+Una vez se conoce el código de la tabla de interés, se puede utilizar la función [DATASET](referencia.html#dataset) para obtener los datos asociados.
+
+**Obtener todos los datos de la tabla**
+
+Por ejemplo, para la tabla [Índices nacionales: general y de grupos ECOICOP](https://www.ine.es/jaxiT3/Tabla.htm?t=50902) (Id 50902):
+
+<https://servicios.ine.es/wstempus/jsstat/ES/DATASET/50902>
+
+**Obtener los n últimos datos**
+
+Utilizamos el parámetro nult. Por ejemplo, nult=5 para obtener los últimos 5 datos:
+
+<https://servicios.ine.es/wstempus/jsstat/ES/DATASET/50902?nult=5>
+
+## Como filtrar datos de una tabla
+
+Cuando realizamos una petición de datos de una tabla existe la posibilidad de filtrar por variables y valores de interés utilizando el parámetro tv. Para ello vamos a distinguir los tres tipos posibles de fuentes de las tablas (tablas Tempus 3, tablas pc-axis y tablas tpx).
+
+### Tablas Tempus 3
+
+Para poder filtrar es necesario conocer los códigos identificadores numéricos (Id) de las variables y los valores por los que queremos filtrar. Por lo tanto, debemos hacer lo siguiente:
+
+1.  Conocer los grupos de la tabla de interés [Índices por comunidades autónomas: general y de grupos ECOICOP](https://www.ine.es/jaxiT3/Tabla.htm?t=50913) (Id = 50913):
+
+    <https://servicios.ine.es/wstempus/js/ES/GRUPOS_TABLA/50913>
+
+2.  Conocer los valores de los grupos:
+
+    <https://servicios.ine.es/wstempus/js/ES/VALORES_GRUPOSTABLA/50913/110924?det=1>
+
+    <https://servicios.ine.es/wstempus/js/ES/VALORES_GRUPOSTABLA/50913/110925?det=1>
+
+    <https://servicios.ine.es/wstempus/js/ES/VALORES_GRUPOSTABLA/50913/110926?det=1>
+
+3.  Filtrar por la variables y valores que nos interesan:
+
+    Por ejemplo, variación anual (id_variable = 3, id_valor = 74 y tv=3:74) del índice general (id_variable = 762, id_valor = 304092 y tv=762:304092) de la Comunidad de Madrid (id_variable = 70, id_valor = 9009 y tv=70:9009)
+
+    <https://servicios.ine.es/wstempus/jsstat/ES/DATASET/50913?nult=2&tv=3:74&tv=762:304092&tv=70:9009>
+
+    Si queremos filtrar por varios valores de una misma variable, tenemos que incluir tantos parámetros tv como valores. Por ejemplo, para obtener datos tanto de la Comunidad de Madrid como del Principado de Asturias (id_variable = 70, id_valor = 8999 y tv=70:8999)
+
+    <https://servicios.ine.es/wstempus/jsstat/ES/DATASET/50913?nult=2&tv=3:74&tv=762:304092&tv=70:9009&tv=70:8999>

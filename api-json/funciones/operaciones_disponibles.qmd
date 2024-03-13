@@ -1,0 +1,64 @@
+---
+title: "OPERACIONES_DISPONIBLES"
+sidebar: api-json
+---
+
+Obtener todas las operaciones disponibles
+
+## Input
+
+Ninguno
+
+## Parámetros
+
+### **det**
+
+Ofrece mayor nivel de detalle de la información mostrada. Valores válidos del parámetro: 0, 1 y 2
+
+### **geo**
+
+Para obtener resultados en función del ámbito geográfico:
+
+-   geo=1: Resultados por comunidades autónomas, provincias, municipios y otras desagregaciones.
+
+-   geo=0: Resultados nacionales
+
+### **page**
+
+La respuesta está paginada. Se ofrece un máximo de 500 elementos por página para no ralentizar la respuesta. Para consultar las páginas siguientes, se utiliza el parámetro page.
+
+## Salida
+
+Se obtienen los identificadores del elemento operación estadística. Existen tres códigos para la identificación de la operación estadística "Índice de Precios de Consumo (IPC)":
+
+-   código numérico Tempus3 interno (Id=25)
+
+-   código de la operación estadística en el Inventario de Operaciones Estadísticas (IOE30138)
+
+-   código alfabético Tempus3 interno (IPC)
+
+## Ejemplos
+
+Devuelve las operaciones disponibles
+
+<https://servicios.ine.es/wstempus/js/ES/OPERACIONES_DISPONIBLES>
+
+Devuelve todas las operaciones disponibles y nivel de detalle 2
+
+<https://servicios.ine.es/wstempus/js/ES/OPERACIONES_DISPONIBLES?det=2>
+
+Devuelve todas las operaciones disponibles que contengan desagregación geográfica (comunidades autónomas, provincias, municipios y otras desagregaciones)
+
+<https://servicios.ine.es/wstempus/js/ES/OPERACIONES_DISPONIBLES?geo=1>
+
+Devuelve todas las operaciones disponibles que contengan solamente resultados nacionales
+
+<https://servicios.ine.es/wstempus/js/ES/OPERACIONES_DISPONIBLES?geo=0>
+
+Devuelve las operaciones disponibles (primeros 500 resultados)
+
+<https://servicios.ine.es/wstempus/js/ES/OPERACIONES_DISPONIBLES?page=1>
+
+Devuelve las operaciones disponibles (500 segundos resultados)
+
+<https://servicios.ine.es/wstempus/js/ES/OPERACIONES_DISPONIBLES?page=2>

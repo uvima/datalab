@@ -1,0 +1,23 @@
+---
+title: "API JSON"
+subtitle: "Servicio web que devuelve las consultas en formato JSON"
+image: ../img/JSON_vector_logo.svg
+image-alt: "JSON"
+image-width: "50%"
+---
+
+El servicio API JSON INE (Java Script Object Notation) que se describe en esta sección permite acceder mediante peticiones URL a toda la información disponible en INEbase, sistema que utiliza el Instituto Nacional de Estadística (INE) para la publicación de la información estadística.
+
+La estructura de las peticiones a través de URL y la simplicidad del formato JSON permiten la explotación automática de la información estadística.
+
+INEbase es el sistema que utiliza el INE para la publicación de la información estadística. La información que será accesible a través del servicio API JSON del INE proviene de tres fuentes distintas:
+
+-   Base de datos [Tempus3](tempus3.html).
+
+-   Repositorio de archivos [PC-Axis](https://www.ine.es/ss/Satellite?L=es_ES&c=Page&cid=1254735116596&p=1254735116596&pagename=ProductosYServicios%2FPYSLayout).
+
+-   Repositorio de archivos tpx.
+
+Para saber si una tabla estadística está almacenada en Tempus3, en el repositorio de archivos PC-Axis o en el repositorio de archivos tpx, consultar [Códigos identificadores de tablas y series](codigos_identificadores.html).
+
+Toda la información publicada por el INE, independientemente de la fuente, va a poder ser consultada a través de la API JSON.

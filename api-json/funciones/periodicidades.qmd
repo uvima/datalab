@@ -1,0 +1,24 @@
+---
+title: "PERIODICIDADES"
+sidebar: api-json
+---
+
+Obtener todas las periodicidades
+
+## Input
+
+Ninguno
+
+## Parámetros
+
+Ninguno
+
+## Salida
+
+Información de las periodicidades disponibles: identificador Tempus3 de la periodicidad, nombre y código.
+
+## Ejemplos
+
+Devuelve todas las periodicidades
+
+<https://servicios.ine.es/wstempus/js/ES/PERIODICIDADES>
