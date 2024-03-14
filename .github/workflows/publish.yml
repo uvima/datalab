@@ -25,7 +25,7 @@ jobs:
       - name: Install R Dependencies
         uses: r-lib/actions/setup-r-dependencies@v2
         with:
-          packages: any::sessioninfo
+          packages: any::sessioninf, any::knitr, any::rmarkdown
           extra-packages: any::httr
           needs: website
 
