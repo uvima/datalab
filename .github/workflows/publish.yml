@@ -25,7 +25,7 @@ jobs:
       - name: Install R Dependencies
         uses: r-lib/actions/setup-r-dependencies@v2
         with:
-          extra-packages: any::httr, any:jsonlite, local::.
+          extra-packages: any::httr, any::jsonlite, local::.
           needs: website
 
       - name: Render and Publish
