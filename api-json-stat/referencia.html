@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.3.450">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Data Lab - Referencia de la API</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+
+<link rel="stylesheet" href="../styles.css">
+</head>
+
+<body class="nav-sidebar docked nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container">
+    <a href="../index.html" class="navbar-brand navbar-brand-logo">
+    <img src="../img/LogoINE.svg" alt="Logo INE" class="navbar-logo">
+    </a>
+    <a class="navbar-brand" href="../index.html">
+    <span class="navbar-title">Data Lab</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../api-json/inicio.html" rel="" target="">
+ <span class="menu-text">API JSON</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link active" href="../api-json-stat/inicio.html" rel="" target="" aria-current="page">
+ <span class="menu-text">API JSON-Stat</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../api-censo/inicio.html" rel="" target="">
+ <span class="menu-text">API Censos 2021</span></a>
+  </li>  
+</ul>
+            <div class="quarto-navbar-tools ms-auto">
+</div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../api-json-stat/referencia.html">Referencia de la API</a></li></ol></nav>
+      <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+      </a>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal sidebar-navigation docked overflow-auto">
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../api-json-stat/inicio.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">API JSON-stat</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../api-json-stat/referencia.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">Referencia de la API</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../api-json-stat/obtener_datos_tabla.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Obtener datos de una tabla</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../api-json-stat/codigos_identificadores.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Códigos identificadores de tablas y series</span></a>
+  </div>
+</li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#lista-de-funciones" id="toc-lista-de-funciones" class="nav-link active" data-scroll-target="#lista-de-funciones">LISTA DE FUNCIONES</a>
+  <ul class="collapse">
+  <li><a href="#dataset" id="toc-dataset" class="nav-link" data-scroll-target="#dataset"><strong>DATASET</strong></a>
+  <ul class="collapse">
+  <li><a href="#input" id="toc-input" class="nav-link" data-scroll-target="#input">Input</a></li>
+  <li><a href="#parámetros" id="toc-parámetros" class="nav-link" data-scroll-target="#parámetros">Parámetros</a></li>
+  <li><a href="#salida" id="toc-salida" class="nav-link" data-scroll-target="#salida">Salida</a></li>
+  <li><a href="#ejemplos" id="toc-ejemplos" class="nav-link" data-scroll-target="#ejemplos">Ejemplos</a></li>
+  </ul></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Referencia de la API</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+</header>
+
+<p>Se accede a la información disponible en INEbase mediante peticiones URL. Las peticiones URL tienen la siguiente estructura:</p>
+<p><strong>https://servicios.ine.es/wstempus/js/{idioma}/{función}/{input}[?parámetros]</strong></p>
+<p>Los campos que aparecen entre llaves, { }, son obligatorios.&nbsp; Los campos que aparecen entre corchetes, [ ], son opcionales y cambian en relación a la función considerada.</p>
+<ul>
+<li><p><strong>{idioma}</strong>. Puede tomar los siguientes valores:</p>
+<ul>
+<li><p>ES: español</p></li>
+<li><p>EN: inglés</p></li>
+</ul></li>
+<li><p><strong>{función}</strong>. La única función implementada es <strong>DATASET</strong>. Con ella se obtienen los datos y metadatos de una tabla.</p>
+<p><strong>{input}</strong>. El input es el identificador de la tabla estadística. Éste varía en relación a la fuente de datos. Para más información, consultar <a href="codigos_identificadores.html#obtención-del-identificador-de-una-tabla-utilizando-inebase">Obtención del identificador de una tabla utilizando INEbase</a>.</p></li>
+<li><p><strong>[¿parámetros]</strong>. Los parámetros en la URL se establecen a partir del símbolo ?. Cuando haya más de un parámetro, el símbolo &amp; se utiliza como separador. No todas las funciones admiten todos los parámetros posibles.</p></li>
+</ul>
+<section id="lista-de-funciones" class="level1">
+<h1>LISTA DE FUNCIONES</h1>
+<section id="dataset" class="level2">
+<h2 class="anchored" data-anchor-id="dataset"><strong>DATASET</strong></h2>
+<p>Obtener los datos y metadatos de una tabla.</p>
+<section id="input" class="level3">
+<h3 class="anchored" data-anchor-id="input">Input</h3>
+<p>Código identificativo de la tabla. Para obtener el código de una tabla vea <a href="codigos_identificadores.html#obtención-del-identificador-de-una-tabla-utilizando-inebase">Obtención del identificador de una tabla utilizando INEbase</a></p>
+</section>
+<section id="parámetros" class="level3">
+<h3 class="anchored" data-anchor-id="parámetros">Parámetros</h3>
+<section id="download" class="level4">
+<h4 class="anchored" data-anchor-id="download"><strong>download</strong></h4>
+<p>Cualquier petición puede descargarse en un fichero plano con extensión .json</p>
+</section>
+<section id="nult" class="level4">
+<h4 class="anchored" data-anchor-id="nult"><strong>nult</strong></h4>
+<p>Devolver los n últimos datos o periodos.</p>
+</section>
+<section id="date" class="level4">
+<h4 class="anchored" data-anchor-id="date"><strong>date</strong></h4>
+<p>Sólo para tablas Tempus3. Permite filtrar los datos por fecha según diferentes opciones:</p>
+<ul>
+<li><p><u>Fecha concreta</u>: <strong>date=YYYYMMDD</strong></p></li>
+<li><p><u>Lista de fechas concretas</u>: <strong>date=YYYYMMDD&amp;date=YYYYMMDD</strong></p></li>
+<li><p><u>Rango de fechas</u>: <strong>date=YYYYMMDD:YYYYMMDD</strong> (permite omitir Fecha Inicio, Fecha Fin y ambas).</p></li>
+</ul>
+</section>
+<section id="tv" class="level4">
+<h4 class="anchored" data-anchor-id="tv"><strong>tv</strong></h4>
+<p>Parámetro para filtrar, utilizado con el formato <u>tv=id_variable:id_valor</u>. Más información en <a href="obtener_datos_tabla.html#como-filtrar-datos-de-una-tabla">Como filtrar datos de una tabla</a>.</p>
+</section>
+</section>
+<section id="salida" class="level3">
+<h3 class="anchored" data-anchor-id="salida">Salida</h3>
+<p>JSON-stat se basa en un modelo de cubo o tablas estadísticas. A continuación, se explican los campos que devuelven las llamadas al servicio JSON-stat</p>
+<ul>
+<li><p><strong>version: 2.0</strong></p></li>
+<li><p><strong>class:</strong> dataset</p></li>
+<li><p><strong>label:</strong> título de la tabla.</p></li>
+<li><p><strong>note:</strong> unidades de las tablas y notas asociadas a la tabla.</p></li>
+<li><p><strong>source</strong>: fuente de datos, operación estadística y capítulo de <a href="https://www.ine.es/dyngs/INEbase/listaoperaciones.htm">INEbase</a> asociados a la tabla<em>.</em></p></li>
+<li><p><strong>link</strong>: enlace a la tabla de datos.&nbsp;</p></li>
+<li><p><strong>extension</strong>: enlace al aviso legal.</p></li>
+<li><p><strong>updated:</strong> fecha última actualización de los datos de la tabla.</p></li>
+<li><p><strong>id</strong>: lista ordenada de los identificadores de las dimensiones de la tabla o grupos de selección que definen la tabla.</p></li>
+<li><p><strong>size:</strong> número de categorías contenidas en cada una de las dimensiones anteriores.</p></li>
+<li><p><strong>role:</strong> se usa para asignar roles especiales a las dimensiones. No todas las dimensiones tienen por qué tener un rol asignado. En la API JSON-stat INE se distinguen dos roles:</p>
+<ul>
+<li><p><u><em>time</em></u><em>:</em> para las dimensiones asociada al periodo (años, semestres, trimestres, meses…).</p></li>
+<li><p><u><em>geo</em></u><em>:</em> para aquellas dimensiones asociadas a categorías geográficas (Comunidades Autónomas, provincias, municipios, distritos, secciones censales…).</p></li>
+<li><p><u>sin rol establecido</u><em>:</em> el resto son dimensiones que por definición tienen un rol genérico, por ser meramente clasificatorias.</p></li>
+</ul></li>
+<li><p><strong>value:</strong> contiene los datos ordenados según las dimensiones de la tabla.</p></li>
+<li><p><strong>status:</strong> estado de cada dato. Puede ser: definitivo (D), provisional (P), estimado (E), …</p></li>
+<li><p><strong>dimension:</strong> contiene información sobre las dimensiones que definen la tabla:</p>
+<ul>
+<li><p><strong>label</strong><em>:</em> nombre de la dimensión.</p></li>
+<li><p><strong>category</strong><em>:</em> codificación (<strong>index</strong>) y nombres (<strong>label</strong>) de las categorías asociadas a la dimensión.</p></li>
+</ul></li>
+</ul>
+</section>
+<section id="ejemplos" class="level3">
+<h3 class="anchored" data-anchor-id="ejemplos">Ejemplos</h3>
+<p>Devuelve todos los periodos de la tabla con Id=50902</p>
+<p><a href="https://servicios.ine.es/wstempus/jsstat/ES/DATASET/50902" class="uri">https://servicios.ine.es/wstempus/jsstat/ES/DATASET/50902</a></p>
+<p>Devuelve el último periodo de la tabla con Id=50902</p>
+<p><a href="https://servicios.ine.es/wstempus/jsstat/ES/DATASET/50902?nult=1" class="uri">https://servicios.ine.es/wstempus/jsstat/ES/DATASET/50902?nult=1</a></p>
+<p>Devuelve los últimos 5 periodos de la tabla con Id=50902</p>
+<p><a href="https://servicios.ine.es/wstempus/jsstat/ES/DATASET/50902?nult=5" class="uri">https://servicios.ine.es/wstempus/jsstat/ES/DATASET/50902?nult=5</a></p>
+<p>Devuelve los datos entre el 01/01/2023 y el 31/12/2023</p>
+<p><a href="https://servicios.ine.es/wstempus/jsstat/ES/DATASET/50902?date=20230101:20231231" class="uri">https://servicios.ine.es/wstempus/jsstat/ES/DATASET/50902?date=20230101:20231231</a></p>
+<p>Devuelve los datos a partir del 01/01/2024</p>
+<p><a href="https://servicios.ine.es/wstempus/jsstat/ES/DATASET/50902?date=20240101" class="uri">https://servicios.ine.es/wstempus/jsstat/ES/DATASET/50902?date=20240101</a>:</p>
+<p>Descargar la consulta en un archivo .json</p>
+<p><a href="https://servicios.ine.es/wstempus/jsstat/ES/DATASET/50902?download=MiDescarga.json" class="uri">https://servicios.ine.es/wstempus/jsstat/ES/DATASET/50902?download=MiDescarga.json</a></p>
+
+
+</section>
+</section>
+</section>
+
+<a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a></main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+</body></html>

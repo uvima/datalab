@@ -1,0 +1,3602 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.3.450">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Data Lab - Referencia de la API</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+
+<link rel="stylesheet" href="../styles.css">
+</head>
+
+<body class="nav-sidebar docked nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container">
+    <a href="../index.html" class="navbar-brand navbar-brand-logo">
+    <img src="../img/LogoINE.svg" alt="Logo INE" class="navbar-logo">
+    </a>
+    <a class="navbar-brand" href="../index.html">
+    <span class="navbar-title">Data Lab</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../api-json/inicio.html" rel="" target="">
+ <span class="menu-text">API JSON</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../api-json-stat/inicio.html" rel="" target="">
+ <span class="menu-text">API JSON-Stat</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link active" href="../api-censo/inicio.html" rel="" target="" aria-current="page">
+ <span class="menu-text">API Censos 2021</span></a>
+  </li>  
+</ul>
+            <div class="quarto-navbar-tools ms-auto">
+</div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../api-censo/referencia.html">Referencia de la API</a></li></ol></nav>
+      <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+      </a>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal sidebar-navigation docked overflow-auto">
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../api-censo/inicio.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">API Censos de Población y Viviendas 2021</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../api-censo/referencia.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">Referencia de la API</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../api-censo/peticion_datos.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Ejemplos de peticiones</span></a>
+  </div>
+</li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#lista-de-tablas-disponibles" id="toc-lista-de-tablas-disponibles" class="nav-link active" data-scroll-target="#lista-de-tablas-disponibles">Lista de tablas disponibles</a></li>
+  <li><a href="#lista-de-variables-disponibles-para-cada-tabla" id="toc-lista-de-variables-disponibles-para-cada-tabla" class="nav-link" data-scroll-target="#lista-de-variables-disponibles-para-cada-tabla">Lista de variables disponibles para cada tabla</a>
+  <ul class="collapse">
+  <li><a href="#hogares-hog" id="toc-hogares-hog" class="nav-link" data-scroll-target="#hogares-hog">Hogares (hog)</a></li>
+  <li><a href="#parejas-y-otros-núcleos-familiares-nuc" id="toc-parejas-y-otros-núcleos-familiares-nuc" class="nav-link" data-scroll-target="#parejas-y-otros-núcleos-familiares-nuc">Parejas y otros núcleos familiares (nuc)</a></li>
+  <li><a href="#personas-empadronadas-en-establecimientos-colectivos-per.estu" id="toc-personas-empadronadas-en-establecimientos-colectivos-per.estu" class="nav-link" data-scroll-target="#personas-empadronadas-en-establecimientos-colectivos-per.estu">Personas empadronadas en establecimientos colectivos (per.estu)</a></li>
+  <li><a href="#personas-residentes-en-viviendas-familiares-per.ocu" id="toc-personas-residentes-en-viviendas-familiares-per.ocu" class="nav-link" data-scroll-target="#personas-residentes-en-viviendas-familiares-per.ocu">Personas residentes en viviendas familiares (per.ocu)</a></li>
+  <li><a href="#total-de-personas-per.ppal" id="toc-total-de-personas-per.ppal" class="nav-link" data-scroll-target="#total-de-personas-per.ppal">Total de personas (per.ppal)</a></li>
+  <li><a href="#viviendas-familiares-viv.fam" id="toc-viviendas-familiares-viv.fam" class="nav-link" data-scroll-target="#viviendas-familiares-viv.fam">Viviendas familiares (viv.fam)</a></li>
+  <li><a href="#ocupados-de-16-y-más-años-viv.ppal" id="toc-ocupados-de-16-y-más-años-viv.ppal" class="nav-link" data-scroll-target="#ocupados-de-16-y-más-años-viv.ppal">Ocupados de 16 y más años (viv.ppal)</a></li>
+  </ul></li>
+  <li><a href="#lista-de-unidades-de-medida-métricas-disponibles-para-cada-tabla" id="toc-lista-de-unidades-de-medida-métricas-disponibles-para-cada-tabla" class="nav-link" data-scroll-target="#lista-de-unidades-de-medida-métricas-disponibles-para-cada-tabla">Lista de unidades de medida (métricas) disponibles para cada tabla</a>
+  <ul class="collapse">
+  <li><a href="#hogares-hog-1" id="toc-hogares-hog-1" class="nav-link" data-scroll-target="#hogares-hog-1"><strong>Hogares (hog)</strong></a></li>
+  <li><a href="#parejas-y-otros-núcleos-familiares-nuc-1" id="toc-parejas-y-otros-núcleos-familiares-nuc-1" class="nav-link" data-scroll-target="#parejas-y-otros-núcleos-familiares-nuc-1"><strong>Parejas y otros núcleos familiares (nuc)</strong></a></li>
+  <li><a href="#personas-empadronadas-en-establecimientos-colectivos-per.estu-1" id="toc-personas-empadronadas-en-establecimientos-colectivos-per.estu-1" class="nav-link" data-scroll-target="#personas-empadronadas-en-establecimientos-colectivos-per.estu-1"><strong>Personas empadronadas en establecimientos colectivos (per.estu)</strong></a></li>
+  <li><a href="#personas-residentes-en-viviendas-familiares-per.ocu-1" id="toc-personas-residentes-en-viviendas-familiares-per.ocu-1" class="nav-link" data-scroll-target="#personas-residentes-en-viviendas-familiares-per.ocu-1"><strong>Personas residentes en viviendas familiares (per.ocu)</strong></a></li>
+  <li><a href="#total-de-personas-per.ppal-1" id="toc-total-de-personas-per.ppal-1" class="nav-link" data-scroll-target="#total-de-personas-per.ppal-1"><strong>Total de personas (per.ppal)</strong></a></li>
+  <li><a href="#viviendas-familiares-viv.fam-1" id="toc-viviendas-familiares-viv.fam-1" class="nav-link" data-scroll-target="#viviendas-familiares-viv.fam-1"><strong>Viviendas familiares (viv.fam)</strong></a></li>
+  <li><a href="#ocupados-de-16-y-más-años-viv.ppal-1" id="toc-ocupados-de-16-y-más-años-viv.ppal-1" class="nav-link" data-scroll-target="#ocupados-de-16-y-más-años-viv.ppal-1"><strong>Ocupados de 16 y más años (viv.ppal)</strong></a></li>
+  </ul></li>
+  <li><a href="#lista-de-idiomas-en-los-que-se-puede-mostrar-el-resultado-de-la-consulta" id="toc-lista-de-idiomas-en-los-que-se-puede-mostrar-el-resultado-de-la-consulta" class="nav-link" data-scroll-target="#lista-de-idiomas-en-los-que-se-puede-mostrar-el-resultado-de-la-consulta">Lista de idiomas en los que se puede mostrar el resultado de la consulta</a></li>
+  <li><a href="#petición-por-url" id="toc-petición-por-url" class="nav-link" data-scroll-target="#petición-por-url">Petición por URL</a></li>
+  <li><a href="#limitaciones-del-servicio" id="toc-limitaciones-del-servicio" class="nav-link" data-scroll-target="#limitaciones-del-servicio">Limitaciones del servicio</a></li>
+  <li><a href="#errores-en-las-respuestas" id="toc-errores-en-las-respuestas" class="nav-link" data-scroll-target="#errores-en-las-respuestas">Errores en las respuestas</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Referencia de la API</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+</header>
+
+<p>Únicamente se considera el método POST para recuperar la información. La petición devuelve los datos que corresponden a una selección de un mínimo de 1 variable y hasta un máximo de 4 variables por tabla.</p>
+<p>Las salidas resultantes de los datos se configuran como cruces de categorías de las variables. Los identificadores de las tablas, las variables, las unidades de medida y el idioma empleado en la petición son los que figuran en los ficheros Excel. La no utilización de esos identificadores no generará resultados en la respuesta. Los cruces se expresan mediante parámetros que se incluyen en la expresión URL que define la petición.</p>
+<section id="lista-de-tablas-disponibles" class="level2">
+<h2 class="anchored" data-anchor-id="lista-de-tablas-disponibles">Lista de tablas disponibles</h2>
+<table class="table">
+<colgroup>
+<col style="width: 12%">
+<col style="width: 49%">
+<col style="width: 38%">
+</colgroup>
+<tbody>
+<tr class="odd">
+<td><strong>ID tabla</strong></td>
+<td><strong>Descripción tabla -ES</strong></td>
+<td><strong>Descripción tabla -EN</strong></td>
+</tr>
+<tr class="even">
+<td>hog</td>
+<td>Hogares</td>
+<td>Households</td>
+</tr>
+<tr class="odd">
+<td>nuc</td>
+<td>Parejas y otros núcleos familiares</td>
+<td>Couples and other family nuclei</td>
+</tr>
+<tr class="even">
+<td>per.estu</td>
+<td>Personas empadronadas en establecimientos colectivos</td>
+<td>Persons registered in collective housing</td>
+</tr>
+<tr class="odd">
+<td>per.ocu</td>
+<td>Personas residentes en viviendas familiares</td>
+<td>Persons resident in family dwellings</td>
+</tr>
+<tr class="even">
+<td>per.ppal</td>
+<td>Total de personas</td>
+<td>All persons</td>
+</tr>
+<tr class="odd">
+<td>viv.fam</td>
+<td>Viviendas familiares</td>
+<td>Dwellings</td>
+</tr>
+<tr class="even">
+<td>viv.ppal</td>
+<td>Ocupados de 16 y más años</td>
+<td>Employed persons aged 16 years and over</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="lista-de-variables-disponibles-para-cada-tabla" class="level2">
+<h2 class="anchored" data-anchor-id="lista-de-variables-disponibles-para-cada-tabla">Lista de variables disponibles para cada tabla</h2>
+<section id="hogares-hog" class="level3">
+<h3 class="anchored" data-anchor-id="hogares-hog">Hogares (hog)</h3>
+<table class="table">
+<colgroup>
+<col style="width: 8%">
+<col style="width: 12%">
+<col style="width: 42%">
+<col style="width: 37%">
+</colgroup>
+<tbody>
+<tr class="odd">
+<td><strong>ID tabla</strong></td>
+<td><strong>ID variable</strong></td>
+<td><strong>Descripción variable - ES</strong></td>
+<td><strong>Descripción variable - EN</strong></td>
+</tr>
+<tr class="even">
+<td>hog</td>
+<td>ID_ACTI_HOG_1</td>
+<td>Número de miembros de 16 a 64 años que están trabajando</td>
+<td>Number of employed&nbsp; members&nbsp; from 16 to 64 years old</td>
+</tr>
+<tr class="odd">
+<td>hog</td>
+<td>ID_ACTI_HOG_2</td>
+<td>Número de miembros de 16 a 64 años que están parados</td>
+<td>Number of unemployed&nbsp; members&nbsp; from 16 to 64 years old</td>
+</tr>
+<tr class="even">
+<td>hog</td>
+<td>ID_ACTI_HOG_3</td>
+<td>Número de miembros de 16 a 64 años que están en situación de inactividad</td>
+<td>Number of economically inactive members from 16 to 64 years old&nbsp;</td>
+</tr>
+<tr class="odd">
+<td>hog</td>
+<td>ID_ANO_CONS_GR11</td>
+<td>Año de construcción (agregado)</td>
+<td>Year of construction&nbsp; (aggregated)</td>
+</tr>
+<tr class="even">
+<td>hog</td>
+<td>ID_CLASE_VIV_FAM</td>
+<td>Clase de vivienda familiar</td>
+<td>Class of main family dwelling</td>
+</tr>
+<tr class="odd">
+<td>hog</td>
+<td>ID_ESTRUC_HOG_2</td>
+<td>Estructura del hogar</td>
+<td>Household Structure&nbsp;</td>
+</tr>
+<tr class="even">
+<td>hog</td>
+<td>ID_FAM_HOG</td>
+<td>Número familias en el hogar</td>
+<td>Number of families in the household</td>
+</tr>
+<tr class="odd">
+<td>hog</td>
+<td>ID_NUC_HOG</td>
+<td>Número núcleos en el hogar</td>
+<td>Number of family nuclei in the household</td>
+</tr>
+<tr class="even">
+<td>hog</td>
+<td>ID_RESIDENCIA_N1</td>
+<td>CC.AA. de residencia</td>
+<td>Autonomous Community</td>
+</tr>
+<tr class="odd">
+<td>hog</td>
+<td>ID_RESIDENCIA_N2</td>
+<td>Provincia de residencia</td>
+<td>Province of residence</td>
+</tr>
+<tr class="even">
+<td>hog</td>
+<td>ID_RESIDENCIA_N3</td>
+<td>Municipio de residencia</td>
+<td>Municipality of residence</td>
+</tr>
+<tr class="odd">
+<td>hog</td>
+<td>ID_RESIDENCIA_N4</td>
+<td>Distrito&nbsp;</td>
+<td>District&nbsp;</td>
+</tr>
+<tr class="even">
+<td>hog</td>
+<td>ID_RESIDENCIA_N5</td>
+<td>Sección&nbsp;</td>
+<td>Section</td>
+</tr>
+<tr class="odd">
+<td>hog</td>
+<td>ID_SUP_OCU_VIV</td>
+<td>Superficie por ocupante</td>
+<td>Useful floor space per occupant</td>
+</tr>
+<tr class="even">
+<td>hog</td>
+<td>ID_SUP_VIV</td>
+<td>Superficie&nbsp;</td>
+<td>Useful floor space</td>
+</tr>
+<tr class="odd">
+<td>hog</td>
+<td>ID_TAM_HOG_6</td>
+<td>Tamaño del hogar</td>
+<td>Size of the household&nbsp;</td>
+</tr>
+<tr class="even">
+<td>hog</td>
+<td>ID_TAM_MUN_HOG</td>
+<td>Tamaño de municipio de residencia</td>
+<td>Size of municipality of residence</td>
+</tr>
+<tr class="odd">
+<td>hog</td>
+<td>ID_TAMEDAD04</td>
+<td>Número de miembros de 0 a 4 años</td>
+<td>Number of members from 0 to 4 years</td>
+</tr>
+<tr class="even">
+<td>hog</td>
+<td>ID_TAMEDAD1624</td>
+<td>Número de miembros de 16 a 24 años</td>
+<td>Number of members from 16 to 24 years old</td>
+</tr>
+<tr class="odd">
+<td>hog</td>
+<td>ID_TAMEDAD2534</td>
+<td>Número de miembros de 25 a 34 años</td>
+<td>Number of members from 25 to 34 years old</td>
+</tr>
+<tr class="even">
+<td>hog</td>
+<td>ID_TAMEDAD3564</td>
+<td>Número de miembros de 35 a 64 años</td>
+<td>Number of members from 35 to 64 years old</td>
+</tr>
+<tr class="odd">
+<td>hog</td>
+<td>ID_TAMEDAD515</td>
+<td>&nbsp; Número de miembros de 5 a 15 años</td>
+<td>Number of members from 5 to 15 years old</td>
+</tr>
+<tr class="even">
+<td>hog</td>
+<td>ID_TAMEDAD6584</td>
+<td>Número de miembros de 65 a 84 años</td>
+<td>Number of members from 65 to 84 years old</td>
+</tr>
+<tr class="odd">
+<td>hog</td>
+<td>ID_TAMEDAD85m</td>
+<td>&nbsp;Número de miembros de 85 años o más</td>
+<td>Number of members 85 years and above</td>
+</tr>
+<tr class="even">
+<td>hog</td>
+<td>ID_TAMSEXNAC11</td>
+<td>Hombres españoles que viven en el hogar</td>
+<td>Spanish men living in the household</td>
+</tr>
+<tr class="odd">
+<td>hog</td>
+<td>ID_TAMSEXNAC12</td>
+<td>Hombres extranjeros que viven en el hogar</td>
+<td>Foreign men living in the household</td>
+</tr>
+<tr class="even">
+<td>hog</td>
+<td>ID_TAMSEXNAC13</td>
+<td>Mujeres españolas que viven en el hogar</td>
+<td>Spanish women living in the household</td>
+</tr>
+<tr class="odd">
+<td>hog</td>
+<td>ID_TAMSEXNAC14</td>
+<td>Mujeres extranjeras que viven en el hogar</td>
+<td>Foreign women living in the household</td>
+</tr>
+<tr class="even">
+<td>hog</td>
+<td>ID_TENEN_VIV</td>
+<td>Régimen de tenencia de la vivienda</td>
+<td>Tenure status of dwelling&nbsp;</td>
+</tr>
+<tr class="odd">
+<td>hog</td>
+<td>ID_TIPO_EDIF_VIV</td>
+<td>Tipo de viviendas según tipo de edificio&nbsp;</td>
+<td>Type of dwellings according to type of building&nbsp;</td>
+</tr>
+<tr class="even">
+<td>hog</td>
+<td>ID_TIPO_HOG_1</td>
+<td>Tipo de Hogar (detalle)</td>
+<td>Type of Household (detail)</td>
+</tr>
+<tr class="odd">
+<td>hog</td>
+<td>ID_TIPO_MUN_DEGURBA</td>
+<td>Tipo de municipio según grado de urbanización</td>
+<td>Type of municipality according to degree of urbanization</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="parejas-y-otros-núcleos-familiares-nuc" class="level3">
+<h3 class="anchored" data-anchor-id="parejas-y-otros-núcleos-familiares-nuc">Parejas y otros núcleos familiares (nuc)</h3>
+<table class="table">
+<colgroup>
+<col style="width: 9%">
+<col style="width: 17%">
+<col style="width: 34%">
+<col style="width: 39%">
+</colgroup>
+<tbody>
+<tr class="odd">
+<td><strong>ID tabla</strong></td>
+<td><strong>ID variable</strong></td>
+<td><strong>Descripción variable - ES</strong></td>
+<td><strong>Descripción variable - EN</strong></td>
+</tr>
+<tr class="even">
+<td>nuc</td>
+<td>ID_ANO_CONS_GR11</td>
+<td>Año de construcción (agregado)</td>
+<td>Year of construction&nbsp; (aggregated)</td>
+</tr>
+<tr class="odd">
+<td>nuc</td>
+<td>ID_CLASE_VIV_FAM</td>
+<td>Clase de vivienda familiar</td>
+<td>Class of main family dwelling</td>
+</tr>
+<tr class="even">
+<td>nuc</td>
+<td>ID_DIF_EDAD_NUC</td>
+<td>Diferencia de edad entre los miembros del núcleo</td>
+<td>Age difference between family nucleus members</td>
+</tr>
+<tr class="odd">
+<td>nuc</td>
+<td>ID_ESTRUC_HOG_2</td>
+<td>Estructura del hogar</td>
+<td>Household Structure&nbsp;</td>
+</tr>
+<tr class="even">
+<td>nuc</td>
+<td>ID_FAM_HOG</td>
+<td>Número familias en el hogar</td>
+<td>Number of families in the household</td>
+</tr>
+<tr class="odd">
+<td>nuc</td>
+<td>ID_NHIJOS_COM_NUC</td>
+<td>Número de hijos comunes</td>
+<td>Number of common children</td>
+</tr>
+<tr class="even">
+<td>nuc</td>
+<td>ID_NHIJOS_NUC</td>
+<td>Número de hijos</td>
+<td>Number of children</td>
+</tr>
+<tr class="odd">
+<td>nuc</td>
+<td>ID_NUC_HOG</td>
+<td>Número núcleos en el hogar</td>
+<td>Number of family nuclei in the household</td>
+</tr>
+<tr class="even">
+<td>nuc</td>
+<td>ID_RESIDENCIA_N1</td>
+<td>CC.AA. de residencia</td>
+<td>Autonomous Community</td>
+</tr>
+<tr class="odd">
+<td>nuc</td>
+<td>ID_RESIDENCIA_N2</td>
+<td>Provincia de residencia</td>
+<td>Province of residence</td>
+</tr>
+<tr class="even">
+<td>nuc</td>
+<td>ID_RESIDENCIA_N3</td>
+<td>Municipio de residencia</td>
+<td>Municipality of residence</td>
+</tr>
+<tr class="odd">
+<td>nuc</td>
+<td>ID_RESIDENCIA_N4</td>
+<td>Distrito&nbsp;</td>
+<td>District&nbsp;</td>
+</tr>
+<tr class="even">
+<td>nuc</td>
+<td>ID_RESIDENCIA_N5</td>
+<td>Sección&nbsp;</td>
+<td>Section</td>
+</tr>
+<tr class="odd">
+<td>nuc</td>
+<td>ID_SUP_OCU_VIV</td>
+<td>Superficie por ocupante</td>
+<td>Useful floor space per occupant</td>
+</tr>
+<tr class="even">
+<td>nuc</td>
+<td>ID_SUP_VIV</td>
+<td>Superficie&nbsp;</td>
+<td>Useful floor space</td>
+</tr>
+<tr class="odd">
+<td>nuc</td>
+<td>ID_TAM_HOG_6</td>
+<td>Tamaño del hogar</td>
+<td>Size of the household&nbsp;</td>
+</tr>
+<tr class="even">
+<td>nuc</td>
+<td>ID_TAM_MUN_NUC</td>
+<td>Tamaño de municipio de residencia</td>
+<td>Size of municipality of residence</td>
+</tr>
+<tr class="odd">
+<td>nuc</td>
+<td>ID_TAM_NUC_1</td>
+<td>Tamaño del núcleo</td>
+<td>Family nucleus size</td>
+</tr>
+<tr class="even">
+<td>nuc</td>
+<td>ID_TENEN_VIV</td>
+<td>Régimen de tenencia de la vivienda</td>
+<td>Tenure status of dwelling&nbsp;</td>
+</tr>
+<tr class="odd">
+<td>nuc</td>
+<td>ID_TIPO_EDIF_VIV</td>
+<td>Tipo de viviendas según tipo de edificio&nbsp;</td>
+<td>Type of dwellings according to type of building&nbsp;</td>
+</tr>
+<tr class="even">
+<td>nuc</td>
+<td>ID_TIPO_HOG_1</td>
+<td>Tipo de Hogar (detalle)</td>
+<td>Type of Household (detail)</td>
+</tr>
+<tr class="odd">
+<td>nuc</td>
+<td>ID_TIPO_MUN_DEGURBA_NUC</td>
+<td>Tipo de municipio según grado de urbanización</td>
+<td>Type of municipality according to degree of urbanization</td>
+</tr>
+<tr class="even">
+<td>nuc</td>
+<td>ID_TIPO_NUC_1</td>
+<td>Tipo de núcleo</td>
+<td>Type of Family Nucleus</td>
+</tr>
+<tr class="odd">
+<td>nuc</td>
+<td>ID_TIPO_PAR_NUC_1</td>
+<td>Tipo de pareja (de hecho o de derecho)</td>
+<td>Type of couple (de facto or de jure)</td>
+</tr>
+<tr class="even">
+<td>nuc</td>
+<td>ID_TIPO_PAR_NUC_2</td>
+<td>Tipo de pareja (mismo sexo, distinto sexo)</td>
+<td>Type of couple (same sex, different sex)</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="personas-empadronadas-en-establecimientos-colectivos-per.estu" class="level3">
+<h3 class="anchored" data-anchor-id="personas-empadronadas-en-establecimientos-colectivos-per.estu">Personas empadronadas en establecimientos colectivos (per.estu)</h3>
+<table class="table">
+<colgroup>
+<col style="width: 8%">
+<col style="width: 13%">
+<col style="width: 35%">
+<col style="width: 42%">
+</colgroup>
+<tbody>
+<tr class="odd">
+<td><strong>ID tabla</strong></td>
+<td><strong>ID variable</strong></td>
+<td><strong>Descripción variable - ES</strong></td>
+<td><strong>Descripción variable - EN</strong></td>
+</tr>
+<tr class="even">
+<td>per.estu</td>
+<td>ID_EDAD</td>
+<td>Edad año a año</td>
+<td>Age year to year</td>
+</tr>
+<tr class="odd">
+<td>per.estu</td>
+<td>ID_ESCUR</td>
+<td>Nivel más alto de la enseñanza principal que cursa</td>
+<td>Highest level of the primary studies in course</td>
+</tr>
+<tr class="even">
+<td>per.estu</td>
+<td>ID_ESCUR2</td>
+<td>Nivel más alto de otras enseñanzas, si cursa más de una</td>
+<td>Highest level of other studies, if more than one is being pursued</td>
+</tr>
+<tr class="odd">
+<td>per.estu</td>
+<td>ID_ESREAL_CNEDA</td>
+<td>Nivel de estudios (detalle)</td>
+<td>Educational attainment (detail)</td>
+</tr>
+<tr class="even">
+<td>per.estu</td>
+<td>ID_ESREAL_GR5</td>
+<td>Nivel de estudios (grado)</td>
+<td>Educational attainment (grade)</td>
+</tr>
+<tr class="odd">
+<td>per.estu</td>
+<td>ID_ESTADO_CIVIL</td>
+<td>Estado Civil</td>
+<td>Legal Marital Status</td>
+</tr>
+<tr class="even">
+<td>per.estu</td>
+<td>ID_GRAN_GRUPO_EDAD</td>
+<td>Edad en grandes grupos</td>
+<td>Age in large groups</td>
+</tr>
+<tr class="odd">
+<td>per.estu</td>
+<td>ID_GRUPO_Q_EDAD</td>
+<td>Edad (grupos quinquenales)</td>
+<td>Age (five-year groups)</td>
+</tr>
+<tr class="even">
+<td>per.estu</td>
+<td>ID_LUGAR_NAC_EXT_N1</td>
+<td>Lugar de nacimiento (España/Extranjero)</td>
+<td>Place of birth (Spain/abroad)</td>
+</tr>
+<tr class="odd">
+<td>per.estu</td>
+<td>ID_LUGAR_NAC_EXT_N2</td>
+<td>País de nacimiento (grandes grupos)</td>
+<td>Country of birth (large groups)</td>
+</tr>
+<tr class="even">
+<td>per.estu</td>
+<td>ID_LUGAR_NAC_NAC_N1</td>
+<td>CC.AA. de nacimiento</td>
+<td>Autonomous Community of birth</td>
+</tr>
+<tr class="odd">
+<td>per.estu</td>
+<td>ID_LUGAR_NAC_NAC_N2</td>
+<td>Provincia de nacimiento</td>
+<td>Province of birth</td>
+</tr>
+<tr class="even">
+<td>per.estu</td>
+<td>ID_LUGAR_NAC_NAC_N3</td>
+<td>Municipio de nacimiento</td>
+<td>Municipality of birth</td>
+</tr>
+<tr class="odd">
+<td>per.estu</td>
+<td>ID_NACIONALIDAD_N1</td>
+<td>Nacionalidad (española/extranjera)</td>
+<td>Nationality (Spanish/foreign)</td>
+</tr>
+<tr class="even">
+<td>per.estu</td>
+<td>ID_NACIONALIDAD_N2</td>
+<td>Nacionalidad (grandes grupos)</td>
+<td>Nationality (large groups)</td>
+</tr>
+<tr class="odd">
+<td>per.estu</td>
+<td>ID_PAIS_ANT_GR9</td>
+<td>País de residencia anterior (agregado)&nbsp;</td>
+<td>Country of previous residence (aggregated)&nbsp;</td>
+</tr>
+<tr class="even">
+<td>per.estu</td>
+<td>ID_PAIS_DANO_GR10</td>
+<td>País residencia en 2011 (agregado)</td>
+<td>Country of residence in 2011 (aggregated)&nbsp;</td>
+</tr>
+<tr class="odd">
+<td>per.estu</td>
+<td>ID_PAIS_PR_GR9</td>
+<td>País de procedencia (grandes grupos)</td>
+<td>Country of origin (large groups)</td>
+</tr>
+<tr class="even">
+<td>per.estu</td>
+<td>ID_PAIS_UNANO_GR10</td>
+<td>País de residencia en 2020 (agregado)</td>
+<td>Country of residence in 2020&nbsp; (aggregated)&nbsp;</td>
+</tr>
+<tr class="odd">
+<td>per.estu</td>
+<td>ID_RELA</td>
+<td>Relación preferente con la actividad (detalle)</td>
+<td>Current activity status (detail)</td>
+</tr>
+<tr class="even">
+<td>per.estu</td>
+<td>ID_RELA2</td>
+<td>Relación preferente con la actividad (activo /inactivo)</td>
+<td>Current activity status (active/inactive)</td>
+</tr>
+<tr class="odd">
+<td>per.estu</td>
+<td>ID_RESI_2011_N1</td>
+<td>CC.AA. de residencia en 2011</td>
+<td>Autonomous Community of residence in 2011</td>
+</tr>
+<tr class="even">
+<td>per.estu</td>
+<td>ID_RESI_2011_N2</td>
+<td>Provincia de residencia en 2011</td>
+<td>Province of residence in 2011</td>
+</tr>
+<tr class="odd">
+<td>per.estu</td>
+<td>ID_RESI_2011_N3</td>
+<td>Municipio de residencia en 2011</td>
+<td>Municipality of residence in 2011</td>
+</tr>
+<tr class="even">
+<td>per.estu</td>
+<td>ID_RESI_2020_N1</td>
+<td>CC.AA. de residencia en 2020</td>
+<td>Autonomous Community of residence in 2020</td>
+</tr>
+<tr class="odd">
+<td>per.estu</td>
+<td>ID_RESI_2020_N2</td>
+<td>Provincia de residencia en 2020</td>
+<td>Province of residence in 2020</td>
+</tr>
+<tr class="even">
+<td>per.estu</td>
+<td>ID_RESI_2020_N3</td>
+<td>Municipio de residencia en 2020</td>
+<td>Municipality of residence 2020</td>
+</tr>
+<tr class="odd">
+<td>per.estu</td>
+<td>ID_RESI_ANT</td>
+<td>Relación entre residencia anterior y residencia actual&nbsp;</td>
+<td>Relationship between previous residence and current residence&nbsp;</td>
+</tr>
+<tr class="even">
+<td>per.estu</td>
+<td>ID_RESI_DANO</td>
+<td>Relación entre residencia en 2011 y actual&nbsp;</td>
+<td>Relationship between residence in 2011 and current residence&nbsp;</td>
+</tr>
+<tr class="odd">
+<td>per.estu</td>
+<td>ID_RESI_NACIM</td>
+<td>Relación entre lugar de nacimiento y residencia</td>
+<td>Relationship between place of birth and residence</td>
+</tr>
+<tr class="even">
+<td>per.estu</td>
+<td>ID_RESI_UNANO</td>
+<td>Relación entre residencia en 2020 y actual</td>
+<td>Relationship between residence in 2020 and current residence&nbsp;</td>
+</tr>
+<tr class="odd">
+<td>per.estu</td>
+<td>ID_RESIDENCIA_N1</td>
+<td>CC.AA. de residencia</td>
+<td>Autonomous Community</td>
+</tr>
+<tr class="even">
+<td>per.estu</td>
+<td>ID_RESIDENCIA_N2</td>
+<td>Provincia de residencia</td>
+<td>Province of residence</td>
+</tr>
+<tr class="odd">
+<td>per.estu</td>
+<td>ID_RESIDENCIA_N3</td>
+<td>Municipio de residencia</td>
+<td>Municipality of residence</td>
+</tr>
+<tr class="even">
+<td>per.estu</td>
+<td>ID_RESIDENCIA_N4</td>
+<td>Distrito&nbsp;</td>
+<td>District&nbsp;</td>
+</tr>
+<tr class="odd">
+<td>per.estu</td>
+<td>ID_RESIDENCIA_N5</td>
+<td>Sección&nbsp;</td>
+<td>Section</td>
+</tr>
+<tr class="even">
+<td>per.estu</td>
+<td>ID_SEXO</td>
+<td>Sexo</td>
+<td>Sex</td>
+</tr>
+<tr class="odd">
+<td>per.estu</td>
+<td>ID_TAM_MUN_11</td>
+<td>Tamaño de municipio de residencia</td>
+<td>Size of municipality of residence</td>
+</tr>
+<tr class="even">
+<td>per.estu</td>
+<td>ID_TAM_MUN_12</td>
+<td>Tamaño de municipio de nacimiento</td>
+<td>Size of municipality of birth</td>
+</tr>
+<tr class="odd">
+<td>per.estu</td>
+<td>ID_TAM_MUN_ANT_12</td>
+<td>Tamaño de municipio de residencia anterior</td>
+<td>Size of municipality previous residence</td>
+</tr>
+<tr class="even">
+<td>per.estu</td>
+<td>ID_TAMANO_MUN_DANO</td>
+<td>Tamaño de municipio de residencia en 2011</td>
+<td>Size of municipality of residence in 2011</td>
+</tr>
+<tr class="odd">
+<td>per.estu</td>
+<td>ID_TAMANO_MUN_UNANO</td>
+<td>Tamaño de municipio de residencia en 2020</td>
+<td>Size of municipality of residence in 2020</td>
+</tr>
+<tr class="even">
+<td>per.estu</td>
+<td>ID_TIPO_COL</td>
+<td>Tipo de colectivo (detalle)</td>
+<td>Class of collective living quarter (detail)</td>
+</tr>
+<tr class="odd">
+<td>per.estu</td>
+<td>ID_TIPO_COL_AG</td>
+<td>Tipo de colectivo (agregado)</td>
+<td>Class of collective living quarter (aggregated)</td>
+</tr>
+<tr class="even">
+<td>per.estu</td>
+<td>ID_TIPO_MUN_DEGURBA</td>
+<td>Tipo de municipio según grado de urbanización</td>
+<td>Type of municipality according to degree of urbanization</td>
+</tr>
+<tr class="odd">
+<td>per.estu</td>
+<td>ID_ULT_RESI_ANT_N1</td>
+<td>CC.AA. de residencia anterior</td>
+<td>Previous Autonomous Community of residence</td>
+</tr>
+<tr class="even">
+<td>per.estu</td>
+<td>ID_ULT_RESI_ANT_N2</td>
+<td>Provincia de residencia anterior</td>
+<td>Previous Province of residence</td>
+</tr>
+<tr class="odd">
+<td>per.estu</td>
+<td>ID_ULT_RESI_ANT_N3</td>
+<td>Municipio de residencia anterior</td>
+<td>Previous Municipality of residence</td>
+</tr>
+<tr class="even">
+<td>per.estu</td>
+<td>ID_VARANOE</td>
+<td>Año de llegada a España</td>
+<td>Year of arrival to Spain</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="personas-residentes-en-viviendas-familiares-per.ocu" class="level3">
+<h3 class="anchored" data-anchor-id="personas-residentes-en-viviendas-familiares-per.ocu">Personas residentes en viviendas familiares (per.ocu)</h3>
+<table class="table">
+<colgroup>
+<col style="width: 7%">
+<col style="width: 13%">
+<col style="width: 40%">
+<col style="width: 38%">
+</colgroup>
+<tbody>
+<tr class="odd">
+<td><strong>ID tabla</strong></td>
+<td><strong>ID variable</strong></td>
+<td><strong>Descripción variable - ES</strong></td>
+<td><strong>Descripción variable - EN</strong></td>
+</tr>
+<tr class="even">
+<td>per.ocu</td>
+<td>ID_ACT5</td>
+<td>Actividad establecimiento (rama)</td>
+<td>Economic activity&nbsp; (branch)</td>
+</tr>
+<tr class="odd">
+<td>per.ocu</td>
+<td>ID_ANO_CONS_GR11</td>
+<td>Año de construcción (agregado)</td>
+<td>Year of construction&nbsp; (aggregated)</td>
+</tr>
+<tr class="even">
+<td>per.ocu</td>
+<td>ID_CLASE_VIV</td>
+<td>Clase de vivienda</td>
+<td>Class of Dwelling</td>
+</tr>
+<tr class="odd">
+<td>per.ocu</td>
+<td>ID_EDAD</td>
+<td>Edad año a año</td>
+<td>Age year to year</td>
+</tr>
+<tr class="even">
+<td>per.ocu</td>
+<td>ID_EDAD_CON_GR22</td>
+<td>Edad del cónyuge (grupos quinquenales)</td>
+<td>Age of spouse or partner (five-year groups)</td>
+</tr>
+<tr class="odd">
+<td>per.ocu</td>
+<td>ID_EDAD_MAD_GR22</td>
+<td>Edad del progenitor 1 (grupos quinquenales)</td>
+<td>Age of parent 1 (five-year groups)</td>
+</tr>
+<tr class="even">
+<td>per.ocu</td>
+<td>ID_EDAD_PAD_GR22</td>
+<td>Edad del progenitor 2 (grupos quinquenales)</td>
+<td>Age of parent 2 (five-year groups)</td>
+</tr>
+<tr class="odd">
+<td>per.ocu</td>
+<td>ID_ESCUR</td>
+<td>Nivel más alto de la enseñanza principal que cursa</td>
+<td>Highest level of the primary studies in course</td>
+</tr>
+<tr class="even">
+<td>per.ocu</td>
+<td>ID_ESCUR2</td>
+<td>Nivel más alto de otras enseñanzas, si cursa más de una</td>
+<td>Highest level of other studies, if more than one is being pursued</td>
+</tr>
+<tr class="odd">
+<td>per.ocu</td>
+<td>ID_ESREAL_CNEDA</td>
+<td>Nivel de estudios (detalle)</td>
+<td>Educational attainment (detail)</td>
+</tr>
+<tr class="even">
+<td>per.ocu</td>
+<td>ID_ESREAL_CNEDA_CON</td>
+<td>Nivel de estudios del cónyuge (detalle)</td>
+<td>Educational attainment of spouse or partner (detail)</td>
+</tr>
+<tr class="odd">
+<td>per.ocu</td>
+<td>ID_ESREAL_CNEDA_MAD</td>
+<td>Nivel de estudios del progenitor 1 (detalle)</td>
+<td>Educational attainment of parent 1 (detail)</td>
+</tr>
+<tr class="even">
+<td>per.ocu</td>
+<td>ID_ESREAL_CNEDA_PAD</td>
+<td>Nivel de estudios del progenitor 2 (detalle)</td>
+<td>Educational attainment of parent 2 (detail)</td>
+</tr>
+<tr class="odd">
+<td>per.ocu</td>
+<td>ID_ESREAL_GR5</td>
+<td>Nivel de estudios (grado)</td>
+<td>Educational attainment (grade)</td>
+</tr>
+<tr class="even">
+<td>per.ocu</td>
+<td>ID_ESREAL_GR5_CON</td>
+<td>Nivel de estudios del cónyuge (grado)</td>
+<td>Educational attainment of spouse or partner (grade)</td>
+</tr>
+<tr class="odd">
+<td>per.ocu</td>
+<td>ID_ESREAL_GR5_MAD</td>
+<td>Nivel de estudios del progenitor 1 (grado)</td>
+<td>Educational attainment of parent 1 (grade)</td>
+</tr>
+<tr class="even">
+<td>per.ocu</td>
+<td>ID_ESREAL_GR5_PAD</td>
+<td>Nivel de estudios del progenitor 2 (grado)</td>
+<td>Educational attainment of parent 2 (grade)</td>
+</tr>
+<tr class="odd">
+<td>per.ocu</td>
+<td>ID_ESTADO_CIVIL</td>
+<td>Estado Civil</td>
+<td>Legal Marital Status</td>
+</tr>
+<tr class="even">
+<td>per.ocu</td>
+<td>ID_ESTADO_CIVIL_CON</td>
+<td>Estado civil del cónyuge</td>
+<td>Legal Marital status spouse or partner</td>
+</tr>
+<tr class="odd">
+<td>per.ocu</td>
+<td>ID_ESTADO_CIVIL_MAD</td>
+<td>Estado civil del progenitor 1</td>
+<td>Legal Marital status of parent 1</td>
+</tr>
+<tr class="even">
+<td>per.ocu</td>
+<td>ID_ESTADO_CIVIL_PAD</td>
+<td>Estado civil del&nbsp; progenitor 2</td>
+<td>Legal Marital status of parent 2</td>
+</tr>
+<tr class="odd">
+<td>per.ocu</td>
+<td>ID_ESTRUC_HOG_2</td>
+<td>Estructura del hogar</td>
+<td>Household Structure&nbsp;</td>
+</tr>
+<tr class="even">
+<td>per.ocu</td>
+<td>ID_FAM_HOG</td>
+<td>Número familias en el hogar</td>
+<td>Number of families in the household</td>
+</tr>
+<tr class="odd">
+<td>per.ocu</td>
+<td>ID_GRAN_GRUPO_EDAD</td>
+<td>Edad en grandes grupos</td>
+<td>Age in large groups</td>
+</tr>
+<tr class="even">
+<td>per.ocu</td>
+<td>ID_GRUPO_Q_EDAD</td>
+<td>Edad (grupos quinquenales)</td>
+<td>Age (five-year groups)</td>
+</tr>
+<tr class="odd">
+<td>per.ocu</td>
+<td>ID_I_CON</td>
+<td>Vive con cónyuge o pareja</td>
+<td>Cohabiting with the spouse or partner</td>
+</tr>
+<tr class="even">
+<td>per.ocu</td>
+<td>ID_I_MAD</td>
+<td>Vive con progenitor 1</td>
+<td>Cohabiting with parent 1</td>
+</tr>
+<tr class="odd">
+<td>per.ocu</td>
+<td>ID_I_OPA</td>
+<td>Vive con otro pariente</td>
+<td>Cohabiting with other relative</td>
+</tr>
+<tr class="even">
+<td>per.ocu</td>
+<td>ID_I_PAD</td>
+<td>Vive con progenitor 2</td>
+<td>Cohabiting with parent 2</td>
+</tr>
+<tr class="odd">
+<td>per.ocu</td>
+<td>ID_L_EST8</td>
+<td>Lugar de estudio</td>
+<td>Place of study</td>
+</tr>
+<tr class="even">
+<td>per.ocu</td>
+<td>ID_L_TRAB7</td>
+<td>Lugar de trabajo</td>
+<td>Place of work</td>
+</tr>
+<tr class="odd">
+<td>per.ocu</td>
+<td>ID_LUGAR_EST_N1</td>
+<td>CC.AA. de estudio</td>
+<td>Autonomous Community of study</td>
+</tr>
+<tr class="even">
+<td>per.ocu</td>
+<td>ID_LUGAR_EST_N2</td>
+<td>Provincia de estudio</td>
+<td>Province of study</td>
+</tr>
+<tr class="odd">
+<td>per.ocu</td>
+<td>ID_LUGAR_EST_N3</td>
+<td>Municipio de estudio</td>
+<td>Municipality of study</td>
+</tr>
+<tr class="even">
+<td>per.ocu</td>
+<td>ID_LUGAR_NAC_CON_N1</td>
+<td>CC.AA. de nacimiento del cónyuge&nbsp;</td>
+<td>Autonomous Community of birth of spouse or partner&nbsp;</td>
+</tr>
+<tr class="odd">
+<td>per.ocu</td>
+<td>ID_LUGAR_NAC_CON_N2</td>
+<td>Provincia de nacimiento del cónyuge</td>
+<td>Province of birth of spouse or partner</td>
+</tr>
+<tr class="even">
+<td>per.ocu</td>
+<td>ID_LUGAR_NAC_CON_N3</td>
+<td>Municipio de nacimiento del cónyuge</td>
+<td>Municipality of birth of spouse or partner</td>
+</tr>
+<tr class="odd">
+<td>per.ocu</td>
+<td>ID_LUGAR_NAC_EXT_CON_N1</td>
+<td>Lugar de nacimiento del cónyuge (agregado)</td>
+<td>Place of birth of spouse or partner (aggregated)</td>
+</tr>
+<tr class="even">
+<td>per.ocu</td>
+<td>ID_LUGAR_NAC_EXT_CON_N2</td>
+<td>País de nacimiento del cónyuge (grandes grupos)</td>
+<td>Country of birth of spouse or partner&nbsp; (large groups)</td>
+</tr>
+<tr class="odd">
+<td>per.ocu</td>
+<td>ID_LUGAR_NAC_EXT_CON_N3</td>
+<td>País de nacimiento del cónyuge</td>
+<td>Country of birth of spouse or partner</td>
+</tr>
+<tr class="even">
+<td>per.ocu</td>
+<td>ID_LUGAR_NAC_EXT_MAD_N1</td>
+<td>Lugar de nacimiento del progenitor 1 (española/extranjera)&nbsp;</td>
+<td>Place of birth of parent 1 (aggregated)</td>
+</tr>
+<tr class="odd">
+<td>per.ocu</td>
+<td>ID_LUGAR_NAC_EXT_MAD_N2</td>
+<td>País de nacimiento del progenitor 1 (grandes grupos)</td>
+<td>Country of birth (large groups)</td>
+</tr>
+<tr class="even">
+<td>per.ocu</td>
+<td>ID_LUGAR_NAC_EXT_MAD_N3</td>
+<td>País de nacimiento del progenitor 1</td>
+<td>Country of&nbsp; birth parent 1</td>
+</tr>
+<tr class="odd">
+<td>per.ocu</td>
+<td>ID_LUGAR_NAC_EXT_N1</td>
+<td>Lugar de nacimiento (España/Extranjero)</td>
+<td>Place of birth (Spain/abroad)</td>
+</tr>
+<tr class="even">
+<td>per.ocu</td>
+<td>ID_LUGAR_NAC_EXT_N2</td>
+<td>País de nacimiento (grandes grupos)</td>
+<td>Country of birth (large groups)</td>
+</tr>
+<tr class="odd">
+<td>per.ocu</td>
+<td>ID_LUGAR_NAC_EXT_N3</td>
+<td>País de nacimiento</td>
+<td>Country of birth</td>
+</tr>
+<tr class="even">
+<td>per.ocu</td>
+<td>ID_LUGAR_NAC_EXT_PAD_N1</td>
+<td>Lugar de nacimiento del progenitor 2 (agregado)</td>
+<td>Place of birth (aggregate) of parent 2</td>
+</tr>
+<tr class="odd">
+<td>per.ocu</td>
+<td>ID_LUGAR_NAC_EXT_PAD_N2</td>
+<td>País de nacimiento del progenitor 2 (grandes grupos)</td>
+<td>Country of birth (large groups) of parent 2</td>
+</tr>
+<tr class="even">
+<td>per.ocu</td>
+<td>ID_LUGAR_NAC_EXT_PAD_N3</td>
+<td>País de nacimiento del progenitor 2</td>
+<td>Country of birth parent 2</td>
+</tr>
+<tr class="odd">
+<td>per.ocu</td>
+<td>ID_LUGAR_NAC_MAD_N1</td>
+<td>CC.AA. de nacimiento del progenitor 1&nbsp;</td>
+<td>Birth Autonomous Community of parent 1&nbsp;</td>
+</tr>
+<tr class="even">
+<td>per.ocu</td>
+<td>ID_LUGAR_NAC_MAD_N2</td>
+<td>Provincia de nacimiento del progenitor 1</td>
+<td>Birth province of parent 1</td>
+</tr>
+<tr class="odd">
+<td>per.ocu</td>
+<td>ID_LUGAR_NAC_MAD_N3</td>
+<td>Municipio de nacimiento del progenitor 1</td>
+<td>Birth municipality of parent 1</td>
+</tr>
+<tr class="even">
+<td>per.ocu</td>
+<td>ID_LUGAR_NAC_NAC_N1</td>
+<td>CC.AA. de nacimiento</td>
+<td>Autonomous Community of birth</td>
+</tr>
+<tr class="odd">
+<td>per.ocu</td>
+<td>ID_LUGAR_NAC_NAC_N2</td>
+<td>Provincia de nacimiento</td>
+<td>Province of birth</td>
+</tr>
+<tr class="even">
+<td>per.ocu</td>
+<td>ID_LUGAR_NAC_NAC_N3</td>
+<td>Municipio de nacimiento</td>
+<td>Municipality of birth</td>
+</tr>
+<tr class="odd">
+<td>per.ocu</td>
+<td>ID_LUGAR_NAC_PAD_N1</td>
+<td>CC.AA. de nacimiento del progenitor 2</td>
+<td>Birth Autonomous Community of parent 2</td>
+</tr>
+<tr class="even">
+<td>per.ocu</td>
+<td>ID_LUGAR_NAC_PAD_N2</td>
+<td>Provincia de nacimiento del&nbsp; progenitor 2</td>
+<td>Birth province of parent 2</td>
+</tr>
+<tr class="odd">
+<td>per.ocu</td>
+<td>ID_LUGAR_NAC_PAD_N3</td>
+<td>Municipio de nacimiento del&nbsp; progenitor 2</td>
+<td>Birth municipality of parent 2</td>
+</tr>
+<tr class="even">
+<td>per.ocu</td>
+<td>ID_LUGAR_PR_N1</td>
+<td>CC.AA. de procedencia</td>
+<td>Autonomous Community of origin</td>
+</tr>
+<tr class="odd">
+<td>per.ocu</td>
+<td>ID_LUGAR_PR_N2</td>
+<td>Provincia de procedencia</td>
+<td>Province of origin</td>
+</tr>
+<tr class="even">
+<td>per.ocu</td>
+<td>ID_LUGAR_PR_N3</td>
+<td>Municipio de procedencia</td>
+<td>Municipality of origin</td>
+</tr>
+<tr class="odd">
+<td>per.ocu</td>
+<td>ID_NACIONALIDAD_CON_N1</td>
+<td>Nacionalidad del cónyuge (española/extranjera)</td>
+<td>Nationality of spouse or partner (Spanish/foreign)</td>
+</tr>
+<tr class="even">
+<td>per.ocu</td>
+<td>ID_NACIONALIDAD_CON_N2</td>
+<td>Nacionalidad del cónyuge (grandes grupos)</td>
+<td>Nationality of spouse or partner (large groups)</td>
+</tr>
+<tr class="odd">
+<td>per.ocu</td>
+<td>ID_NACIONALIDAD_CON_N3</td>
+<td>País de nacionalidad del cónyuge</td>
+<td>Country of nationality spouse or partner</td>
+</tr>
+<tr class="even">
+<td>per.ocu</td>
+<td>ID_NACIONALIDAD_MAD_N1</td>
+<td>Nacionalidad del progenitor 1 (española/extranjera)</td>
+<td>Nationality of parent 1 (Spanish/foreign)</td>
+</tr>
+<tr class="odd">
+<td>per.ocu</td>
+<td>ID_NACIONALIDAD_MAD_N2</td>
+<td>Nacionalidad del progenitor 1 (grandes grupos)</td>
+<td>Nationality of parent 1 (large groups)</td>
+</tr>
+<tr class="even">
+<td>per.ocu</td>
+<td>ID_NACIONALIDAD_MAD_N3</td>
+<td>País de nacionalidad del progenitor 1</td>
+<td>Country of nacionality of parent 1</td>
+</tr>
+<tr class="odd">
+<td>per.ocu</td>
+<td>ID_NACIONALIDAD_N1</td>
+<td>Nacionalidad (española/extranjera)</td>
+<td>Nationality (Spanish/foreign)</td>
+</tr>
+<tr class="even">
+<td>per.ocu</td>
+<td>ID_NACIONALIDAD_N2</td>
+<td>Nacionalidad (grandes grupos)</td>
+<td>Nationality (large groups)</td>
+</tr>
+<tr class="odd">
+<td>per.ocu</td>
+<td>ID_NACIONALIDAD_N3</td>
+<td>País de nacionalidad</td>
+<td>Country of nationality</td>
+</tr>
+<tr class="even">
+<td>per.ocu</td>
+<td>ID_NACIONALIDAD_PAD_N1</td>
+<td>Nacionalidad del progenitor 2 (española/extranjera)</td>
+<td>Nationality of parent 2 (Spanish/foreign)</td>
+</tr>
+<tr class="odd">
+<td>per.ocu</td>
+<td>ID_NACIONALIDAD_PAD_N2</td>
+<td>Nacionalidad del progenitor 2 (grandes grupos)</td>
+<td>Nationality of parent 2 (large groups)</td>
+</tr>
+<tr class="even">
+<td>per.ocu</td>
+<td>ID_NACIONALIDAD_PAD_N3</td>
+<td>País de nacionalidad del progenitor 2</td>
+<td>Country of nationality parent 2</td>
+</tr>
+<tr class="odd">
+<td>per.ocu</td>
+<td>ID_NHIJOS_NUC</td>
+<td>Número de hijos</td>
+<td>Number of children</td>
+</tr>
+<tr class="even">
+<td>per.ocu</td>
+<td>ID_NUC_HOG</td>
+<td>Número núcleos en el hogar</td>
+<td>Number of family nuclei in the household</td>
+</tr>
+<tr class="odd">
+<td>per.ocu</td>
+<td>ID_OCU11</td>
+<td>Ocupación a 1 dígito CNO-11</td>
+<td>1-digit occupation CNO-11</td>
+</tr>
+<tr class="even">
+<td>per.ocu</td>
+<td>ID_OCU11_CON</td>
+<td>Ocupación del cónyuge a 1 dígito</td>
+<td>Occupation of the spouse or partner to 1 digit</td>
+</tr>
+<tr class="odd">
+<td>per.ocu</td>
+<td>ID_OCU11_MAD</td>
+<td>Ocupación del progenitor 1 a 1 dígito</td>
+<td>Occupation of parent 1 to 1 digit</td>
+</tr>
+<tr class="even">
+<td>per.ocu</td>
+<td>ID_OCU11_PAD</td>
+<td>Ocupación del progenitor 2 a 1 dígito</td>
+<td>Occupation of parent 2 to 1 digit</td>
+</tr>
+<tr class="odd">
+<td>per.ocu</td>
+<td>ID_PAIS_ANT</td>
+<td>País de residencia anterior</td>
+<td>Country of previous residence&nbsp;</td>
+</tr>
+<tr class="even">
+<td>per.ocu</td>
+<td>ID_PAIS_ANT_GR9</td>
+<td>País de residencia anterior (agregado)&nbsp;</td>
+<td>Country of previous residence (aggregated)&nbsp;</td>
+</tr>
+<tr class="odd">
+<td>per.ocu</td>
+<td>ID_PAIS_DANO</td>
+<td>País de residencia en 2011&nbsp;</td>
+<td>Country of residence in 2011</td>
+</tr>
+<tr class="even">
+<td>per.ocu</td>
+<td>ID_PAIS_DANO_GR10</td>
+<td>País residencia en 2011 (agregado)</td>
+<td>Country of residence in 2011 (aggregated)&nbsp;</td>
+</tr>
+<tr class="odd">
+<td>per.ocu</td>
+<td>ID_PAIS_PR</td>
+<td>País de procedencia</td>
+<td>Country of origin</td>
+</tr>
+<tr class="even">
+<td>per.ocu</td>
+<td>ID_PAIS_PR_GR9</td>
+<td>País de procedencia (grandes grupos)</td>
+<td>Country of origin (large groups)</td>
+</tr>
+<tr class="odd">
+<td>per.ocu</td>
+<td>ID_PAIS_UNANO</td>
+<td>País de residencia en 2020&nbsp;</td>
+<td>Country of residence in 2020&nbsp;</td>
+</tr>
+<tr class="even">
+<td>per.ocu</td>
+<td>ID_PAIS_UNANO_GR10</td>
+<td>País de residencia en 2020 (agregado)</td>
+<td>Country of residence in 2020&nbsp; (aggregated)&nbsp;</td>
+</tr>
+<tr class="odd">
+<td>per.ocu</td>
+<td>ID_RELA</td>
+<td>Relación preferente con la actividad (detalle)</td>
+<td>Current activity status (detail)</td>
+</tr>
+<tr class="even">
+<td>per.ocu</td>
+<td>ID_RELA_CON</td>
+<td>Relación con la actividad del cónyuge (detalle)</td>
+<td>Activity status (detail) of the spouse or partner</td>
+</tr>
+<tr class="odd">
+<td>per.ocu</td>
+<td>ID_RELA_MAD</td>
+<td>Relación con la actividad del progenitor 1 (detalle)</td>
+<td>Activity status (detail) parent 1</td>
+</tr>
+<tr class="even">
+<td>per.ocu</td>
+<td>ID_RELA_PAD</td>
+<td>Relación con la actividad del progenitor 2 (detalle)</td>
+<td>Activity status (detail) of parent 2</td>
+</tr>
+<tr class="odd">
+<td>per.ocu</td>
+<td>ID_RELA2</td>
+<td>Relación preferente con la actividad (activo /inactivo)</td>
+<td>Current activity status (active/inactive)</td>
+</tr>
+<tr class="even">
+<td>per.ocu</td>
+<td>ID_RESI_2011_N1</td>
+<td>CC.AA. de residencia en 2011</td>
+<td>Autonomous Community of residence in 2011</td>
+</tr>
+<tr class="odd">
+<td>per.ocu</td>
+<td>ID_RESI_2011_N2</td>
+<td>Provincia de residencia en 2011</td>
+<td>Province of residence in 2011</td>
+</tr>
+<tr class="even">
+<td>per.ocu</td>
+<td>ID_RESI_2011_N3</td>
+<td>Municipio de residencia en 2011</td>
+<td>Municipality of residence in 2011</td>
+</tr>
+<tr class="odd">
+<td>per.ocu</td>
+<td>ID_RESI_2020_N1</td>
+<td>CC.AA. de residencia en 2020</td>
+<td>Autonomous Community of residence in 2020</td>
+</tr>
+<tr class="even">
+<td>per.ocu</td>
+<td>ID_RESI_2020_N2</td>
+<td>Provincia de residencia en 2020</td>
+<td>Province of residence in 2020</td>
+</tr>
+<tr class="odd">
+<td>per.ocu</td>
+<td>ID_RESI_2020_N3</td>
+<td>Municipio de residencia en 2020</td>
+<td>Municipality of residence 2020</td>
+</tr>
+<tr class="even">
+<td>per.ocu</td>
+<td>ID_RESI_ANT</td>
+<td>Relación entre residencia anterior y residencia actual&nbsp;</td>
+<td>Relationship between previous residence and current residence&nbsp;</td>
+</tr>
+<tr class="odd">
+<td>per.ocu</td>
+<td>ID_RESI_DANO</td>
+<td>Relación entre residencia en 2011 y actual&nbsp;</td>
+<td>Relationship between residence in 2011 and current residence&nbsp;</td>
+</tr>
+<tr class="even">
+<td>per.ocu</td>
+<td>ID_RESI_NACIM</td>
+<td>Relación entre lugar de nacimiento y residencia</td>
+<td>Relationship between place of birth and residence</td>
+</tr>
+<tr class="odd">
+<td>per.ocu</td>
+<td>ID_RESI_NACIM_CON</td>
+<td>Relación entre el lugar de nacimiento y el de residencia del cónyuge</td>
+<td>Relationship between place of birth and residence of spouse or partner</td>
+</tr>
+<tr class="even">
+<td>per.ocu</td>
+<td>ID_RESI_NACIM_MAD</td>
+<td>Relación entre el lugar de nacimiento y el de residencia del progenitor 1</td>
+<td>Relationship between place of birth and residence parent 1</td>
+</tr>
+<tr class="odd">
+<td>per.ocu</td>
+<td>ID_RESI_NACIM_PAD</td>
+<td>Relación entre el lugar de nacimiento y el de residencia del progenitor 2</td>
+<td>Relationship between place of birth and residence parent 2</td>
+</tr>
+<tr class="even">
+<td>per.ocu</td>
+<td>ID_RESI_UNANO</td>
+<td>Relación entre residencia en 2020 y actual</td>
+<td>Relationship between residence in 2020 and current residence&nbsp;</td>
+</tr>
+<tr class="odd">
+<td>per.ocu</td>
+<td>ID_RESIDENCIA_N1</td>
+<td>CC.AA. de residencia</td>
+<td>Autonomous Community</td>
+</tr>
+<tr class="even">
+<td>per.ocu</td>
+<td>ID_RESIDENCIA_N2</td>
+<td>Provincia de residencia</td>
+<td>Province of residence</td>
+</tr>
+<tr class="odd">
+<td>per.ocu</td>
+<td>ID_RESIDENCIA_N3</td>
+<td>Municipio de residencia</td>
+<td>Municipality of residence</td>
+</tr>
+<tr class="even">
+<td>per.ocu</td>
+<td>ID_RESIDENCIA_N4</td>
+<td>Distrito&nbsp;</td>
+<td>District&nbsp;</td>
+</tr>
+<tr class="odd">
+<td>per.ocu</td>
+<td>ID_RESIDENCIA_N5</td>
+<td>Sección&nbsp;</td>
+<td>Section</td>
+</tr>
+<tr class="even">
+<td>per.ocu</td>
+<td>ID_SEXO</td>
+<td>Sexo</td>
+<td>Sex</td>
+</tr>
+<tr class="odd">
+<td>per.ocu</td>
+<td>ID_SEXO_CON</td>
+<td>Sexo del cónyuge</td>
+<td>Sex of spouse or partner&nbsp;</td>
+</tr>
+<tr class="even">
+<td>per.ocu</td>
+<td>ID_SEXO_MAD</td>
+<td>Sexo del progenitor 1</td>
+<td>Sex of parent 1</td>
+</tr>
+<tr class="odd">
+<td>per.ocu</td>
+<td>ID_SEXO_PAD</td>
+<td>Sexo del&nbsp; progenitor 2</td>
+<td>Sex of parent 2</td>
+</tr>
+<tr class="even">
+<td>per.ocu</td>
+<td>ID_SITU</td>
+<td>Situación profesional</td>
+<td>Status in employment</td>
+</tr>
+<tr class="odd">
+<td>per.ocu</td>
+<td>ID_SITU_CON</td>
+<td>Situación profesional del cónyuge</td>
+<td>Status in employment of the spouse or partner</td>
+</tr>
+<tr class="even">
+<td>per.ocu</td>
+<td>ID_SITU_MAD</td>
+<td>Situación profesional del progenitor 1</td>
+<td>Status in employment of parent 1</td>
+</tr>
+<tr class="odd">
+<td>per.ocu</td>
+<td>ID_SITU_PAD</td>
+<td>Situación profesional del progenitor 2</td>
+<td>Status in employment of parent 2</td>
+</tr>
+<tr class="even">
+<td>per.ocu</td>
+<td>ID_SUP_OCU_VIV</td>
+<td>Superficie por ocupante</td>
+<td>Useful floor space per occupant</td>
+</tr>
+<tr class="odd">
+<td>per.ocu</td>
+<td>ID_SUP_VIV</td>
+<td>Superficie&nbsp;</td>
+<td>Useful floor space</td>
+</tr>
+<tr class="even">
+<td>per.ocu</td>
+<td>ID_TAM_HOG_6</td>
+<td>Tamaño del hogar</td>
+<td>Size of the household&nbsp;</td>
+</tr>
+<tr class="odd">
+<td>per.ocu</td>
+<td>ID_TAM_MUN_11</td>
+<td>Tamaño de municipio de residencia</td>
+<td>Size of municipality of residence</td>
+</tr>
+<tr class="even">
+<td>per.ocu</td>
+<td>ID_TAM_MUN_12</td>
+<td>Tamaño de municipio de nacimiento</td>
+<td>Size of municipality of birth</td>
+</tr>
+<tr class="odd">
+<td>per.ocu</td>
+<td>ID_TAM_MUN_ANT_12</td>
+<td>Tamaño de municipio de residencia anterior</td>
+<td>Size of municipality previous residence</td>
+</tr>
+<tr class="even">
+<td>per.ocu</td>
+<td>ID_TAM_NUC_1</td>
+<td>Tamaño del núcleo</td>
+<td>Family nucleus size</td>
+</tr>
+<tr class="odd">
+<td>per.ocu</td>
+<td>ID_TAMANO_MUN_DANO</td>
+<td>Tamaño de municipio de residencia en 2011</td>
+<td>Size of municipality of residence in 2011</td>
+</tr>
+<tr class="even">
+<td>per.ocu</td>
+<td>ID_TAMANO_MUN_EST</td>
+<td>Tamaño del municipio de estudio</td>
+<td>Size of municipality of study</td>
+</tr>
+<tr class="odd">
+<td>per.ocu</td>
+<td>ID_TAMANO_MUN_NAC_CON_12</td>
+<td>Tamaño de municipio de nacimiento del cónyuge</td>
+<td>Size of municipality of birth of spouse or partner</td>
+</tr>
+<tr class="even">
+<td>per.ocu</td>
+<td>ID_TAMANO_MUN_NAC_MAD_12</td>
+<td>Tamaño de municipio de nacimiento del progenitor 1</td>
+<td>Size of municipality of birth parent 1</td>
+</tr>
+<tr class="odd">
+<td>per.ocu</td>
+<td>ID_TAMANO_MUN_NAC_PAD_12</td>
+<td>Tamaño de municipio de nacimiento del progenitor 2</td>
+<td>Size of municipality of birth parent 2</td>
+</tr>
+<tr class="even">
+<td>per.ocu</td>
+<td>ID_TAMANO_MUN_PR</td>
+<td>Tamaño de municipio de procedencia</td>
+<td>Size of municipality of origin</td>
+</tr>
+<tr class="odd">
+<td>per.ocu</td>
+<td>ID_TAMANO_MUN_UNANO</td>
+<td>Tamaño de municipio de residencia en 2020</td>
+<td>Size of municipality of residence in 2020</td>
+</tr>
+<tr class="even">
+<td>per.ocu</td>
+<td>ID_TENEN_VIV</td>
+<td>Régimen de tenencia de la vivienda</td>
+<td>Tenure status of dwelling&nbsp;</td>
+</tr>
+<tr class="odd">
+<td>per.ocu</td>
+<td>ID_TESCUR</td>
+<td>Tipo de estudios en curso</td>
+<td>Field of studies in progress</td>
+</tr>
+<tr class="even">
+<td>per.ocu</td>
+<td>ID_TIPO_EDIF_VIV</td>
+<td>Tipo de viviendas según tipo de edificio&nbsp;</td>
+<td>Type of dwellings according to type of building&nbsp;</td>
+</tr>
+<tr class="odd">
+<td>per.ocu</td>
+<td>ID_TIPO_HOG_1</td>
+<td>Tipo de Hogar (detalle)</td>
+<td>Type of Household (detail)</td>
+</tr>
+<tr class="even">
+<td>per.ocu</td>
+<td>ID_TIPO_MUN_DEGURBA</td>
+<td>Tipo de municipio según grado de urbanización</td>
+<td>Type of municipality according to degree of urbanization</td>
+</tr>
+<tr class="odd">
+<td>per.ocu</td>
+<td>ID_TIPO_NUC_1</td>
+<td>Tipo de núcleo</td>
+<td>Type of Family Nucleus</td>
+</tr>
+<tr class="even">
+<td>per.ocu</td>
+<td>ID_TIPO_PAR_NUC_1</td>
+<td>Tipo de pareja (de hecho o de derecho)</td>
+<td>Type of couple (de facto or de jure)</td>
+</tr>
+<tr class="odd">
+<td>per.ocu</td>
+<td>ID_TIPO_PAR_NUC_2</td>
+<td>Tipo de pareja (mismo sexo, distinto sexo)</td>
+<td>Type of couple (same sex, different sex)</td>
+</tr>
+<tr class="even">
+<td>per.ocu</td>
+<td>ID_ULT_RESI_ANT_N1</td>
+<td>CC.AA. de residencia anterior</td>
+<td>Previous Autonomous Community of residence</td>
+</tr>
+<tr class="odd">
+<td>per.ocu</td>
+<td>ID_ULT_RESI_ANT_N2</td>
+<td>Provincia de residencia anterior</td>
+<td>Previous Province of residence</td>
+</tr>
+<tr class="even">
+<td>per.ocu</td>
+<td>ID_ULT_RESI_ANT_N3</td>
+<td>Municipio de residencia anterior</td>
+<td>Previous Municipality of residence</td>
+</tr>
+<tr class="odd">
+<td>per.ocu</td>
+<td>ID_VARANOC</td>
+<td>Año de llegada a la CC.AA.</td>
+<td>Year of arrival to the Autonomous Community</td>
+</tr>
+<tr class="even">
+<td>per.ocu</td>
+<td>ID_VARANOE</td>
+<td>Año de llegada a España</td>
+<td>Year of arrival to Spain</td>
+</tr>
+<tr class="odd">
+<td>per.ocu</td>
+<td>ID_VARANOE_CON</td>
+<td>Año de llegada a España del cónyuge</td>
+<td>Year of arrival to Spain for spouse or partner</td>
+</tr>
+<tr class="even">
+<td>per.ocu</td>
+<td>ID_VARANOE_MAD</td>
+<td>Año de llegada a España del progenitor 1</td>
+<td>Year of arrival to Spain parent 1</td>
+</tr>
+<tr class="odd">
+<td>per.ocu</td>
+<td>ID_VARANOE_PAD</td>
+<td>Año de llegada a España del progenitor 2</td>
+<td>Year of arrival to Spain parent 2</td>
+</tr>
+<tr class="even">
+<td>per.ocu</td>
+<td>ID_VARANOM</td>
+<td>Año de llegada al municipio</td>
+<td>Year of arrival in the municipality</td>
+</tr>
+<tr class="odd">
+<td>per.ocu</td>
+<td>ID_VARANOP</td>
+<td>Año de llegada a la provincia&nbsp;</td>
+<td>Year of arrival to the province&nbsp;</td>
+</tr>
+<tr class="even">
+<td>per.ocu</td>
+<td>ID_VARANORES</td>
+<td>Año de llegada a la vivienda</td>
+<td>Year of arrival to the dwelling</td>
+</tr>
+<tr class="odd">
+<td>per.ocu</td>
+<td>ID_VAREDAD_CON</td>
+<td>Edad del cónyuge (año a año)</td>
+<td>Age of spouse or partner (year to year)</td>
+</tr>
+<tr class="even">
+<td>per.ocu</td>
+<td>ID_VAREDAD_MAD</td>
+<td>Edad del progenitor 1 (año a año)</td>
+<td>Age of parent 1 (year to year)</td>
+</tr>
+<tr class="odd">
+<td>per.ocu</td>
+<td>ID_VAREDAD_PAD</td>
+<td>Edad del progenitor 2 (año a año)</td>
+<td>Age of parent 2 (year to year)</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="total-de-personas-per.ppal" class="level3">
+<h3 class="anchored" data-anchor-id="total-de-personas-per.ppal">Total de personas (per.ppal)</h3>
+<table class="table">
+<colgroup>
+<col style="width: 8%">
+<col style="width: 13%">
+<col style="width: 35%">
+<col style="width: 42%">
+</colgroup>
+<tbody>
+<tr class="odd">
+<td><strong>ID tabla</strong></td>
+<td><strong>ID variable</strong></td>
+<td><strong>Descripción variable - ES</strong></td>
+<td><strong>Descripción variable - EN</strong></td>
+</tr>
+<tr class="even">
+<td>per.ppal</td>
+<td>ID_CLASE_VIV</td>
+<td>Clase de vivienda</td>
+<td>Class of Dwelling</td>
+</tr>
+<tr class="odd">
+<td>per.ppal</td>
+<td>ID_EDAD</td>
+<td>Edad año a año</td>
+<td>Age year to year</td>
+</tr>
+<tr class="even">
+<td>per.ppal</td>
+<td>ID_ESCUR</td>
+<td>Nivel más alto de la enseñanza principal que cursa</td>
+<td>Highest level of the primary studies in course</td>
+</tr>
+<tr class="odd">
+<td>per.ppal</td>
+<td>ID_ESCUR2</td>
+<td>Nivel más alto de otras enseñanzas, si cursa más de una</td>
+<td>Highest level of other studies, if more than one is being pursued</td>
+</tr>
+<tr class="even">
+<td>per.ppal</td>
+<td>ID_ESREAL_CNEDA</td>
+<td>Nivel de estudios (detalle)</td>
+<td>Educational attainment (detail)</td>
+</tr>
+<tr class="odd">
+<td>per.ppal</td>
+<td>ID_ESREAL_GR5</td>
+<td>Nivel de estudios (grado)</td>
+<td>Educational attainment (grade)</td>
+</tr>
+<tr class="even">
+<td>per.ppal</td>
+<td>ID_ESTADO_CIVIL</td>
+<td>Estado Civil</td>
+<td>Legal Marital Status</td>
+</tr>
+<tr class="odd">
+<td>per.ppal</td>
+<td>ID_GRAN_GRUPO_EDAD</td>
+<td>Edad en grandes grupos</td>
+<td>Age in large groups</td>
+</tr>
+<tr class="even">
+<td>per.ppal</td>
+<td>ID_GRUPO_Q_EDAD</td>
+<td>Edad (grupos quinquenales)</td>
+<td>Age (five-year groups)</td>
+</tr>
+<tr class="odd">
+<td>per.ppal</td>
+<td>ID_L_EST8</td>
+<td>Lugar de estudio</td>
+<td>Place of study</td>
+</tr>
+<tr class="even">
+<td>per.ppal</td>
+<td>ID_LUGAR_EST_N1</td>
+<td>CC.AA. de estudio</td>
+<td>Autonomous Community of study</td>
+</tr>
+<tr class="odd">
+<td>per.ppal</td>
+<td>ID_LUGAR_EST_N2</td>
+<td>Provincia de estudio</td>
+<td>Province of study</td>
+</tr>
+<tr class="even">
+<td>per.ppal</td>
+<td>ID_LUGAR_EST_N3</td>
+<td>Municipio de estudio</td>
+<td>Municipality of study</td>
+</tr>
+<tr class="odd">
+<td>per.ppal</td>
+<td>ID_LUGAR_NAC_EXT_N1</td>
+<td>Lugar de nacimiento (España/Extranjero)</td>
+<td>Place of birth (Spain/abroad)</td>
+</tr>
+<tr class="even">
+<td>per.ppal</td>
+<td>ID_LUGAR_NAC_EXT_N2</td>
+<td>País de nacimiento (grandes grupos)</td>
+<td>Country of birth (large groups)</td>
+</tr>
+<tr class="odd">
+<td>per.ppal</td>
+<td>ID_LUGAR_NAC_EXT_N3</td>
+<td>País de nacimiento</td>
+<td>Country of birth</td>
+</tr>
+<tr class="even">
+<td>per.ppal</td>
+<td>ID_LUGAR_NAC_NAC_N1</td>
+<td>CC.AA. de nacimiento</td>
+<td>Autonomous Community of birth</td>
+</tr>
+<tr class="odd">
+<td>per.ppal</td>
+<td>ID_LUGAR_NAC_NAC_N2</td>
+<td>Provincia de nacimiento</td>
+<td>Province of birth</td>
+</tr>
+<tr class="even">
+<td>per.ppal</td>
+<td>ID_LUGAR_NAC_NAC_N3</td>
+<td>Municipio de nacimiento</td>
+<td>Municipality of birth</td>
+</tr>
+<tr class="odd">
+<td>per.ppal</td>
+<td>ID_LUGAR_PR_N1</td>
+<td>CC.AA. de procedencia</td>
+<td>Autonomous Community of origin</td>
+</tr>
+<tr class="even">
+<td>per.ppal</td>
+<td>ID_LUGAR_PR_N2</td>
+<td>Provincia de procedencia</td>
+<td>Province of origin</td>
+</tr>
+<tr class="odd">
+<td>per.ppal</td>
+<td>ID_LUGAR_PR_N3</td>
+<td>Municipio de procedencia</td>
+<td>Municipality of origin</td>
+</tr>
+<tr class="even">
+<td>per.ppal</td>
+<td>ID_NACIONALIDAD_N1</td>
+<td>Nacionalidad (española/extranjera)</td>
+<td>Nationality (Spanish/foreign)</td>
+</tr>
+<tr class="odd">
+<td>per.ppal</td>
+<td>ID_NACIONALIDAD_N2</td>
+<td>Nacionalidad (grandes grupos)</td>
+<td>Nationality (large groups)</td>
+</tr>
+<tr class="even">
+<td>per.ppal</td>
+<td>ID_NACIONALIDAD_N3</td>
+<td>País de nacionalidad</td>
+<td>Country of nationality</td>
+</tr>
+<tr class="odd">
+<td>per.ppal</td>
+<td>ID_PAIS_ANT</td>
+<td>País de residencia anterior</td>
+<td>Country of previous residence&nbsp;</td>
+</tr>
+<tr class="even">
+<td>per.ppal</td>
+<td>ID_PAIS_ANT_GR9</td>
+<td>País de residencia anterior (agregado)&nbsp;</td>
+<td>Country of previous residence (aggregated)&nbsp;</td>
+</tr>
+<tr class="odd">
+<td>per.ppal</td>
+<td>ID_PAIS_DANO</td>
+<td>País de residencia en 2011&nbsp;</td>
+<td>Country of residence in 2011</td>
+</tr>
+<tr class="even">
+<td>per.ppal</td>
+<td>ID_PAIS_DANO_GR10</td>
+<td>País residencia en 2011 (agregado)</td>
+<td>Country of residence in 2011 (aggregated)&nbsp;</td>
+</tr>
+<tr class="odd">
+<td>per.ppal</td>
+<td>ID_PAIS_PR</td>
+<td>País de procedencia</td>
+<td>Country of origin</td>
+</tr>
+<tr class="even">
+<td>per.ppal</td>
+<td>ID_PAIS_PR_GR9</td>
+<td>País de procedencia (grandes grupos)</td>
+<td>Country of origin (large groups)</td>
+</tr>
+<tr class="odd">
+<td>per.ppal</td>
+<td>ID_PAIS_UNANO</td>
+<td>País de residencia en 2020&nbsp;</td>
+<td>Country of residence in 2020&nbsp;</td>
+</tr>
+<tr class="even">
+<td>per.ppal</td>
+<td>ID_PAIS_UNANO_GR10</td>
+<td>País de residencia en 2020 (agregado)</td>
+<td>Country of residence in 2020&nbsp; (aggregated)&nbsp;</td>
+</tr>
+<tr class="odd">
+<td>per.ppal</td>
+<td>ID_RELA</td>
+<td>Relación preferente con la actividad (detalle)</td>
+<td>Current activity status (detail)</td>
+</tr>
+<tr class="even">
+<td>per.ppal</td>
+<td>ID_RELA2</td>
+<td>Relación preferente con la actividad (activo /inactivo)</td>
+<td>Current activity status (active/inactive)</td>
+</tr>
+<tr class="odd">
+<td>per.ppal</td>
+<td>ID_RESI_2011_N1</td>
+<td>CC.AA. de residencia en 2011</td>
+<td>Autonomous Community of residence in 2011</td>
+</tr>
+<tr class="even">
+<td>per.ppal</td>
+<td>ID_RESI_2011_N2</td>
+<td>Provincia de residencia en 2011</td>
+<td>Province of residence in 2011</td>
+</tr>
+<tr class="odd">
+<td>per.ppal</td>
+<td>ID_RESI_2011_N3</td>
+<td>Municipio de residencia en 2011</td>
+<td>Municipality of residence in 2011</td>
+</tr>
+<tr class="even">
+<td>per.ppal</td>
+<td>ID_RESI_2020_N1</td>
+<td>CC.AA. de residencia en 2020</td>
+<td>Autonomous Community of residence in 2020</td>
+</tr>
+<tr class="odd">
+<td>per.ppal</td>
+<td>ID_RESI_2020_N2</td>
+<td>Provincia de residencia en 2020</td>
+<td>Province of residence in 2020</td>
+</tr>
+<tr class="even">
+<td>per.ppal</td>
+<td>ID_RESI_2020_N3</td>
+<td>Municipio de residencia en 2020</td>
+<td>Municipality of residence 2020</td>
+</tr>
+<tr class="odd">
+<td>per.ppal</td>
+<td>ID_RESI_ANT</td>
+<td>Relación entre residencia anterior y residencia actual&nbsp;</td>
+<td>Relationship between previous residence and current residence&nbsp;</td>
+</tr>
+<tr class="even">
+<td>per.ppal</td>
+<td>ID_RESI_DANO</td>
+<td>Relación entre residencia en 2011 y actual&nbsp;</td>
+<td>Relationship between residence in 2011 and current residence&nbsp;</td>
+</tr>
+<tr class="odd">
+<td>per.ppal</td>
+<td>ID_RESI_NACIM</td>
+<td>Relación entre lugar de nacimiento y residencia</td>
+<td>Relationship between place of birth and residence</td>
+</tr>
+<tr class="even">
+<td>per.ppal</td>
+<td>ID_RESI_UNANO</td>
+<td>Relación entre residencia en 2020 y actual</td>
+<td>Relationship between residence in 2020 and current residence&nbsp;</td>
+</tr>
+<tr class="odd">
+<td>per.ppal</td>
+<td>ID_RESIDENCIA_N1</td>
+<td>CC.AA. de residencia</td>
+<td>Autonomous Community</td>
+</tr>
+<tr class="even">
+<td>per.ppal</td>
+<td>ID_RESIDENCIA_N2</td>
+<td>Provincia de residencia</td>
+<td>Province of residence</td>
+</tr>
+<tr class="odd">
+<td>per.ppal</td>
+<td>ID_RESIDENCIA_N3</td>
+<td>Municipio de residencia</td>
+<td>Municipality of residence</td>
+</tr>
+<tr class="even">
+<td>per.ppal</td>
+<td>ID_RESIDENCIA_N4</td>
+<td>Distrito&nbsp;</td>
+<td>District&nbsp;</td>
+</tr>
+<tr class="odd">
+<td>per.ppal</td>
+<td>ID_RESIDENCIA_N5</td>
+<td>Sección&nbsp;</td>
+<td>Section</td>
+</tr>
+<tr class="even">
+<td>per.ppal</td>
+<td>ID_SEXO</td>
+<td>Sexo</td>
+<td>Sex</td>
+</tr>
+<tr class="odd">
+<td>per.ppal</td>
+<td>ID_TAM_MUN_11</td>
+<td>Tamaño de municipio de residencia</td>
+<td>Size of municipality of residence</td>
+</tr>
+<tr class="even">
+<td>per.ppal</td>
+<td>ID_TAM_MUN_12</td>
+<td>Tamaño de municipio de nacimiento</td>
+<td>Size of municipality of birth</td>
+</tr>
+<tr class="odd">
+<td>per.ppal</td>
+<td>ID_TAM_MUN_ANT_12</td>
+<td>Tamaño de municipio de residencia anterior</td>
+<td>Size of municipality previous residence</td>
+</tr>
+<tr class="even">
+<td>per.ppal</td>
+<td>ID_TAMANO_MUN_DANO</td>
+<td>Tamaño de municipio de residencia en 2011</td>
+<td>Size of municipality of residence in 2011</td>
+</tr>
+<tr class="odd">
+<td>per.ppal</td>
+<td>ID_TAMANO_MUN_EST</td>
+<td>Tamaño del municipio de estudio</td>
+<td>Size of municipality of study</td>
+</tr>
+<tr class="even">
+<td>per.ppal</td>
+<td>ID_TAMANO_MUN_PR</td>
+<td>Tamaño de municipio de procedencia</td>
+<td>Size of municipality of origin</td>
+</tr>
+<tr class="odd">
+<td>per.ppal</td>
+<td>ID_TAMANO_MUN_UNANO</td>
+<td>Tamaño de municipio de residencia en 2020</td>
+<td>Size of municipality of residence in 2020</td>
+</tr>
+<tr class="even">
+<td>per.ppal</td>
+<td>ID_TESCUR</td>
+<td>Tipo de estudios en curso</td>
+<td>Field of studies in progress</td>
+</tr>
+<tr class="odd">
+<td>per.ppal</td>
+<td>ID_TIPO_MUN_DEGURBA</td>
+<td>Tipo de municipio según grado de urbanización</td>
+<td>Type of municipality according to degree of urbanization</td>
+</tr>
+<tr class="even">
+<td>per.ppal</td>
+<td>ID_ULT_RESI_ANT_N1</td>
+<td>CC.AA. de residencia anterior</td>
+<td>Previous Autonomous Community of residence</td>
+</tr>
+<tr class="odd">
+<td>per.ppal</td>
+<td>ID_ULT_RESI_ANT_N2</td>
+<td>Provincia de residencia anterior</td>
+<td>Previous Province of residence</td>
+</tr>
+<tr class="even">
+<td>per.ppal</td>
+<td>ID_ULT_RESI_ANT_N3</td>
+<td>Municipio de residencia anterior</td>
+<td>Previous Municipality of residence</td>
+</tr>
+<tr class="odd">
+<td>per.ppal</td>
+<td>ID_VARANOC</td>
+<td>Año de llegada a la CC.AA.</td>
+<td>Year of arrival to the Autonomous Community</td>
+</tr>
+<tr class="even">
+<td>per.ppal</td>
+<td>ID_VARANOE</td>
+<td>Año de llegada a España</td>
+<td>Year of arrival to Spain</td>
+</tr>
+<tr class="odd">
+<td>per.ppal</td>
+<td>ID_VARANOM</td>
+<td>Año de llegada al municipio</td>
+<td>Year of arrival in the municipality</td>
+</tr>
+<tr class="even">
+<td>per.ppal</td>
+<td>ID_VARANOP</td>
+<td>Año de llegada a la provincia&nbsp;</td>
+<td>Year of arrival to the province&nbsp;</td>
+</tr>
+<tr class="odd">
+<td>per.ppal</td>
+<td>ID_VARANORES</td>
+<td>Año de llegada a la vivienda</td>
+<td>Year of arrival to the dwelling</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="viviendas-familiares-viv.fam" class="level3">
+<h3 class="anchored" data-anchor-id="viviendas-familiares-viv.fam">Viviendas familiares (viv.fam)</h3>
+<table class="table">
+<colgroup>
+<col style="width: 9%">
+<col style="width: 16%">
+<col style="width: 32%">
+<col style="width: 40%">
+</colgroup>
+<tbody>
+<tr class="odd">
+<td><strong>ID tabla</strong></td>
+<td><strong>ID variable</strong></td>
+<td><strong>Descripción variable - ES</strong></td>
+<td><strong>Descripción variable - EN</strong></td>
+</tr>
+<tr class="even">
+<td>viv.fam</td>
+<td>ID_ANO_CONS</td>
+<td>Año de construcción (todo)</td>
+<td>Year of construction (detail)</td>
+</tr>
+<tr class="odd">
+<td>viv.fam</td>
+<td>ID_ANO_CONS_GR11</td>
+<td>Año de construcción (agregado)</td>
+<td>Year of construction&nbsp; (aggregated)</td>
+</tr>
+<tr class="even">
+<td>viv.fam</td>
+<td>ID_CLASE_VIV_FAM</td>
+<td>Clase de vivienda familiar</td>
+<td>Class of main family dwelling</td>
+</tr>
+<tr class="odd">
+<td>viv.fam</td>
+<td>ID_NPLANTAS_BAJO_EDIF</td>
+<td>Número plantas bajo rasante</td>
+<td>Number of floors below ground level</td>
+</tr>
+<tr class="even">
+<td>viv.fam</td>
+<td>ID_NPLANTAS_SOBRE_EDIF</td>
+<td>Número plantas sobre rasante</td>
+<td>Number of floors above ground level</td>
+</tr>
+<tr class="odd">
+<td>viv.fam</td>
+<td>ID_RESIDENCIA_N1</td>
+<td>CC.AA. de residencia</td>
+<td>Autonomous Community</td>
+</tr>
+<tr class="even">
+<td>viv.fam</td>
+<td>ID_RESIDENCIA_N2</td>
+<td>Provincia de residencia</td>
+<td>Province of residence</td>
+</tr>
+<tr class="odd">
+<td>viv.fam</td>
+<td>ID_RESIDENCIA_N3</td>
+<td>Municipio de residencia</td>
+<td>Municipality of residence</td>
+</tr>
+<tr class="even">
+<td>viv.fam</td>
+<td>ID_RESIDENCIA_N4</td>
+<td>Distrito&nbsp;</td>
+<td>District&nbsp;</td>
+</tr>
+<tr class="odd">
+<td>viv.fam</td>
+<td>ID_RESIDENCIA_N5</td>
+<td>Sección&nbsp;</td>
+<td>Section</td>
+</tr>
+<tr class="even">
+<td>viv.fam</td>
+<td>ID_SUP_OCU_VIV</td>
+<td>Superficie por ocupante</td>
+<td>Useful floor space per occupant</td>
+</tr>
+<tr class="odd">
+<td>viv.fam</td>
+<td>ID_SUP_VIV</td>
+<td>Superficie&nbsp;</td>
+<td>Useful floor space</td>
+</tr>
+<tr class="even">
+<td>viv.fam</td>
+<td>ID_TAM_HOG_6</td>
+<td>Tamaño del hogar</td>
+<td>Size of the household&nbsp;</td>
+</tr>
+<tr class="odd">
+<td>viv.fam</td>
+<td>ID_TAM_MUN_VIV</td>
+<td>Tamaño de municipio de residencia</td>
+<td>Size of municipality of residence</td>
+</tr>
+<tr class="even">
+<td>viv.fam</td>
+<td>ID_TENEN_VIV</td>
+<td>Régimen de tenencia de la vivienda</td>
+<td>Tenure status of dwelling&nbsp;</td>
+</tr>
+<tr class="odd">
+<td>viv.fam</td>
+<td>ID_TIPO_EDIF_VIV</td>
+<td>Tipo de viviendas según tipo de edificio&nbsp;</td>
+<td>Type of dwellings according to type of building&nbsp;</td>
+</tr>
+<tr class="even">
+<td>viv.fam</td>
+<td>ID_TIPO_MUN_DEGURBA</td>
+<td>Tipo de municipio según grado de urbanización</td>
+<td>Type of municipality according to degree of urbanization</td>
+</tr>
+<tr class="odd">
+<td>viv.fam</td>
+<td>ID_TIPO_VIV_USO</td>
+<td>Tipo de vivienda según uso</td>
+<td>Class of family dwelling according to use</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="ocupados-de-16-y-más-años-viv.ppal" class="level3">
+<h3 class="anchored" data-anchor-id="ocupados-de-16-y-más-años-viv.ppal">Ocupados de 16 y más años (viv.ppal)</h3>
+<table class="table">
+<colgroup>
+<col style="width: 8%">
+<col style="width: 13%">
+<col style="width: 35%">
+<col style="width: 42%">
+</colgroup>
+<tbody>
+<tr class="odd">
+<td><strong>ID tabla</strong></td>
+<td><strong>ID variable</strong></td>
+<td><strong>Descripción variable - ES</strong></td>
+<td><strong>Descripción variable - EN</strong></td>
+</tr>
+<tr class="even">
+<td>viv.ppal</td>
+<td>ID_ACT22</td>
+<td>Actividad establecimiento a 1 letra CNAE-09</td>
+<td>Economic activity at 1 letter CNAE-09</td>
+</tr>
+<tr class="odd">
+<td>viv.ppal</td>
+<td>ID_ACT273</td>
+<td>Actividad establecimiento a 3 dígitos CNAE-09</td>
+<td>Economic activity3-digit CNAE-09</td>
+</tr>
+<tr class="even">
+<td>viv.ppal</td>
+<td>ID_ACT5</td>
+<td>Actividad establecimiento (rama)</td>
+<td>Economic activity&nbsp; (branch)</td>
+</tr>
+<tr class="odd">
+<td>viv.ppal</td>
+<td>ID_ACT89</td>
+<td>Actividad establecimiento a 2 dígitos CNAE-09</td>
+<td>Economic activity 2-digit CNAE-09</td>
+</tr>
+<tr class="even">
+<td>viv.ppal</td>
+<td>ID_CLASE_VIV</td>
+<td>Clase de vivienda</td>
+<td>Class of Dwelling</td>
+</tr>
+<tr class="odd">
+<td>viv.ppal</td>
+<td>ID_EDAD</td>
+<td>Edad año a año</td>
+<td>Age year to year</td>
+</tr>
+<tr class="even">
+<td>viv.ppal</td>
+<td>ID_ESCUR</td>
+<td>Nivel más alto de la enseñanza principal que cursa</td>
+<td>Highest level of the primary studies in course</td>
+</tr>
+<tr class="odd">
+<td>viv.ppal</td>
+<td>ID_ESCUR2</td>
+<td>Nivel más alto de otras enseñanzas, si cursa más de una</td>
+<td>Highest level of other studies, if more than one is being pursued</td>
+</tr>
+<tr class="even">
+<td>viv.ppal</td>
+<td>ID_ESREAL_CNEDA</td>
+<td>Nivel de estudios (detalle)</td>
+<td>Educational attainment (detail)</td>
+</tr>
+<tr class="odd">
+<td>viv.ppal</td>
+<td>ID_ESREAL_GR5</td>
+<td>Nivel de estudios (grado)</td>
+<td>Educational attainment (grade)</td>
+</tr>
+<tr class="even">
+<td>viv.ppal</td>
+<td>ID_ESTADO_CIVIL</td>
+<td>Estado Civil</td>
+<td>Legal Marital Status</td>
+</tr>
+<tr class="odd">
+<td>viv.ppal</td>
+<td>ID_GRAN_GRUPO_EDAD</td>
+<td>Edad en grandes grupos</td>
+<td>Age in large groups</td>
+</tr>
+<tr class="even">
+<td>viv.ppal</td>
+<td>ID_GRUPO_Q_EDAD</td>
+<td>Edad (grupos quinquenales)</td>
+<td>Age (five-year groups)</td>
+</tr>
+<tr class="odd">
+<td>viv.ppal</td>
+<td>ID_L_EST8</td>
+<td>Lugar de estudio</td>
+<td>Place of study</td>
+</tr>
+<tr class="even">
+<td>viv.ppal</td>
+<td>ID_L_TRAB7</td>
+<td>Lugar de trabajo</td>
+<td>Place of work</td>
+</tr>
+<tr class="odd">
+<td>viv.ppal</td>
+<td>ID_LUGAR_EST_N1</td>
+<td>CC.AA. de estudio</td>
+<td>Autonomous Community of study</td>
+</tr>
+<tr class="even">
+<td>viv.ppal</td>
+<td>ID_LUGAR_EST_N2</td>
+<td>Provincia de estudio</td>
+<td>Province of study</td>
+</tr>
+<tr class="odd">
+<td>viv.ppal</td>
+<td>ID_LUGAR_EST_N3</td>
+<td>Municipio de estudio</td>
+<td>Municipality of study</td>
+</tr>
+<tr class="even">
+<td>viv.ppal</td>
+<td>ID_LUGAR_NAC_EXT_N1</td>
+<td>Lugar de nacimiento (España/Extranjero)</td>
+<td>Place of birth (Spain/abroad)</td>
+</tr>
+<tr class="odd">
+<td>viv.ppal</td>
+<td>ID_LUGAR_NAC_EXT_N2</td>
+<td>País de nacimiento (grandes grupos)</td>
+<td>Country of birth (large groups)</td>
+</tr>
+<tr class="even">
+<td>viv.ppal</td>
+<td>ID_LUGAR_NAC_EXT_N3</td>
+<td>País de nacimiento</td>
+<td>Country of birth</td>
+</tr>
+<tr class="odd">
+<td>viv.ppal</td>
+<td>ID_LUGAR_NAC_NAC_N1</td>
+<td>CC.AA. de nacimiento</td>
+<td>Autonomous Community of birth</td>
+</tr>
+<tr class="even">
+<td>viv.ppal</td>
+<td>ID_LUGAR_NAC_NAC_N2</td>
+<td>Provincia de nacimiento</td>
+<td>Province of birth</td>
+</tr>
+<tr class="odd">
+<td>viv.ppal</td>
+<td>ID_LUGAR_NAC_NAC_N3</td>
+<td>Municipio de nacimiento</td>
+<td>Municipality of birth</td>
+</tr>
+<tr class="even">
+<td>viv.ppal</td>
+<td>ID_LUGAR_TRAB_N1</td>
+<td>CC.AA. de trabajo</td>
+<td>Autonomous Community of work</td>
+</tr>
+<tr class="odd">
+<td>viv.ppal</td>
+<td>ID_LUGAR_TRAB_N2</td>
+<td>Provincia de trabajo</td>
+<td>Province of work</td>
+</tr>
+<tr class="even">
+<td>viv.ppal</td>
+<td>ID_LUGAR_TRAB_N3</td>
+<td>Municipio de trabajo</td>
+<td>Municipality of work</td>
+</tr>
+<tr class="odd">
+<td>viv.ppal</td>
+<td>ID_NACIONALIDAD_N1</td>
+<td>Nacionalidad (española/extranjera)</td>
+<td>Nationality (Spanish/foreign)</td>
+</tr>
+<tr class="even">
+<td>viv.ppal</td>
+<td>ID_NACIONALIDAD_N2</td>
+<td>Nacionalidad (grandes grupos)</td>
+<td>Nationality (large groups)</td>
+</tr>
+<tr class="odd">
+<td>viv.ppal</td>
+<td>ID_NACIONALIDAD_N3</td>
+<td>País de nacionalidad</td>
+<td>Country of nationality</td>
+</tr>
+<tr class="even">
+<td>viv.ppal</td>
+<td>ID_OCU11</td>
+<td>Ocupación a 1 dígito CNO-11</td>
+<td>1-digit occupation CNO-11</td>
+</tr>
+<tr class="odd">
+<td>viv.ppal</td>
+<td>ID_OCU171</td>
+<td>Ocupación a 3 dígitos CNO-11</td>
+<td>3-digit occupation CNO-11</td>
+</tr>
+<tr class="even">
+<td>viv.ppal</td>
+<td>ID_OCU63</td>
+<td>Ocupación a 2 dígitos CNO-11</td>
+<td>2-digit occupation CNO-11</td>
+</tr>
+<tr class="odd">
+<td>viv.ppal</td>
+<td>ID_PAIS_PR_GR9</td>
+<td>País de procedencia (grandes grupos)</td>
+<td>Country of origin (large groups)</td>
+</tr>
+<tr class="even">
+<td>viv.ppal</td>
+<td>ID_RESI_NACIM</td>
+<td>Relación entre lugar de nacimiento y residencia</td>
+<td>Relationship between place of birth and residence</td>
+</tr>
+<tr class="odd">
+<td>viv.ppal</td>
+<td>ID_RESIDENCIA_N1</td>
+<td>CC.AA. de residencia</td>
+<td>Autonomous Community</td>
+</tr>
+<tr class="even">
+<td>viv.ppal</td>
+<td>ID_RESIDENCIA_N2</td>
+<td>Provincia de residencia</td>
+<td>Province of residence</td>
+</tr>
+<tr class="odd">
+<td>viv.ppal</td>
+<td>ID_RESIDENCIA_N3</td>
+<td>Municipio de residencia</td>
+<td>Municipality of residence</td>
+</tr>
+<tr class="even">
+<td>viv.ppal</td>
+<td>ID_RESIDENCIA_N4</td>
+<td>Distrito&nbsp;</td>
+<td>District&nbsp;</td>
+</tr>
+<tr class="odd">
+<td>viv.ppal</td>
+<td>ID_RESIDENCIA_N5</td>
+<td>Sección&nbsp;</td>
+<td>Section</td>
+</tr>
+<tr class="even">
+<td>viv.ppal</td>
+<td>ID_SEXO</td>
+<td>Sexo</td>
+<td>Sex</td>
+</tr>
+<tr class="odd">
+<td>viv.ppal</td>
+<td>ID_SITU</td>
+<td>Situación profesional</td>
+<td>Status in employment</td>
+</tr>
+<tr class="even">
+<td>viv.ppal</td>
+<td>ID_TAM_MUN_11</td>
+<td>Tamaño de municipio de residencia</td>
+<td>Size of municipality of residence</td>
+</tr>
+<tr class="odd">
+<td>viv.ppal</td>
+<td>ID_TAM_MUN_12</td>
+<td>Tamaño de municipio de nacimiento</td>
+<td>Size of municipality of birth</td>
+</tr>
+<tr class="even">
+<td>viv.ppal</td>
+<td>ID_TAMANO_MUN_EST</td>
+<td>Tamaño del municipio de estudio</td>
+<td>Size of municipality of study</td>
+</tr>
+<tr class="odd">
+<td>viv.ppal</td>
+<td>ID_TAMANO_MUN_TRAB</td>
+<td>Tamaño del municipio de trabajo</td>
+<td>Size of municipality of work</td>
+</tr>
+<tr class="even">
+<td>viv.ppal</td>
+<td>ID_TESCUR</td>
+<td>Tipo de estudios en curso</td>
+<td>Field of studies in progress</td>
+</tr>
+<tr class="odd">
+<td>viv.ppal</td>
+<td>ID_TIPO_MUN_DEGURBA</td>
+<td>Tipo de municipio según grado de urbanización</td>
+<td>Type of municipality according to degree of urbanization</td>
+</tr>
+<tr class="even">
+<td>viv.ppal</td>
+<td>ID_VARANOE</td>
+<td>Año de llegada a España</td>
+<td>Year of arrival to Spain</td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+<section id="lista-de-unidades-de-medida-métricas-disponibles-para-cada-tabla" class="level2">
+<h2 class="anchored" data-anchor-id="lista-de-unidades-de-medida-métricas-disponibles-para-cada-tabla">Lista de unidades de medida (métricas) disponibles para cada tabla</h2>
+<section id="hogares-hog-1" class="level3">
+<h3 class="anchored" data-anchor-id="hogares-hog-1"><strong>Hogares (hog)</strong></h3>
+<table class="table">
+<colgroup>
+<col style="width: 11%">
+<col style="width: 21%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<tbody>
+<tr class="odd">
+<td><strong>ID tabla</strong></td>
+<td><strong>ID unidad de medida</strong></td>
+<td><strong>Descripción unidad de medida - ES</strong></td>
+<td><strong>Descripción unidad de medida - EN</strong></td>
+</tr>
+<tr class="even">
+<td>hog</td>
+<td>SHOGARES</td>
+<td>Número de Hogares</td>
+<td>No.&nbsp;of Households</td>
+</tr>
+<tr class="odd">
+<td>hog</td>
+<td>MEDIA_SSUPERFICIE_OCU</td>
+<td>Superficie media por ocupante</td>
+<td>Average floor space by occupant</td>
+</tr>
+<tr class="even">
+<td>hog</td>
+<td>STAM_HOG</td>
+<td>Tamaño medio del hogar</td>
+<td>Average size of household</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="parejas-y-otros-núcleos-familiares-nuc-1" class="level3">
+<h3 class="anchored" data-anchor-id="parejas-y-otros-núcleos-familiares-nuc-1"><strong>Parejas y otros núcleos familiares (nuc)</strong></h3>
+<table class="table">
+<colgroup>
+<col style="width: 11%">
+<col style="width: 19%">
+<col style="width: 34%">
+<col style="width: 34%">
+</colgroup>
+<tbody>
+<tr class="odd">
+<td><strong>ID tabla</strong></td>
+<td><strong>ID unidad de medida</strong></td>
+<td><strong>Descripción unidad de medida - ES</strong></td>
+<td><strong>Descripción unidad de medida - EN</strong></td>
+</tr>
+<tr class="even">
+<td>nuc</td>
+<td>SNUCLEOS</td>
+<td>Número de núcleos</td>
+<td>No.&nbsp;of nucleus</td>
+</tr>
+<tr class="odd">
+<td>nuc</td>
+<td>MEDIA_SHIJOS_NUCLEO</td>
+<td>Número medio de hijos por núcleo familiar</td>
+<td>Average no. of children per family nucleus</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="personas-empadronadas-en-establecimientos-colectivos-per.estu-1" class="level3">
+<h3 class="anchored" data-anchor-id="personas-empadronadas-en-establecimientos-colectivos-per.estu-1"><strong>Personas empadronadas en establecimientos colectivos (per.estu)</strong></h3>
+<table class="table">
+<colgroup>
+<col style="width: 9%">
+<col style="width: 16%">
+<col style="width: 38%">
+<col style="width: 35%">
+</colgroup>
+<tbody>
+<tr class="odd">
+<td><strong>ID tabla</strong></td>
+<td><strong>ID unidad de medida</strong></td>
+<td><strong>Descripción unidad de medida - ES</strong></td>
+<td><strong>Descripción unidad de medida - EN</strong></td>
+</tr>
+<tr class="even">
+<td>per.estu</td>
+<td>SPERSONAS</td>
+<td>Personas</td>
+<td>People</td>
+</tr>
+<tr class="odd">
+<td>per.estu</td>
+<td>MEDIA_SEDAD</td>
+<td>Edad media</td>
+<td>Average age</td>
+</tr>
+<tr class="even">
+<td>per.estu</td>
+<td>PCT_SMENORES_16</td>
+<td>Porcentaje de personas de menos de 16 años</td>
+<td>Percentage of people under 16 years</td>
+</tr>
+<tr class="odd">
+<td>per.estu</td>
+<td>PCT_SPERSONAS_16_64</td>
+<td>Porcentaje de personas entre 16 y 64 años</td>
+<td>Percentage of people between the ages of 16 and 64</td>
+</tr>
+<tr class="even">
+<td>per.estu</td>
+<td>PCT_SMAYORES_64</td>
+<td>Porcentaje de personas de más de 64 años</td>
+<td>Percentage of people over 64 years</td>
+</tr>
+<tr class="odd">
+<td>per.estu</td>
+<td>PCT_SEXTRANJEROS</td>
+<td>Porcentaje de población extranjera</td>
+<td>Percentage of foreign people</td>
+</tr>
+<tr class="even">
+<td>per.estu</td>
+<td>MEDIA_SNIVEL_ESTU</td>
+<td>Nivel medio de estudios</td>
+<td>Average level of studies</td>
+</tr>
+<tr class="odd">
+<td>per.estu</td>
+<td>PCT_SESTSUP</td>
+<td>Porcentaje de personas con estudios superiores</td>
+<td>Percentage of people with higher education</td>
+</tr>
+<tr class="even">
+<td>per.estu</td>
+<td>PCT_SNACIO</td>
+<td>Porcentaje de personas con país de nacimiento extranjero</td>
+<td>Percentage of people with a foreign country of birth</td>
+</tr>
+<tr class="odd">
+<td>per.estu</td>
+<td>PCT_SACTIVOS</td>
+<td>Porcentaje de población activa</td>
+<td>Percentage of active people</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="personas-residentes-en-viviendas-familiares-per.ocu-1" class="level3">
+<h3 class="anchored" data-anchor-id="personas-residentes-en-viviendas-familiares-per.ocu-1"><strong>Personas residentes en viviendas familiares (per.ocu)</strong></h3>
+<table class="table">
+<colgroup>
+<col style="width: 9%">
+<col style="width: 16%">
+<col style="width: 38%">
+<col style="width: 35%">
+</colgroup>
+<tbody>
+<tr class="odd">
+<td><strong>ID tabla</strong></td>
+<td><strong>ID unidad de medida</strong></td>
+<td><strong>Descripción unidad de medida - ES</strong></td>
+<td><strong>Descripción unidad de medida - EN</strong></td>
+</tr>
+<tr class="even">
+<td>per.ocu</td>
+<td>SPERSONAS</td>
+<td>Personas</td>
+<td>People</td>
+</tr>
+<tr class="odd">
+<td>per.ocu</td>
+<td>MEDIA_SEDAD</td>
+<td>Edad media</td>
+<td>Average age</td>
+</tr>
+<tr class="even">
+<td>per.ocu</td>
+<td>PCT_SMENORES_16</td>
+<td>Porcentaje de personas de menos de 16 años</td>
+<td>Percentage of people under 16 years</td>
+</tr>
+<tr class="odd">
+<td>per.ocu</td>
+<td>PCT_SPERSONAS_16_64</td>
+<td>Porcentaje de personas entre 16 y 64 años</td>
+<td>Percentage of people between the ages of 16 and 64</td>
+</tr>
+<tr class="even">
+<td>per.ocu</td>
+<td>PCT_SMAYORES_64</td>
+<td>Porcentaje de personas de más de 64 años</td>
+<td>Percentage of people over 64 years</td>
+</tr>
+<tr class="odd">
+<td>per.ocu</td>
+<td>PCT_SEXTRANJEROS</td>
+<td>Porcentaje de población extranjera</td>
+<td>Percentage of foreign people</td>
+</tr>
+<tr class="even">
+<td>per.ocu</td>
+<td>MEDIA_SNIVEL_ESTU</td>
+<td>Nivel medio de estudios</td>
+<td>Average level of studies</td>
+</tr>
+<tr class="odd">
+<td>per.ocu</td>
+<td>PCT_SESTSUP</td>
+<td>Porcentaje de personas con estudios superiores</td>
+<td>Percentage of people with higher education</td>
+</tr>
+<tr class="even">
+<td>per.ocu</td>
+<td>PCT_SNACIO</td>
+<td>Porcentaje de personas con país de nacimiento extranjero</td>
+<td>Percentage of people with a foreign country of birth</td>
+</tr>
+<tr class="odd">
+<td>per.ocu</td>
+<td>PCT_SACTIVOS</td>
+<td>Porcentaje de población activa</td>
+<td>Percentage of active people</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="total-de-personas-per.ppal-1" class="level3">
+<h3 class="anchored" data-anchor-id="total-de-personas-per.ppal-1"><strong>Total de personas (per.ppal)</strong></h3>
+<table class="table">
+<colgroup>
+<col style="width: 9%">
+<col style="width: 16%">
+<col style="width: 38%">
+<col style="width: 35%">
+</colgroup>
+<tbody>
+<tr class="odd">
+<td><strong>ID tabla</strong></td>
+<td><strong>ID unidad de medida</strong></td>
+<td><strong>Descripción unidad de medida - ES</strong></td>
+<td><strong>Descripción unidad de medida - EN</strong></td>
+</tr>
+<tr class="even">
+<td>per.ppal</td>
+<td>SPERSONAS</td>
+<td>Personas</td>
+<td>People</td>
+</tr>
+<tr class="odd">
+<td>per.ppal</td>
+<td>MEDIA_SEDAD</td>
+<td>Edad media</td>
+<td>Average age</td>
+</tr>
+<tr class="even">
+<td>per.ppal</td>
+<td>PCT_SESTSUP</td>
+<td>Porcentaje de personas con estudios superiores</td>
+<td>Percentage of people with higher education</td>
+</tr>
+<tr class="odd">
+<td>per.ppal</td>
+<td>PCT_SMENORES_16</td>
+<td>Porcentaje de personas de menos de 16 años</td>
+<td>Percentage of people under 16 years</td>
+</tr>
+<tr class="even">
+<td>per.ppal</td>
+<td>PCT_SPERSONAS_16_64</td>
+<td>Porcentaje de personas entre 16 y 64 años</td>
+<td>Percentage of people between the ages of 16 and 64</td>
+</tr>
+<tr class="odd">
+<td>per.ppal</td>
+<td>PCT_SMAYORES_64</td>
+<td>Porcentaje de personas de más de 64 años</td>
+<td>Percentage of people over 64 years</td>
+</tr>
+<tr class="even">
+<td>per.ppal</td>
+<td>PCT_SEXTRANJEROS</td>
+<td>Porcentaje de población extranjera</td>
+<td>Percentage of foreign people</td>
+</tr>
+<tr class="odd">
+<td>per.ppal</td>
+<td>MEDIA_SNIVEL_ESTU</td>
+<td>Nivel medio de estudios</td>
+<td>Average level of studies</td>
+</tr>
+<tr class="even">
+<td>per.ppal</td>
+<td>PCT_SNACIO</td>
+<td>Porcentaje de personas con país de nacimiento extranjero</td>
+<td>Percentage of people with a foreign country of birth</td>
+</tr>
+<tr class="odd">
+<td>per.ppal</td>
+<td>PCT_SACTIVOS</td>
+<td>Porcentaje de población activa</td>
+<td>Percentage of active people</td>
+</tr>
+<tr class="even">
+<td>per.ppal</td>
+<td>PCT_SINACTIVOS</td>
+<td>Porcentaje de población inactiva</td>
+<td>Percentage of inactive people</td>
+</tr>
+<tr class="odd">
+<td>per.ppal</td>
+<td>PCT_SPARADOS</td>
+<td>Porcentaje de población parada</td>
+<td>Percentage of unemployed people</td>
+</tr>
+<tr class="even">
+<td>per.ppal</td>
+<td>PCT_SOCUPADOS</td>
+<td>Porcentaje de población ocupada</td>
+<td>Percentage of employed people</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="viviendas-familiares-viv.fam-1" class="level3">
+<h3 class="anchored" data-anchor-id="viviendas-familiares-viv.fam-1"><strong>Viviendas familiares (viv.fam)</strong></h3>
+<table class="table">
+<colgroup>
+<col style="width: 11%">
+<col style="width: 21%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<tbody>
+<tr class="odd">
+<td><strong>ID tabla</strong></td>
+<td><strong>ID unidad de medida</strong></td>
+<td><strong>Descripción unidad de medida - ES</strong></td>
+<td><strong>Descripción unidad de medida - EN</strong></td>
+</tr>
+<tr class="even">
+<td>viv.fam</td>
+<td>SVIVIENDAS</td>
+<td>Número de viviendas</td>
+<td>No.&nbsp;of dwellings</td>
+</tr>
+<tr class="odd">
+<td>viv.fam</td>
+<td>MEDIA_SANTIGUEDAD</td>
+<td>Edad media de la vivienda</td>
+<td>Average age of the dwelling</td>
+</tr>
+<tr class="even">
+<td>viv.fam</td>
+<td>MEDIA_SSUPERFICIE</td>
+<td>Superficie media</td>
+<td>Average useful floor space</td>
+</tr>
+<tr class="odd">
+<td>viv.fam</td>
+<td>PCT_SVIVNOPPAL</td>
+<td>Porcentaje de viviendas no principales</td>
+<td>Percentage of seasonal/empty dwellings</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="ocupados-de-16-y-más-años-viv.ppal-1" class="level3">
+<h3 class="anchored" data-anchor-id="ocupados-de-16-y-más-años-viv.ppal-1"><strong>Ocupados de 16 y más años (viv.ppal)</strong></h3>
+<table class="table">
+<colgroup>
+<col style="width: 9%">
+<col style="width: 16%">
+<col style="width: 38%">
+<col style="width: 35%">
+</colgroup>
+<tbody>
+<tr class="odd">
+<td><strong>ID tabla</strong></td>
+<td><strong>ID unidad de medida</strong></td>
+<td><strong>Descripción unidad de medida - ES</strong></td>
+<td><strong>Descripción unidad de medida - EN</strong></td>
+</tr>
+<tr class="even">
+<td>viv.ppal</td>
+<td>SPERSONAS</td>
+<td>Personas</td>
+<td>People</td>
+</tr>
+<tr class="odd">
+<td>viv.ppal</td>
+<td>MEDIA_SEDAD</td>
+<td>Edad media</td>
+<td>Average age</td>
+</tr>
+<tr class="even">
+<td>viv.ppal</td>
+<td>PCT_SPERSONAS_16_64</td>
+<td>Porcentaje de personas entre 16 y 64 años</td>
+<td>Percentage of people between the ages of 16 and 64</td>
+</tr>
+<tr class="odd">
+<td>viv.ppal</td>
+<td>PCT_SMAYORES_64</td>
+<td>Porcentaje de personas de más de 64 años</td>
+<td>Percentage of people over 64 years</td>
+</tr>
+<tr class="even">
+<td>viv.ppal</td>
+<td>PCT_SEXTRANJEROS</td>
+<td>Porcentaje de población extranjera</td>
+<td>Percentage of foreign people</td>
+</tr>
+<tr class="odd">
+<td>viv.ppal</td>
+<td>MEDIA_SNIVEL_ESTU</td>
+<td>Nivel medio de estudios</td>
+<td>Average level of studies</td>
+</tr>
+<tr class="even">
+<td>viv.ppal</td>
+<td>PCT_SESTSUP</td>
+<td>Porcentaje de personas con estudios superiores</td>
+<td>Percentage of people with higher education</td>
+</tr>
+<tr class="odd">
+<td>viv.ppal</td>
+<td>PCT_SNACIO</td>
+<td>Porcentaje de personas con país de nacimiento extranjero</td>
+<td>Percentage of people with a foreign country of birth</td>
+</tr>
+<tr class="even">
+<td>viv.ppal</td>
+<td>PCT_SACTIVOS</td>
+<td>Porcentaje de población activa</td>
+<td>Percentage of active people</td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+<section id="lista-de-idiomas-en-los-que-se-puede-mostrar-el-resultado-de-la-consulta" class="level2">
+<h2 class="anchored" data-anchor-id="lista-de-idiomas-en-los-que-se-puede-mostrar-el-resultado-de-la-consulta">Lista de idiomas en los que se puede mostrar el resultado de la consulta</h2>
+<table class="table">
+<tbody>
+<tr class="odd">
+<td><strong>ID idioma</strong></td>
+<td>Descripción idioma</td>
+</tr>
+<tr class="even">
+<td>EN</td>
+<td>inglés</td>
+</tr>
+<tr class="odd">
+<td>ES</td>
+<td>castellano</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="petición-por-url" class="level2">
+<h2 class="anchored" data-anchor-id="petición-por-url">Petición por URL</h2>
+<p>La petición devuelve los datos que corresponden a una selección de un mínimo de 1 variable y hasta un máximo de 4 variables por tabla.</p>
+<p>Las salidas resultantes de los datos se configuran como cruces de categorías de las variables. Los identificadores de las tablas, las variables, las unidades de medida y el idioma empleado en la petición son los que figuran en los ficheros Excel. La no utilización de esos identificadores no generará resultados en la respuesta. Los cruces se expresan mediante parámetros que se incluyen en la expresión URL que define la petición.</p>
+<p><strong><em>Ejemplo</em></strong>: Petición de datos del número de personas por sexo y comunidad autónoma del dominio per.ppal en inglés:</p>
+<p><a href="https://www.ine.es/Censo2021/api" class="uri">https://www.ine.es/Censo2021/api</a></p>
+<p><strong><em>Cabeceras de la petición</em></strong></p>
+<p>POST /</p>
+<p>Accept : application/json</p>
+<p>Content-Type: application/json</p>
+<p>Content-Length: [0-9]* (valor numérico, por seguridad y limitaciones técnicas, es opcional)</p>
+<p><strong><em>Cuerpo de la petición</em></strong></p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode json code-with-copy"><code class="sourceCode json"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">{</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>  <span class="er">“idioma”</span><span class="fu">:</span> <span class="er">“EN”</span><span class="fu">,</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>  <span class="er">“metrica”</span><span class="fu">:</span><span class="ot">[</span><span class="er">”SPERSONAS”</span><span class="ot">]</span><span class="fu">,</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>  <span class="er">“tabla”</span><span class="fu">:</span><span class="er">”per.ppal”</span><span class="fu">,</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>  <span class="er">“variables”</span><span class="fu">:</span> <span class="ot">[</span></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>    <span class="er">“ID_RESIDENCIA_N1”</span><span class="ot">,</span></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>    <span class="er">“ID_SEXO”</span></span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>  <span class="ot">]</span></span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a><span class="fu">}</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>En el cuerpo de la petición, las variables obligatorias son: metrica,&nbsp;tabla,&nbsp;variables.</p>
+<p>De no enviarse recibirá un Status 404 con el mensaje <em>“Data not found”.</em></p>
+<p><strong><em>Respuesta Json:</em></strong></p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode json code-with-copy"><code class="sourceCode json"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">{</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="dt">"Metadata"</span><span class="fu">:</span> <span class="ot">[</span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">{</span></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>    <span class="dt">"Column"</span><span class="fu">:</span> <span class="st">"ID_RESIDENCIA_N1"</span></span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">}</span><span class="ot">,</span></span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">{</span></span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>    <span class="dt">"Column"</span><span class="fu">:</span> <span class="st">"ID_SEXO"</span></span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">}</span><span class="ot">,</span></span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a>  <span class="fu">{</span></span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a>    <span class="dt">"Column"</span><span class="fu">:</span> <span class="st">"SPERSONAS"</span></span>
+<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a>  <span class="fu">}</span></span>
+<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a><span class="ot">]</span><span class="fu">,</span></span>
+<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a><span class="dt">"Data"</span><span class="fu">:</span> <span class="ot">[</span></span>
+<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a>  <span class="fu">{</span></span>
+<span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a>    <span class="dt">"ID_RESIDENCIA_N1"</span><span class="fu">:</span> <span class="st">"Andalucia"</span><span class="fu">,</span></span>
+<span id="cb2-21"><a href="#cb2-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-22"><a href="#cb2-22" aria-hidden="true" tabindex="-1"></a>    <span class="dt">"ID_SEXO "</span><span class="fu">:</span> <span class="st">"Hombre"</span><span class="fu">,</span></span>
+<span id="cb2-23"><a href="#cb2-23" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-24"><a href="#cb2-24" aria-hidden="true" tabindex="-1"></a>    <span class="dt">"SPERSONAS"</span><span class="fu">:</span> <span class="dv">4182618</span></span>
+<span id="cb2-25"><a href="#cb2-25" aria-hidden="true" tabindex="-1"></a>  <span class="fu">}</span><span class="ot">,</span></span>
+<span id="cb2-26"><a href="#cb2-26" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-27"><a href="#cb2-27" aria-hidden="true" tabindex="-1"></a>  <span class="fu">{</span></span>
+<span id="cb2-28"><a href="#cb2-28" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-29"><a href="#cb2-29" aria-hidden="true" tabindex="-1"></a>    <span class="dt">"ID_RESIDENCIA_N1"</span><span class="fu">:</span> <span class="st">"Andalucia"</span><span class="fu">,</span></span>
+<span id="cb2-30"><a href="#cb2-30" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-31"><a href="#cb2-31" aria-hidden="true" tabindex="-1"></a>    <span class="dt">"ID_SEXO "</span><span class="fu">:</span> <span class="st">"Mujer"</span><span class="fu">,</span></span>
+<span id="cb2-32"><a href="#cb2-32" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-33"><a href="#cb2-33" aria-hidden="true" tabindex="-1"></a>    <span class="dt">"SPERSONAS"</span><span class="fu">:</span> <span class="dv">4302183</span></span>
+<span id="cb2-34"><a href="#cb2-34" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-35"><a href="#cb2-35" aria-hidden="true" tabindex="-1"></a>    <span class="fu">}</span><span class="ot">,</span></span>
+<span id="cb2-36"><a href="#cb2-36" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-37"><a href="#cb2-37" aria-hidden="true" tabindex="-1"></a>  <span class="fu">{</span></span>
+<span id="cb2-38"><a href="#cb2-38" aria-hidden="true" tabindex="-1"></a>    <span class="dt">"ID_RESIDENCIA_N1"</span><span class="fu">:</span> <span class="st">"Aragón"</span><span class="fu">,</span></span>
+<span id="cb2-39"><a href="#cb2-39" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-40"><a href="#cb2-40" aria-hidden="true" tabindex="-1"></a>    <span class="dt">"ID_SEXO"</span><span class="fu">:</span> <span class="st">"Hombre"</span><span class="fu">,</span></span>
+<span id="cb2-41"><a href="#cb2-41" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-42"><a href="#cb2-42" aria-hidden="true" tabindex="-1"></a>    <span class="dt">"SPERSONAS"</span><span class="fu">:</span> <span class="dv">658263</span></span>
+<span id="cb2-43"><a href="#cb2-43" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-44"><a href="#cb2-44" aria-hidden="true" tabindex="-1"></a>  <span class="fu">}</span><span class="ot">,</span></span>
+<span id="cb2-45"><a href="#cb2-45" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-46"><a href="#cb2-46" aria-hidden="true" tabindex="-1"></a>  <span class="fu">{</span></span>
+<span id="cb2-47"><a href="#cb2-47" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-48"><a href="#cb2-48" aria-hidden="true" tabindex="-1"></a>    <span class="dt">"ID_RESIDENCIA_N1"</span><span class="fu">:</span> <span class="st">"Aragón"</span><span class="fu">,</span></span>
+<span id="cb2-49"><a href="#cb2-49" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-50"><a href="#cb2-50" aria-hidden="true" tabindex="-1"></a>    <span class="dt">"ID_SEXO"</span><span class="fu">:</span> <span class="st">"Mujer"</span><span class="fu">,</span></span>
+<span id="cb2-51"><a href="#cb2-51" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-52"><a href="#cb2-52" aria-hidden="true" tabindex="-1"></a>    <span class="dt">"SPERSONAS"</span><span class="fu">:</span> <span class="dv">673677</span></span>
+<span id="cb2-53"><a href="#cb2-53" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-54"><a href="#cb2-54" aria-hidden="true" tabindex="-1"></a>  <span class="fu">}</span><span class="ot">,</span></span>
+<span id="cb2-55"><a href="#cb2-55" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-56"><a href="#cb2-56" aria-hidden="true" tabindex="-1"></a>  <span class="er">...</span></span>
+<span id="cb2-57"><a href="#cb2-57" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-58"><a href="#cb2-58" aria-hidden="true" tabindex="-1"></a><span class="ot">]</span></span>
+<span id="cb2-59"><a href="#cb2-59" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-60"><a href="#cb2-60" aria-hidden="true" tabindex="-1"></a><span class="fu">}</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="limitaciones-del-servicio" class="level2">
+<h2 class="anchored" data-anchor-id="limitaciones-del-servicio">Limitaciones del servicio</h2>
+<p>El uso de la API se rige por las mismas condiciones que el SDC21. Además, se limita inicialmente a 2 el número de peticiones concurrentes que pueden estar activas a través de la API.</p>
+<p>Aquellas consultas que se consideren significativamente grandes para la ejecución y respuesta en vivo no serán procesadas, en este caso el objeto de respuesta será:</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode json code-with-copy"><code class="sourceCode json"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">{</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"Debido al tamaño de la consulta ésta no puede ser procesada por el sistema"</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="fu">}</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="errores-en-las-respuestas" class="level2">
+<h2 class="anchored" data-anchor-id="errores-en-las-respuestas">Errores en las respuestas</h2>
+<p>Para los errores controlados de la aplicación, el objeto de respuesta será:</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode json code-with-copy"><code class="sourceCode json"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">{</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>  <span class="er">“error”</span><span class="fu">:</span><span class="er">”texto</span> <span class="er">descriptivo</span> <span class="er">del</span> <span class="er">problema”</span></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="fu">}</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+
+
+</section>
+
+<a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a></main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+</body></html>

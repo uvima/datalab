@@ -1,0 +1,669 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.3.450">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Data Lab - Otros casos de uso</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+
+<link rel="stylesheet" href="../styles.css">
+</head>
+
+<body class="nav-sidebar docked nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container">
+    <a href="../index.html" class="navbar-brand navbar-brand-logo">
+    <img src="../img/LogoINE.svg" alt="Logo INE" class="navbar-logo">
+    </a>
+    <a class="navbar-brand" href="../index.html">
+    <span class="navbar-title">Data Lab</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link active" href="../api-json/inicio.html" rel="" target="" aria-current="page">
+ <span class="menu-text">API JSON</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../api-json-stat/inicio.html" rel="" target="">
+ <span class="menu-text">API JSON-Stat</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../api-censo/inicio.html" rel="" target="">
+ <span class="menu-text">API Censos 2021</span></a>
+  </li>  
+</ul>
+            <div class="quarto-navbar-tools ms-auto">
+</div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../api-json/otros_casos_uso.html">Otros casos de uso</a></li></ol></nav>
+      <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+      </a>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal sidebar-navigation docked overflow-auto">
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../api-json/inicio.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">API JSON</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../api-json/referencia.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Referencia de la API</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="false">
+ <span class="menu-text">Lista de funciones</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../api-json/funciones/datos_metadataoperacion.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">DATOS_METADATAOPERACION</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../api-json/funciones/datos_serie.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">DATOS_SERIE</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../api-json/funciones/datos_tabla.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">DATOS_TABLA</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../api-json/funciones/grupos_tabla.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">GRUPOS_TABLA</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../api-json/funciones/operacion.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">OPERACION</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../api-json/funciones/operaciones_disponibles.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">OPERACIONES_DISPONIBLES</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../api-json/funciones/periodicidades.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">PERIODICIDADES</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../api-json/funciones/publicaciones.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">PUBLICACIONES</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../api-json/funciones/publicaciones_operacion.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">PUBLICACIONES_OPERACION</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../api-json/funciones/publicacionfecha_publicacion.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">PUBLICACIONFECHA_PUBLICACION</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../api-json/funciones/serie.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">SERIE</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../api-json/funciones/serie_metadataoperacion.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">SERIE_METADATAOPERACION</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../api-json/funciones/series_operacion.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">SERIES_OPERACION</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../api-json/funciones/series_tabla.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">SERIES_TABLA</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../api-json/funciones/tablas_operacion.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">TABLAS_OPERACION</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../api-json/funciones/valores_grupostabla.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">VALORES_GRUPOSTABLA</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../api-json/funciones/valores_serie.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">VALORES_SERIE</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../api-json/funciones/valores_variable.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">VALORES_VARIABLE</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../api-json/funciones/valores_variableoperacion.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">VALORES_VARIABLEOPERACION</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../api-json/funciones/variables.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">VARIABLES</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../api-json/funciones/variables_operacion.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">VARIABLES</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../api-json/obtener_datos_tabla.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Obtener datos de una tabla</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../api-json/otros_casos_uso.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">Otros casos de uso</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../api-json/codigos_identificadores.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Códigos identificadores de tablas y series</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../api-json/tempus3.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Base de datos Tempus3</span></a>
+  </div>
+</li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#obtener-datos-de-una-serie" id="toc-obtener-datos-de-una-serie" class="nav-link active" data-scroll-target="#obtener-datos-de-una-serie">Obtener datos de una serie</a></li>
+  <li><a href="#consultar-operaciones-estadísticas" id="toc-consultar-operaciones-estadísticas" class="nav-link" data-scroll-target="#consultar-operaciones-estadísticas">Consultar operaciones estadísticas</a></li>
+  <li><a href="#consultar-variables" id="toc-consultar-variables" class="nav-link" data-scroll-target="#consultar-variables">Consultar variables</a></li>
+  <li><a href="#consultar-valores-de-variables" id="toc-consultar-valores-de-variables" class="nav-link" data-scroll-target="#consultar-valores-de-variables">Consultar valores de variables</a></li>
+  <li><a href="#obtener-información-de-tablas" id="toc-obtener-información-de-tablas" class="nav-link" data-scroll-target="#obtener-información-de-tablas">Obtener información de tablas</a></li>
+  <li><a href="#obtener-información-de-series" id="toc-obtener-información-de-series" class="nav-link" data-scroll-target="#obtener-información-de-series">Obtener información de series</a></li>
+  <li><a href="#consultar-publicaciones" id="toc-consultar-publicaciones" class="nav-link" data-scroll-target="#consultar-publicaciones">Consultar publicaciones</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Otros casos de uso</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+</header>
+
+<section id="obtener-datos-de-una-serie" class="level2">
+<h2 class="anchored" data-anchor-id="obtener-datos-de-una-serie">Obtener datos de una serie</h2>
+<p>Para obtener los datos de una única serie es necesario conocer su código identificativo (vea códigos identificativos de tablas y series).</p>
+<p>Una vez se conoce el código de la serie de interés, se puede utilizar la función <a href="funciones/datos_serie.html">DATOS_SERIE</a> para obtener los datos de interés.</p>
+<p><strong>Obtener el último periodo de una serie</strong></p>
+<p>Por ejemplo, para la serie con código <a href="https://www.ine.es/consul/serie.do?s=IPC251856">IPC251856</a></p>
+<p><a href="https://servicios.ine.es/wstempus/js/ES/DATOS_SERIE/IPC251856?nult=1" class="uri">https://servicios.ine.es/wstempus/js/ES/DATOS_SERIE/IPC251856?nult=1</a></p>
+<p><strong>Obtener los últimos 5 periodos de una serie</strong></p>
+<p>Por ejemplo, para la serie con código <a href="https://www.ine.es/consul/serie.do?s=IPC251856">IPC251856</a></p>
+<p><a href="https://servicios.ine.es/wstempus/js/ES/DATOS_SERIE/IPC251856?nult=5" class="uri">https://servicios.ine.es/wstempus/js/ES/DATOS_SERIE/IPC251856?nult=5</a></p>
+<p><strong>Obtener los datos entre dos fechas</strong></p>
+<p>Por ejemplo, entre 01/01/2023 y 31/12/2023</p>
+<p><a href="https://servicios.ine.es/wstempus/js/ES/DATOS_SERIE/IPC251856?date=20230101:20231231&amp;tip=A" class="uri">https://servicios.ine.es/wstempus/js/ES/DATOS_SERIE/IPC251856?date=20230101:20231231&amp;tip=A</a></p>
+<p><strong>Obtener los datos a partir de una fecha</strong></p>
+<p>Por ejemplo, a partir de 01/01/2024</p>
+<p><a href="https://servicios.ine.es/wstempus/js/ES/DATOS_SERIE/IPC251856?date=20240101:&amp;tip=A" class="uri">https://servicios.ine.es/wstempus/js/ES/DATOS_SERIE/IPC251856?date=20240101:&amp;tip=A</a></p>
+</section>
+<section id="consultar-operaciones-estadísticas" class="level2">
+<h2 class="anchored" data-anchor-id="consultar-operaciones-estadísticas">Consultar operaciones estadísticas</h2>
+<p>La base de datos Tempus3 contiene la información de todas las operaciones estadísticas coyunturales del INE, aquellas cuya periodicidad de difusión de resultados es inferior al año, además de algunas operaciones estadísticas estructurales. La relación de operaciones en Tempus3 cambia a medida que se van integrando en la base de datos. Puede consultarse la lista de operaciones disponibles en cualquier momento con las funciones <a href="funciones/operaciones_disponibles.html">OPERACIONES_DISPONIBLES</a> y <a href="funciones/operacion.html">OPERACION</a>.</p>
+<p><strong>Obtener las operaciones estadísticas disponibles del sistema</strong></p>
+<p><a href="https://servicios.ine.es/wstempus/js/ES/OPERACIONES_DISPONIBLES" class="uri">https://servicios.ine.es/wstempus/js/ES/OPERACIONES_DISPONIBLES</a></p>
+<p><strong>Obtener una operación estadística</strong></p>
+<p>Por ejemplo, la operación IPC utilizando el código alfabético Tempus3 interno (IPC)</p>
+<p><a href="https://servicios.ine.es/wstempus/js/ES/OPERACION/IPC" class="uri">https://servicios.ine.es/wstempus/js/ES/OPERACION/IPC</a></p>
+</section>
+<section id="consultar-variables" class="level2">
+<h2 class="anchored" data-anchor-id="consultar-variables">Consultar variables</h2>
+<p>Se pueden obtener las variables del Sistema utilizando las funciones <a href="funciones/variables.html">VARIABLES</a> y <a href="funciones/variables_operacion.html">VARIABLES_OPERACION</a>.</p>
+<p><strong>Obtener todas las variables del sistema</strong></p>
+<p>La respuesta está paginada (500 elementos por página)</p>
+<p><a href="https://servicios.ine.es/wstempus/js/ES/VARIABLES" class="uri">https://servicios.ine.es/wstempus/js/ES/VARIABLES</a></p>
+<p><a href="https://servicios.ine.es/wstempus/js/ES/VARIABLES?page=2" class="uri">https://servicios.ine.es/wstempus/js/ES/VARIABLES?page=2</a></p>
+<p><strong>Obtener variables para una operación</strong></p>
+<p>Por ejemplo, las variables utilizadas en la operación IPC</p>
+<p><a href="https://servicios.ine.es/wstempus/js/ES/VARIABLES_OPERACION/IPC" class="uri">https://servicios.ine.es/wstempus/js/ES/VARIABLES_OPERACION/IPC</a></p>
+</section>
+<section id="consultar-valores-de-variables" class="level2">
+<h2 class="anchored" data-anchor-id="consultar-valores-de-variables">Consultar valores de variables</h2>
+<p>Se pueden obtener los valores de una variable utilizando las funciones <a href="funciones/valores_variable.html">VALORES_VARIABLE</a> y <a href="funciones/valores_variableoperacion.html">VALORES_VARIABLEOPERACION</a>.</p>
+<p><strong>Obtener todos los valores de una variable</strong></p>
+<p>Por ejemplo, de la variable Provincias (Id=115)</p>
+<p><a href="https://servicios.ine.es/wstempus/js/ES/VALORES_VARIABLE/115" class="uri">https://servicios.ine.es/wstempus/js/ES/VALORES_VARIABLE/115</a></p>
+<p><strong>Obtener todos los valores de una variable para una operación</strong></p>
+<p>Por ejemplo, los valores de la variable “Grupos ECOICOP” (Id=762) para la operación IPC (IOE30138 / IPC / 25)</p>
+<p><a href="https://servicios.ine.es/wstempus/js/ES/VALORES_VARIABLEOPERACION/762/25" class="uri">https://servicios.ine.es/wstempus/js/ES/VALORES_VARIABLEOPERACION/762/25</a></p>
+</section>
+<section id="obtener-información-de-tablas" class="level2">
+<h2 class="anchored" data-anchor-id="obtener-información-de-tablas">Obtener información de tablas</h2>
+<p>En lo que se refiere a las tablas, se puede obtener un listado de las tablas de una operación con la función <a href="funciones/tabla_operacion.html">TABLAS_OPERACION</a> y también las variables y valores que la definen con las funciones <a href="funciones/grupos_tabla.html">GRUPOS_TABLA</a> y <a href="funciones/valores_grupostabla.html">VALORES_GRUPOSTABLA</a>.</p>
+<p><strong>Obtener todas las tablas de una operación</strong></p>
+<p>Por ejemplo, el listado de tablas de la operación estadística IPC (IOE30138 / IPC / 25)</p>
+<p><a href="https://servicios.ine.es/wstempus/js/ES/TABLAS_OPERACION/IPC" class="uri">https://servicios.ine.es/wstempus/js/ES/TABLAS_OPERACION/IPC</a></p>
+<p><strong>Obtener la combinación de variables y valores que definen una tabla</strong></p>
+<p>Una tabla está definida por diferentes grupos o combos de selección y cada uno de ellos por los valores que toman una o varias variables. La consulta de los valores y las variables que constituyen la tabla se debe realizar en dos partes:</p>
+<ol type="1">
+<li><p>Primera parte de la consulta: Grupos o combos de selección que definen a la tabla “<a href="https://www.ine.es/jaxiT3/Tabla.htm?t=50913">Índices por comunidades autónomas: general y de grupos ECOICOP</a>” (Id 50913)</p>
+<p><a href="https://servicios.ine.es/wstempus/js/ES/GRUPOS_TABLA/50913" class="uri">https://servicios.ine.es/wstempus/js/ES/GRUPOS_TABLA/50913</a></p></li>
+<li><p>Segunda parte de la consulta: Valores del grupo “Comunidades y Ciudades Autónomas” (Id=110924) perteneciente a la tabla “<a href="https://www.ine.es/jaxiT3/Tabla.htm?t=50913">Índices por comunidades autónomas: general y de grupos ECOICOP</a>” (Id=50913)</p>
+<p><a href="https://servicios.ine.es/wstempus/js/ES/VALORES_GRUPOSTABLA/50913/110924?det=1" class="uri">https://servicios.ine.es/wstempus/js/ES/VALORES_GRUPOSTABLA/50913/110924?det=1</a></p></li>
+</ol>
+</section>
+<section id="obtener-información-de-series" class="level2">
+<h2 class="anchored" data-anchor-id="obtener-información-de-series">Obtener información de series</h2>
+<p>En lo que se refiere a las series, se puede obtener información de una serie con la función <a href="funciones/serie.html">SERIE</a>, así como de las variables y valores que la definen con la función <a href="funciones/valores_serie.html">VALORES_SERIE</a>. Además, también se puede obtener un listado de las series de una tabla con la función <a href="funciones/series_tabla.html">SERIES_TABLA</a> y un listado de las series de una operación <a href="funciones/series_operacion.html">SERIES_OPERACION</a>.</p>
+<p><strong>Obtener información de una serie</strong></p>
+<p>Por ejemplo, de la serie que recoge los datos del índice general del IPC (<a href="https://www.ine.es/consul/serie.do?s=IPC251852">IPC251852</a>) que recoge la variación mensual del Índice de precios de consumo</p>
+<p><a href="https://servicios.ine.es/wstempus/js/ES/SERIE/IPC251852?det=2&amp;tip=A" class="uri">https://servicios.ine.es/wstempus/js/ES/SERIE/IPC251852?det=2&amp;tip=A</a></p>
+<p><strong>Obtener las variables y valores que definen una serie</strong></p>
+<p>Por ejemplo, de la serie que recoge los datos del índice general del IPC (<a href="https://www.ine.es/consul/serie.do?s=IPC251852">IPC251852</a>)</p>
+<p><a href="https://servicios.ine.es/wstempus/js/ES/VALORES_SERIE/IPC251852?det=1" class="uri">https://servicios.ine.es/wstempus/js/ES/VALORES_SERIE/IPC251852?det=1</a></p>
+<p><strong>Obtener el listado de series de una tabla</strong></p>
+<p>Por ejemplo, las series de la tabla “<a href="https://www.ine.es/jaxiT3/Datos.htm?t=50913">Índices por comunidades autónomas: general y de grupos ECOICOP</a>” de la operación IPC (Id 50913).</p>
+<p><a href="https://servicios.ine.es/wstempus/jsCache/ES/SERIES_TABLA/50913" class="uri">https://servicios.ine.es/wstempus/jsCache/ES/SERIES_TABLA/50913</a></p>
+<p>Se puede utilizar el parámetro tv para filtrar por variables y valores. Más información en <a href="obtener_datos_tabla.html#como-filtrar-datos-de-una-tabla">Como filtrar datos de una tabla</a>.</p>
+<p><strong>Obtener el listado de series de una operación</strong></p>
+<p>Como el resultado está paginado, se debe utilizar el parámetro page. Consulta de las primeras 500 series pertenecientes a la operación IPC (IOE30138 / IPC / 25)</p>
+<p><a href="https://servicios.ine.es/wstempus/js/ES/SERIES_OPERACION/IPC?page=1" class="uri">https://servicios.ine.es/wstempus/js/ES/SERIES_OPERACION/IPC?page=1</a></p>
+<p>Consulta de las segundas 500 series pertenecientes a la operación IPC (IOE30138 / IPC / 25)</p>
+<p><a href="https://servicios.ine.es/wstempus/js/ES/SERIES_OPERACION/IPC?page=2" class="uri">https://servicios.ine.es/wstempus/js/ES/SERIES_OPERACION/IPC?page=2</a></p>
+</section>
+<section id="consultar-publicaciones" class="level2">
+<h2 class="anchored" data-anchor-id="consultar-publicaciones">Consultar publicaciones</h2>
+<p>Se puede obtener un listado de las todas las publicaciones del sistema con la función <a href="funciones/publicaciones.html">PUBLICACIONES</a>, así como el listado de las publicaciones de una operación con la función <a href="funciones/publicaciones_operacion.html">PUBLICACIONES_OPERACION</a>. Además, también se pueden consultar las fechas de publicación de una publicación en particular con la función <a href="funciones/publicacionfecha_publicacion.html">PUBLICACIONFECHA_PUBLICACION</a>.</p>
+<p><strong>Obtener el litado de todas las publicaciones</strong></p>
+<p><a href="https://servicios.ine.es/wstempus/js/ES/PUBLICACIONES" class="uri">https://servicios.ine.es/wstempus/js/ES/PUBLICACIONES</a></p>
+<p><strong>Obtener el listado de las publicaciones de una operación</strong></p>
+<p>Por ejemplo, las publicaciones de la operación del IPC (IOE30138 / IPC / 25)</p>
+<p><a href="https://servicios.ine.es/wstempus/js/ES/PUBLICACIONES_OPERACION/IPC" class="uri">https://servicios.ine.es/wstempus/js/ES/PUBLICACIONES_OPERACION/IPC</a></p>
+<p><strong>Obtener las fechas de publicación de una publicación</strong></p>
+<p>Por ejemplo, de la publicación “Índice de Precios de Consumo” (Id=8)</p>
+<p><a href="https://servicios.ine.es/wstempus/js/ES/PUBLICACIONFECHA_PUBLICACION/8?tip=A" class="uri">https://servicios.ine.es/wstempus/js/ES/PUBLICACIONFECHA_PUBLICACION/8?tip=A</a></p>
+
+
+</section>
+
+<a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a></main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+</body></html>

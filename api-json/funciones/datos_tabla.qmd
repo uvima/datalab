@@ -1,0 +1,59 @@
+---
+title: "DATOS_TABLA"
+---
+
+Obtener datos para una tabla específica
+
+## Input
+
+Código identificativo de la tabla. Para obtener el código de una tabla vea [Obtención del identificador de una tabla utilizando INEbase](#_Obtención_del_identificador_1)
+
+## Parámetros
+
+### **nult** 
+
+Devolver los n últimos datos o periodos.
+
+### **det** 
+
+Ofrece mayor nivel de detalle de la información mostrada. Valores válidos son 0, 1 y 2
+
+### **tip**
+
+ Obtener la respuesta de las peticiones de modo más amigable (‘A’), incluir metadatos (‘M’) o ambos (‘AM’)
+
+### **tv**
+
+Parámetro para filtrar, utilizado con el formato [tv=id_variable:id_valor]{.underline}. Más información en [Como filtrar datos de una tabla](#_Como_filtrar_datos).
+
+## Salida
+
+Información y datos de las series contenidas en la tabla: Nombre de la serie, identificador Tempu3 de la unidad, identificador Tempus3 de la escala, fecha, identificador Tempus3 del tipo de dato, identificador Tempus3 del periodo, año y valor (dato).
+
+## Ejemplos
+
+Devuelve todos los periodos de la tabla con Id=50902 <https://servicios.ine.es/wstempus/js/ES/DATOS_TABLA/50902>
+
+Devuelve el último periodo de la tabla con Id=50902
+
+<https://servicios.ine.es/wstempus/js/ES/DATOS_TABLA/50902?nult=1>
+
+Devuelve los últimos 5 periodos de la tabla con Id=50902
+
+<https://servicios.ine.es/wstempus/js/ES/DATOS_TABLA/50902?nult=5>
+
+Devuelve el último periodo de la tabla con Id=50902 más salida amigable
+
+<https://servicios.ine.es/wstempus/js/ES/DATOS_TABLA/50902?nult=1&tip=A>
+
+Devuelve el último periodo de la tabla con Id=50902 junto a los metadatos
+
+<https://servicios.ine.es/wstempus/js/ES/DATOS_TABLA/50902?nult=1&tip=M>
+
+Devuelve el último periodo de la tabla con Id=50902 con salida amigable y metadatos
+
+<https://servicios.ine.es/wstempus/js/ES/DATOS_TABLA/50902?nult=1&tip=AM>
+
+Devuelve el último periodo de la tabla con Id=50902 y nivel de detalle 2
+
+<https://servicios.ine.es/wstempus/js/ES/DATOS_TABLA/50902?nult=1&det=2>

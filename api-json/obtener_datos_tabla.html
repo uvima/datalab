@@ -1,0 +1,646 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.3.450">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Data Lab - Obtener datos de una tabla</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+
+<link rel="stylesheet" href="../styles.css">
+</head>
+
+<body class="nav-sidebar docked nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container">
+    <a href="../index.html" class="navbar-brand navbar-brand-logo">
+    <img src="../img/LogoINE.svg" alt="Logo INE" class="navbar-logo">
+    </a>
+    <a class="navbar-brand" href="../index.html">
+    <span class="navbar-title">Data Lab</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link active" href="../api-json/inicio.html" rel="" target="" aria-current="page">
+ <span class="menu-text">API JSON</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../api-json-stat/inicio.html" rel="" target="">
+ <span class="menu-text">API JSON-Stat</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../api-censo/inicio.html" rel="" target="">
+ <span class="menu-text">API Censos 2021</span></a>
+  </li>  
+</ul>
+            <div class="quarto-navbar-tools ms-auto">
+</div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../api-json/obtener_datos_tabla.html">Obtener datos de una tabla</a></li></ol></nav>
+      <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+      </a>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal sidebar-navigation docked overflow-auto">
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../api-json/inicio.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">API JSON</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../api-json/referencia.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Referencia de la API</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="false">
+ <span class="menu-text">Lista de funciones</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../api-json/funciones/datos_metadataoperacion.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">DATOS_METADATAOPERACION</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../api-json/funciones/datos_serie.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">DATOS_SERIE</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../api-json/funciones/datos_tabla.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">DATOS_TABLA</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../api-json/funciones/grupos_tabla.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">GRUPOS_TABLA</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../api-json/funciones/operacion.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">OPERACION</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../api-json/funciones/operaciones_disponibles.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">OPERACIONES_DISPONIBLES</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../api-json/funciones/periodicidades.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">PERIODICIDADES</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../api-json/funciones/publicaciones.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">PUBLICACIONES</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../api-json/funciones/publicaciones_operacion.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">PUBLICACIONES_OPERACION</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../api-json/funciones/publicacionfecha_publicacion.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">PUBLICACIONFECHA_PUBLICACION</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../api-json/funciones/serie.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">SERIE</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../api-json/funciones/serie_metadataoperacion.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">SERIE_METADATAOPERACION</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../api-json/funciones/series_operacion.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">SERIES_OPERACION</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../api-json/funciones/series_tabla.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">SERIES_TABLA</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../api-json/funciones/tablas_operacion.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">TABLAS_OPERACION</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../api-json/funciones/valores_grupostabla.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">VALORES_GRUPOSTABLA</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../api-json/funciones/valores_serie.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">VALORES_SERIE</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../api-json/funciones/valores_variable.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">VALORES_VARIABLE</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../api-json/funciones/valores_variableoperacion.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">VALORES_VARIABLEOPERACION</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../api-json/funciones/variables.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">VARIABLES</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../api-json/funciones/variables_operacion.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">VARIABLES</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../api-json/obtener_datos_tabla.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">Obtener datos de una tabla</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../api-json/otros_casos_uso.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Otros casos de uso</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../api-json/codigos_identificadores.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Códigos identificadores de tablas y series</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../api-json/tempus3.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Base de datos Tempus3</span></a>
+  </div>
+</li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#como-filtrar-datos-de-una-tabla" id="toc-como-filtrar-datos-de-una-tabla" class="nav-link active" data-scroll-target="#como-filtrar-datos-de-una-tabla">Como filtrar datos de una tabla</a>
+  <ul class="collapse">
+  <li><a href="#tablas-tempus-3" id="toc-tablas-tempus-3" class="nav-link" data-scroll-target="#tablas-tempus-3">Tablas Tempus 3</a></li>
+  <li><a href="#tablas-pc-axis" id="toc-tablas-pc-axis" class="nav-link" data-scroll-target="#tablas-pc-axis">Tablas pc-axis</a></li>
+  <li><a href="#tablas-tpx" id="toc-tablas-tpx" class="nav-link" data-scroll-target="#tablas-tpx">Tablas tpx</a></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Obtener datos de una tabla</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+</header>
+
+<p>Para obtener los datos de una tabla es necesario conocer su código identificativo (vea <a href="codigos_identificadores.html">códigos identificadores de tablas y series</a>).</p>
+<p>Una vez se conoce el código de la tabla de interés, se puede utilizar la función <a href="funciones/datos_tabla.html">DATOS_TABLA</a> para obtener los datos asociados.</p>
+<p><strong>Obtener todos los datos de la tabla</strong></p>
+<p>Por ejemplo, para la tabla <a href="https://www.ine.es/jaxiT3/Tabla.htm?t=50902">Índices nacionales: general y de grupos ECOICOP</a> (Id 50902):</p>
+<p><a href="https://servicios.ine.es/wstempus/js/ES/DATOS_TABLA/50902" class="uri">https://servicios.ine.es/wstempus/js/ES/DATOS_TABLA/50902</a></p>
+<p><strong>Obtener los n últimos datos</strong></p>
+<p>Utilizamos el parámetro nult. Por ejemplo nult=5 para obtener los últimos 5 datos:</p>
+<p><a href="https://servicios.ine.es/wstempus/js/ES/DATOS_TABLA/50902?nult=5" class="uri">https://servicios.ine.es/wstempus/js/ES/DATOS_TABLA/50902?nult=5</a></p>
+<section id="como-filtrar-datos-de-una-tabla" class="level2">
+<h2 class="anchored" data-anchor-id="como-filtrar-datos-de-una-tabla">Como filtrar datos de una tabla</h2>
+<p>Cuando realizamos una petición de datos de una tabla existe la posibilidad de filtrar por variables y valores de interés utilizando el parámetro tv. Para ello vamos a distinguir los tres tipos posibles de fuentes de las tablas (tablas Tempus 3, tablas pc-axis y tablas tpx).</p>
+<section id="tablas-tempus-3" class="level3">
+<h3 class="anchored" data-anchor-id="tablas-tempus-3">Tablas Tempus 3</h3>
+<p>Para poder filtrar es necesario conocer los códigos identificadores numéricos (Id) de las variables y los valores por los que queremos filtrar. Por lo tanto, debemos hacer lo siguiente:</p>
+<ol type="1">
+<li><p>Conocer los grupos de la tabla de interés <a href="https://www.ine.es/jaxiT3/Tabla.htm?t=50913">Índices por comunidades autónomas: general y de grupos ECOICOP</a> (Id = 50913):</p>
+<p><a href="https://servicios.ine.es/wstempus/js/ES/GRUPOS_TABLA/50913" class="uri">https://servicios.ine.es/wstempus/js/ES/GRUPOS_TABLA/50913</a></p></li>
+<li><p>Conocer los valores de los grupos:</p>
+<p><a href="https://servicios.ine.es/wstempus/js/ES/VALORES_GRUPOSTABLA/50913/110924?det=1" class="uri">https://servicios.ine.es/wstempus/js/ES/VALORES_GRUPOSTABLA/50913/110924?det=1</a></p>
+<p><a href="https://servicios.ine.es/wstempus/js/ES/VALORES_GRUPOSTABLA/50913/110925?det=1" class="uri">https://servicios.ine.es/wstempus/js/ES/VALORES_GRUPOSTABLA/50913/110925?det=1</a></p>
+<p><a href="https://servicios.ine.es/wstempus/js/ES/VALORES_GRUPOSTABLA/50913/110926?det=1" class="uri">https://servicios.ine.es/wstempus/js/ES/VALORES_GRUPOSTABLA/50913/110926?det=1</a></p></li>
+<li><p>Filtrar por la variables y valores que nos interesan:</p>
+<p>Por ejemplo, variación anual (id_variable = 3, id_valor = 74 y tv=3:74) del índice general (id_variable = 762, id_valor = 304092 y tv=762:304092) de la Comunidad de Madrid (id_variable = 70, id_valor = 9009 y tv=70:9009)</p>
+<p><a href="https://servicios.ine.es/wstempus/js/ES/DATOS_TABLA/50913?nult=2&amp;tv=3:74&amp;tv=762:304092&amp;tv=70:9009" class="uri">https://servicios.ine.es/wstempus/js/ES/DATOS_TABLA/50913?nult=2&amp;tv=3:74&amp;tv=762:304092&amp;tv=70:9009</a></p>
+<p>Si no se especifica ningún valor, se obtienen todos los valores de la variable. Por ejemplo, con tv=70: se obtiene todas las Comunidades Autónomas</p>
+<p><a href="https://servicios.ine.es/wstempus/js/ES/DATOS_TABLA/50913?nult=2&amp;tv=3:74&amp;tv=762:304092&amp;tv=70" class="uri">https://servicios.ine.es/wstempus/js/ES/DATOS_TABLA/50913?nult=2&amp;tv=3:74&amp;tv=762:304092&amp;tv=70</a>:</p>
+<p>Si queremos filtrar por varios valores de una misma variable, tenemos que incluir tantos parámetros tv como valores. Por ejemplo, para obtener datos tanto de la Comunidad de Madrid como del Principado de Asturias (id_variable = 70, id_valor = 8999 y tv=70:8999)</p>
+<p><a href="https://servicios.ine.es/wstempus/js/ES/DATOS_TABLA/50913?nult=2&amp;tv=3:74&amp;tv=762:304092&amp;tv=70:9009&amp;tv=70:8999" class="uri">https://servicios.ine.es/wstempus/js/ES/DATOS_TABLA/50913?nult=2&amp;tv=3:74&amp;tv=762:304092&amp;tv=70:9009&amp;tv=70:8999</a></p></li>
+</ol>
+</section>
+<section id="tablas-pc-axis" class="level3">
+<h3 class="anchored" data-anchor-id="tablas-pc-axis">Tablas pc-axis</h3>
+<p>Para poder filtrar es necesario conocer los códigos identificadores alfanuméricos (Código) de las variables y los valores por los que queremos filtrar. Por lo tanto, debemos hacer lo siguiente:</p>
+<ol type="1">
+<li><p>Pedir los metadatos de las series que conforman la tabla de interés <a href="https://www.ine.es/jaxi/Tabla.htm?path=/t20/e245/p08/l0/&amp;file=01001.px">Población por edad (3 grupos de edad), Españoles/Extranjeros, Sexo y Año</a> (Id = t20/e245/p08/l0/01001.px)</p>
+<p><a href="https://servicios.ine.es/wstempus/jsCache/ES/SERIES_TABLA/t20/e245/p08/l0/01001.px?tip=M" class="uri">https://servicios.ine.es/wstempus/jsCache/ES/SERIES_TABLA/t20/e245/p08/l0/01001.px?tip=M</a></p></li>
+<li><p>Filtrar por la variables y valores que nos interesan:</p>
+<p>Por ejemplo, para la población de mujeres (id_variable = sexo, id_valor = mujeres, tv=sexo:mujeres) españolas (id_variable = espanolesextranjeros, id_valor = españoles, tv= espanolesextranjeros:españoles) de todas las edades (id_variable = edad3gruposdeedad, id_valor = totaledades, tv=edad3gruposdeedad:totaledades)</p>
+<p><a href="https://servicios.ine.es/wstempus/jsCache/ES/DATOS_TABLA/t20/e245/p08/l0/01001.px?nult=2&amp;tv=sexo:mujeres&amp;tv=espanolesextranjeros:espanoles&amp;tv=edad3gruposdeedad:totaledades" class="uri">https://servicios.ine.es/wstempus/jsCache/ES/DATOS_TABLA/t20/e245/p08/l0/01001.px?nult=2&amp;tv=sexo:mujeres&amp;tv=espanolesextranjeros:espanoles&amp;tv=edad3gruposdeedad:totaledades</a></p>
+<p>Si no se especifica ningún valor, se obtienen todos los valores de la variable. Por ejemplo, con tv=sexo: se obtiene la población de hombres, mujeres y ambos sexos</p>
+<p><a href="https://servicios.ine.es/wstempus/jsCache/ES/DATOS_TABLA/t20/e245/p08/l0/01001.px?nult=2&amp;tv=sexo:&amp;tv=espanolesextranjeros:espanoles&amp;tv=edad3gruposdeedad:totaledades" class="uri">https://servicios.ine.es/wstempus/jsCache/ES/DATOS_TABLA/t20/e245/p08/l0/01001.px?nult=2&amp;tv=sexo:&amp;tv=espanolesextranjeros:espanoles&amp;tv=edad3gruposdeedad:totaledades</a></p>
+<p>Si queremos filtrar por varios valores de una misma variable, tenemos que incluir tantos parámetros tv como valores. Por ejemplo, para obtener la población de hombres y mujeres</p>
+<p><a href="https://servicios.ine.es/wstempus/jsCache/ES/DATOS_TABLA/t20/e245/p08/l0/01001.px?nult=2&amp;tv=sexo:mujeres&amp;tv=sexo:hombres&amp;tv=espanolesextranjeros:espanoles&amp;tv=edad3gruposdeedad:totaledades" class="uri">https://servicios.ine.es/wstempus/jsCache/ES/DATOS_TABLA/t20/e245/p08/l0/01001.px?nult=2&amp;tv=sexo:mujeres&amp;tv=sexo:hombres&amp;tv=espanolesextranjeros:espanoles&amp;tv=edad3gruposdeedad:totaledades</a></p></li>
+</ol>
+</section>
+<section id="tablas-tpx" class="level3">
+<h3 class="anchored" data-anchor-id="tablas-tpx">Tablas tpx</h3>
+<p>Para poder filtrar es necesario conocer los códigos identificadores alfanuméricos de las variables y los valores por los que queremos filtrar. Por lo tanto, debemos hacer lo siguiente:</p>
+<ol type="1">
+<li><p>Pedir los metadatos de las series que conforman la tabla de interés <a href="https://www.ine.es/jaxi/Tabla.htm?tpx=33387&amp;L=0">Extracción nacional por tipo de material y años</a> &nbsp;(Id = 33387)</p>
+<p><a href="https://servicios.ine.es/wstempus/jsCache/ES/SERIES_TABLA/33387?tip=M" class="uri">https://servicios.ine.es/wstempus/jsCache/ES/SERIES_TABLA/33387?tip=M</a></p></li>
+<li><p>Filtrar por la variables y valores que nos interesan:</p>
+<p>Por ejemplo, para biomasa (id_variable = tipodematerial, id_valor = tipodematerial, tv= tipodematerial: tipodematerial</p>
+<p><a href="https://servicios.ine.es/wstempus/jsCache/ES/DATOS_TABLA/33387?nult=2&amp;tv=tipodematerial:1biomasa" class="uri">https://servicios.ine.es/wstempus/jsCache/ES/DATOS_TABLA/33387?nult=2&amp;tv=tipodematerial:1biomasa</a></p>
+<p>Si no se especifica ningún valor, se obtienen todos los valores de la variable. Por ejemplo, con tv=sexo: se obtiene la población de hombres, mujeres y ambos sexos</p>
+<p><a href="https://servicios.ine.es/wstempus/jsCache/ES/DATOS_TABLA/33387?nult=2&amp;tv=tipodematerial" class="uri">https://servicios.ine.es/wstempus/jsCache/ES/DATOS_TABLA/33387?nult=2&amp;tv=tipodematerial</a>:</p>
+<p>Si queremos filtrar por varios valores de una misma variable, tenemos que incluir tantos parámetros tv como valores. Por ejemplo, para obtener biomasa y minerales metálicos</p>
+<p><a href="https://servicios.ine.es/wstempus/jsCache/ES/DATOS_TABLA/33387?nult=2&amp;tv=tipodematerial:1biomasa&amp;tv=tipodematerial:2mineralesmetalicosmineralenbruto" class="uri">https://servicios.ine.es/wstempus/jsCache/ES/DATOS_TABLA/33387?nult=2&amp;tv=tipodematerial:1biomasa&amp;tv=tipodematerial:2mineralesmetalicosmineralenbruto</a></p></li>
+</ol>
+<section id="tablas-tpx-con-códigos-identificadores-de-tempus-3" class="level4">
+<h4 class="anchored" data-anchor-id="tablas-tpx-con-códigos-identificadores-de-tempus-3">Tablas tpx con códigos identificadores de Tempus 3</h4>
+<p>Existen tablas tpx que contienen códigos identificadores de Tempus 3 (<a href="https://www.ine.es/dyngs/INEbase/es/operacion.htm?c=Estadistica_C&amp;cid=1254736176851&amp;menu=resultados&amp;idp=1254735727106">Censo agrario 2020</a>). En este caso además de filtrar usando los códigos alfanuméricos, como para una tabla tpx normal, también se puede filtrar utilizando los códigos numéricos Tempus 3 de las variables y los valores. Para ello, debemos hacer lo siguiente:</p>
+<ol type="1">
+<li><p>Pedir lo metadatos de las series que conforman la tabla de interés <a href="https://www.ine.es/jaxi/Tabla.htm?tpx=52056&amp;L=0">Mano de obra en la explotación, familiar y contratada de manera regular, por relación con el titular, porcentaje de unidad de trabajo-año total (UTAT) y sexo</a> (Id=52056). A la función <a href="#_SERIES_TABLA">SERIES_TABLA</a> también le podemos pasar un filtro (útil para tablas con un gran número de series debido a una gran segmentación territorial), por ejemplo total nacional (tv=NAC:00):</p>
+<p><a href="https://servicios.ine.es/wstempus/js/ES/SERIES_TABLA/52056?tip=M&amp;tv=NAC:00" class="uri">https://servicios.ine.es/wstempus/js/ES/SERIES_TABLA/52056?tip=M&amp;tv=NAC:00</a></p></li>
+<li><p>Para utilizar los identificadores numéricos añadimos el alias ~id al final (tv=id_varaible~id:id_valor~id). Por ejemplo&nbsp; para el Total Nacional (tv=349~id:16473~id),&nbsp; Total tramos UTAT (tv=916~id:391871~id), Nº explotaciones (tv=942~id:274282~id), Total mano de obra (tv=999~id:391770~id) y Valor absoluto (tv=3~id:11406~id) tendríamos:</p>
+<p><a href="https://servicios.ine.es/wstempus/js/ES/DATOS_TABLA/52056?tv=349~id:16473~id&amp;tv=916~id:391871~id&amp;tv=942~id:274282~id&amp;tv=999~id:391770~id&amp;tv=3~id:11406~id" class="uri">https://servicios.ine.es/wstempus/js/ES/DATOS_TABLA/52056?tv=349~id:16473~id&amp;tv=916~id:391871~id&amp;tv=942~id:274282~id&amp;tv=999~id:391770~id&amp;tv=3~id:11406~id</a></p></li>
+</ol>
+
+
+</section>
+</section>
+</section>
+
+<a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a></main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+</body></html>
