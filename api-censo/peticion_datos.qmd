@@ -1,0 +1,135 @@
+---
+title: "Ejemplos de peticiones"
+---
+
+A continuación mostramos una serie de ejemplos de consulta utilizando el entorno R.
+
+## Ejemplo 1
+
+Población por (vea las [variables de tabla per.ppal](referencia.html#total-de-personas-per.ppal)):
+
+-   CCAA de residencia (**ID_RESIDENCIA_N1**)
+
+-   Nacionalidad (española/extranjera) (**ID_NACIONALIDAD_N1**)
+
+-   Sexo (ID_SEXO)
+
+-   Edad en grandes grupos (**ID_GRAN_GRUPO_EDAD**)
+
+```{r}
+library(httr)
+library(jsonlite)
+
+# Url base del servio API del Censo
+url <- "https://www.ine.es/Censo2021/api"
+
+# Consulta a la base de datos
+consulta <- '{"idioma":"ES", "metrica":["SPERSONAS"], "tabla":"per.ppal",
+              "variables": ["ID_RESIDENCIA_N1", 
+                            "ID_NACIONALIDAD_N1",
+                            "ID_SEXO",
+                            "ID_GRAN_GRUPO_EDAD"]
+             }'
+
+# Llamada a la API utilizando método POST
+response <- httr::VERB("POST", url, 
+                  body =  consulta, 
+                  content_type("application/json"),
+                  accept("application/json"),
+                  encode = "json")
+
+
+# Obtenemos el contenido de la respuesta, que contiene tanto los datos como los metadatos
+contenido <- content(response, "text")
+
+# La cadena de texto internamente es un json
+contenido <- jsonlite::fromJSON(contenido)
+
+# Data frame con los datos
+datos <- contenido$data
+head(datos)
+
+```
+
+## Ejemplo 2
+
+Número de hogares por (vea las [variables de tabla hog](referencia.html#hogares-hog)):
+
+-   CC.AA. de residencia (**ID_RESIDENCIA_N1**)
+
+-   Tamaño del hogar (**ID_TAM_HOG_6**)
+
+-   Número de miembros de 16 a 64 años que están trabajando (**ID_ACTI_HOG_1**)
+
+```{r}
+library(httr)
+library(jsonlite)
+
+# Url base del servio API del Censo
+url <- "https://www.ine.es/Censo2021/api"
+
+# Consulta a la base de datos
+consulta <- '{"idioma":"ES", "metrica":["SHOGARES"], "tabla":"hog",
+              "variables": ["ID_RESIDENCIA_N1", 
+                            "ID_TAM_HOG_6",
+                            "ID_ACTI_HOG_1"
+                            ]
+             }'
+
+# Llamada a la API utilizando método POST
+response <- httr::VERB("POST", url, 
+                  body =  consulta, 
+                  content_type("application/json"),
+                  accept("application/json"),
+                  encode = "json")
+
+
+# Obtenemos el contenido de la respuesta, que contiene tanto los datos como los metadatos
+contenido <- content(response, "text")
+
+# La cadena de texto internamente es un json
+contenido <- jsonlite::fromJSON(contenido)
+
+# Data frame con los datos
+datos <- contenido$data
+head(datos)
+```
+
+## Ejemplo 3
+
+Número de viviendas familiares por (vea las [variables de tabla viv.fam](referencia.html#viviendas-familiares-viv.fam)):
+
+-   CC.AA. de residencia (**ID_RESIDENCIA_N1**)
+
+-   Régimen de tenencia de la vivienda (**ID_TENEN_VIV**)
+
+```{r}
+library(httr)
+library(jsonlite)
+
+# Url base del servio API del Censo
+url <- "https://www.ine.es/Censo2021/api"
+
+# Consulta a la base de datos
+consulta <- '{"idioma":"ES", "metrica":["SVIVIENDAS"], "tabla":"viv.fam",
+              "variables": ["ID_RESIDENCIA_N1", "ID_TENEN_VIV"]
+             }'
+
+# Llamada a la API utilizando método POST
+response <- httr::VERB("POST", url, 
+                  body =  consulta, 
+                  content_type("application/json"),
+                  accept("application/json"),
+                  encode = "json")
+
+
+# Obtenemos el contenido de la respuesta, que contiene tanto los datos como los metadatos
+contenido <- content(response, "text")
+
+# La cadena de texto internamente es un json
+contenido <- jsonlite::fromJSON(contenido)
+
+# Data frame con los datos
+datos <- contenido$data
+head(datos)
+```

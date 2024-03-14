@@ -1,0 +1,10 @@
+---
+title: "API Censos de Población y Viviendas 2021"
+subtitle: "Servicio web para la consulta de los Censos de Población y Viviendas 2021"
+description: " "
+image: ../img/censos_2021.png
+image-alt: "Censos 2021"
+image-width: "50%"
+---
+
+En 2021 se realizararon en España los censos de Población, personas y hogares, y de Viviendas y Edificios. El servicio permite la consulta de datos del Sistema de Difusión de los Censos de Población y Viviendas 2021 (SDC21).

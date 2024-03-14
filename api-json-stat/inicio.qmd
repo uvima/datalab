@@ -1,6 +1,7 @@
 ---
 title: "API JSON-stat"
 subtitle: "Servicio web que devuelve las consultas en formato JSON-stat"
+description: " "
 image: ../img/JSON_vector_logo.svg
 image-alt: "JSON"
 image-width: "50%"

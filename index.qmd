@@ -3,8 +3,9 @@ title: "Data Lab: servicios web API"
 listing:
   type: grid
   contents:
-    - "api-json/inicio.qmd"
-    - "api-json-stat/inicio.qmd"
+    - api-json/inicio.qmd
+    - api-json-stat/inicio.qmd
+    - api-censo/inicio.qmd
 ---
 
 

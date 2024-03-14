@@ -12,6 +12,8 @@ website:
         text: API JSON
       - href: api-json-stat/inicio.qmd
         text: API JSON-Stat
+      - href: api-censo/inicio.qmd
+        text: "API Censos 2021"
 
   sidebar:
     - id: api-json
@@ -34,6 +36,13 @@ website:
         - api-json-stat/referencia.qmd
         - api-json-stat/obtener_datos_tabla.qmd
         - api-json-stat/codigos_identificadores.qmd
+        
+    - id: api-censo
+      style: "docked"
+      contents:
+        - api-censo/inicio.qmd
+        - api-censo/referencia.qmd
+        - api-censo/peticion_datos.qmd
 
 format:
   html:
