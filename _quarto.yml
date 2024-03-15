@@ -5,19 +5,23 @@ website:
   title: "INE Data Lab"
   back-to-top-navigation: true
   navbar:
-    logo: img/LogoINE.svg
-    logo-alt: Logo INE
+    background: "#457E76"
     left:
-      - href: api-json/inicio.qmd
+      - file: api-json/inicio.qmd
         text: API JSON
-      - href: api-json-stat/inicio.qmd
+      - file: api-json-stat/inicio.qmd
         text: API JSON-Stat
-      - href: api-censo/inicio.qmd
-        text: "API Censos 2021"
+      - file: api-censo/inicio.qmd
+        text: "API Censos 2021"		
+
 
   sidebar:
     - id: api-json
+      title: "API JSON"
+      logo: img/LogoINE.svg
+      logo-alt: Logo INE
       style: "docked"
+      background: "#DDEEEC"
       collapse-level: 1
       contents:
         - api-json/inicio.qmd
@@ -30,7 +34,7 @@ website:
         - api-json/tempus3.qmd
     
     - id: api-json-stat
-      style: "docked"
+      title: "API JSON-stat"
       contents:
         - api-json-stat/inicio.qmd
         - api-json-stat/referencia.qmd
@@ -38,7 +42,7 @@ website:
         - api-json-stat/codigos_identificadores.qmd
         
     - id: api-censo
-      style: "docked"
+      title: "API Censos 2021"
       contents:
         - api-censo/inicio.qmd
         - api-censo/referencia.qmd
