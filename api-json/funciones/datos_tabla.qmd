@@ -33,7 +33,9 @@ Información y datos de las series contenidas en la tabla: Nombre de la serie, i
 
 ## Ejemplos
 
-Devuelve todos los periodos de la tabla con Id=50902 <https://servicios.ine.es/wstempus/js/ES/DATOS_TABLA/50902>
+Devuelve todos los periodos de la tabla con Id=50902
+
+<https://servicios.ine.es/wstempus/js/ES/DATOS_TABLA/50902>
 
 Devuelve el último periodo de la tabla con Id=50902
 

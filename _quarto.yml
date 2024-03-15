@@ -10,7 +10,7 @@ website:
       - file: api-json/inicio.qmd
         text: API JSON
       - file: api-json-stat/inicio.qmd
-        text: API JSON-Stat
+        text: API JSON-stat
       - file: api-censo/inicio.qmd
         text: "API Censos 2021"		
 
