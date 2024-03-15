@@ -165,6 +165,8 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#como-filtrar-datos-de-una-tabla" id="toc-como-filtrar-datos-de-una-tabla" class="nav-link active" data-scroll-target="#como-filtrar-datos-de-una-tabla">Como filtrar datos de una tabla</a>
   <ul class="collapse">
   <li><a href="#tablas-tempus-3" id="toc-tablas-tempus-3" class="nav-link" data-scroll-target="#tablas-tempus-3">Tablas Tempus 3</a></li>
+  <li><a href="#tablas-pc-axis" id="toc-tablas-pc-axis" class="nav-link" data-scroll-target="#tablas-pc-axis">Tablas pc-axis</a></li>
+  <li><a href="#tablas-tpx" id="toc-tablas-tpx" class="nav-link" data-scroll-target="#tablas-tpx">Tablas tpx</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -218,8 +220,37 @@ ul.task-list li input[type="checkbox"] {
 <p>Si queremos filtrar por varios valores de una misma variable, tenemos que incluir tantos parámetros tv como valores. Por ejemplo, para obtener datos tanto de la Comunidad de Madrid como del Principado de Asturias (id_variable = 70, id_valor = 8999 y tv=70:8999)</p>
 <p><a href="https://servicios.ine.es/wstempus/jsstat/ES/DATASET/50913?nult=2&amp;tv=3:74&amp;tv=762:304092&amp;tv=70:9009&amp;tv=70:8999" class="uri">https://servicios.ine.es/wstempus/jsstat/ES/DATASET/50913?nult=2&amp;tv=3:74&amp;tv=762:304092&amp;tv=70:9009&amp;tv=70:8999</a></p></li>
 </ol>
+</section>
+<section id="tablas-pc-axis" class="level3">
+<h3 class="anchored" data-anchor-id="tablas-pc-axis">Tablas pc-axis</h3>
+<p>Para poder filtrar es necesario conocer los códigos identificadores alfanuméricos (Código) de las variables y los valores por los que queremos filtrar. Por lo tanto, debemos hacer lo siguiente:</p>
+<ol type="1">
+<li><p>Pedir los metadatos de las series que conforman la tabla de interés <a href="https://www.ine.es/jaxi/Tabla.htm?path=/t20/e245/p08/l0/&amp;file=01001.px">Población por edad (3 grupos de edad), Españoles/Extranjeros, Sexo y Año</a> (Id = t20/e245/p08/l0/01001.px)</p>
+<p><a href="https://servicios.ine.es/wstempus/jsCache/ES/SERIES_TABLA/t20/e245/p08/l0/01001.px?tip=M" class="uri">https://servicios.ine.es/wstempus/jsCache/ES/SERIES_TABLA/t20/e245/p08/l0/01001.px?tip=M</a></p></li>
+<li><p>Filtrar por la variables y valores que nos interesan:</p>
+<p>Por ejemplo, para la población de mujeres (id_variable = sexo, id_valor = mujeres, tv=sexo:mujeres) españolas (id_variable = espanolesextranjeros, id_valor = españoles, tv= espanolesextranjeros:españoles) de todas las edades (id_variable = edad3gruposdeedad, id_valor = totaledades, tv=edad3gruposdeedad:totaledades)</p>
+<p><a href="https://servicios.ine.es/wstempus/jsstat/ES/DATASET/t20/e245/p08/l0/01001.px?nult=2&amp;tv=sexo:mujeres&amp;tv=espanolesextranjeros:espanoles&amp;tv=edad3gruposdeedad:totaledades" class="uri">https://servicios.ine.es/wstempus/jsstat/ES/DATASET/t20/e245/p08/l0/01001.px?nult=2&amp;tv=sexo:mujeres&amp;tv=espanolesextranjeros:espanoles&amp;tv=edad3gruposdeedad:totaledades</a></p>
+<p>Si queremos filtrar por varios valores de una misma variable, tenemos que incluir tantos parámetros tv como valores. Por ejemplo, para obtener la población de hombres y mujeres</p>
+<p><a href="https://servicios.ine.es/wstempus/jsstat/ES/DATASET/t20/e245/p08/l0/01001.px?nult=2&amp;tv=sexo:mujeres&amp;tv=sexo:hombres&amp;tv=espanolesextranjeros:espanoles&amp;tv=edad3gruposdeedad:totaledades" class="uri">https://servicios.ine.es/wstempus/jsstat/ES/DATASET/t20/e245/p08/l0/01001.px?nult=2&amp;tv=sexo:mujeres&amp;tv=sexo:hombres&amp;tv=espanolesextranjeros:espanoles&amp;tv=edad3gruposdeedad:totaledades</a></p></li>
+</ol>
+</section>
+<section id="tablas-tpx" class="level3">
+<h3 class="anchored" data-anchor-id="tablas-tpx">Tablas tpx</h3>
+<p>Para poder filtrar es necesario conocer los códigos identificadores alfanuméricos de las variables y los valores por los que queremos filtrar. Por lo tanto, debemos hacer lo siguiente:</p>
+<ol type="1">
+<li><p>Pedir los metadatos de las series que conforman la tabla de interés <a href="https://www.ine.es/jaxi/Tabla.htm?tpx=33387&amp;L=0">Extracción nacional por tipo de material y años</a> &nbsp;(Id = 33387)</p>
+<p><a href="https://servicios.ine.es/wstempus/jsCache/ES/SERIES_TABLA/33387?tip=M" class="uri">https://servicios.ine.es/wstempus/jsCache/ES/SERIES_TABLA/33387?tip=M</a></p></li>
+<li><p>Filtrar por la variables y valores que nos interesan:</p>
+<p>Por ejemplo, para biomasa (id_variable = tipodematerial, id_valor = tipodematerial, tv= tipodematerial: tipodematerial</p>
+<p><a href="https://servicios.ine.es/wstempus/jsstat/ES/DATASET/33387?nult=2&amp;tv=tipodematerial:1biomasa" class="uri">https://servicios.ine.es/wstempus/jsstat/ES/DATASET/33387?nult=2&amp;tv=tipodematerial:1biomasa</a></p>
+<p>Si queremos filtrar por varios valores de una misma variable, tenemos que incluir tantos parámetros tv como valores. Por ejemplo, para obtener biomasa y minerales metálicos</p>
+<p><a href="https://servicios.ine.es/wstempus/jsstat/ES/DATASET/33387?nult=2&amp;tv=tipodematerial:1biomasa&amp;tv=tipodematerial:2mineralesmetalicosmineralenbruto" class="uri">https://servicios.ine.es/wstempus/jsstat/ES/DATASET/33387?nult=2&amp;tv=tipodematerial:1biomasa&amp;tv=tipodematerial:2mineralesmetalicosmineralenbruto</a></p></li>
+</ol>
+<section id="section" class="level4">
+<h4 class="anchored" data-anchor-id="section"></h4>
 
 
+</section>
 </section>
 </section>
 
