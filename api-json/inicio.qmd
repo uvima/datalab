@@ -1,6 +1,6 @@
 ---
 title: "API JSON"
-subtitle: "Servicio web para la consulta de INEbase en formato JSON"
+subtitle: "Servicio web para la consulta de INEbase con salida en formato JSON"
 description: " "
 image: ../img/JSON_vector_logo.svg
 image-alt: "JSON"
