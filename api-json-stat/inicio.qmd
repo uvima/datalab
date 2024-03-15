@@ -1,10 +1,9 @@
 ---
 title: "API JSON-stat"
-subtitle: "Servicio web que devuelve las consultas en formato JSON-stat"
+subtitle: "Servicio web para la consulta de tablas de INEbase en formato JSON-stat"
 description: " "
 image: ../img/JSON_vector_logo.svg
 image-alt: "JSON"
-image-width: "50%"
 ---
 
 El formato JSON-stat es un formato ligero para la publicación de datos en forma tabular. En este modelo de cubo los conjuntos de datos están organizados en dimensiones y las dimensiones están organizadas en categorías. 
