@@ -2,9 +2,9 @@
   {
     "listing": "/index.html",
     "items": [
-      "/api-censo/inicio.html",
+      "/api-json-stat/inicio.html",
       "/api-json/inicio.html",
-      "/api-json-stat/inicio.html"
+      "/api-censo/inicio.html"
     ]
   }
 ]
