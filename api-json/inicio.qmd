@@ -1,9 +1,8 @@
 ---
 title: "API JSON"
 subtitle: "Servicio web para la consulta de INEbase con salida en formato JSON"
-description: " "
-image: ../img/JSON_vector_logo.svg
-image-alt: "JSON"
+#image: ../img/JSON_vector_logo.svg
+#image-alt: "JSON"
 ---
 
 El servicio API JSON INE (Java Script Object Notation) que se describe en esta sección permite acceder mediante peticiones URL a toda la información disponible en INEbase, sistema que utiliza el Instituto Nacional de Estadística (INE) para la publicación de la información estadística.

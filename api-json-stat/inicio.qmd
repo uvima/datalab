@@ -1,16 +1,15 @@
 ---
 title: "API JSON-stat"
 subtitle: "Servicio web para la consulta de tablas de INEbase con salida en formato JSON-stat"
-description: " "
-image: ../img/JSON_vector_logo.svg
-image-alt: "JSON"
+#image: ../img/JSON_vector_logo.svg
+#image-alt: "JSON"
 ---
 
 El formato JSON-stat es un formato ligero para la publicación de datos en forma tabular. En este modelo de cubo los conjuntos de datos están organizados en dimensiones y las dimensiones están organizadas en categorías. 
 
 La estructura de las peticiones a través de URL y la simplicidad del formato JSON permiten la explotación automática de la información estadística.
 
-INEbase es el sistema que utiliza el INE para la publicación de la información estadística. La información que será accesible a través del servicio API JSON del INE proviene de tres fuentes distintas:
+INEbase es el sistema que utiliza el INE para la publicación de la información estadística. Las tablas que serán accesibles a través del servicio API JSON del INE proviene de tres fuentes distintas:
 
 -   Base de datos Tempus3.
 
@@ -19,5 +18,3 @@ INEbase es el sistema que utiliza el INE para la publicación de la información
 -   Repositorio de archivos tpx.
 
 Para saber si una tabla estadística está almacenada en Tempus3, en el repositorio de archivos PC-Axis o en el repositorio de archivos tpx, consultar [Obtención del identificador de una tabla utilizando INEbase](codigos_identificadores.html#obtenci%C3%B3n-del-identificador-de-una-tabla-utilizando-inebase).
-
-Toda la información publicada por el INE, independientemente de la fuente, va a poder ser consultada a través de la API JSON.

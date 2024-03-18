@@ -116,7 +116,7 @@ Devuelve los datos entre el 01/01/2023 y el 31/12/2023
 
 Devuelve los datos a partir del 01/01/2024
 
-<https://servicios.ine.es/wstempus/jsstat/ES/DATASET/50902?date=20240101>:
+<https://servicios.ine.es/wstempus/jsstat/ES/DATASET/50902?date=20240101:>
 
 Descargar la consulta en un archivo .json
 

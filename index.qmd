@@ -2,8 +2,10 @@
 title: "INE Data Lab"
 subtitle: "Lista de servicios web disponibles"
 listing:
-  type: default
-  grid-item-align: center
+  type: grid
+  fields: [title, subtitle] 
+  sort: 
+    - "title desc"
   contents:
     - api-json/inicio.qmd
     - api-json-stat/inicio.qmd
