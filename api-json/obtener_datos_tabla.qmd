@@ -50,7 +50,7 @@ Para poder filtrar es necesario conocer los códigos identificadores numéricos 
 
     Si queremos filtrar por varios valores de una misma variable, tenemos que incluir tantos parámetros tv como valores. Por ejemplo, para obtener datos tanto de Castilla y León como del Principado de Asturias (id_variable = 70, id_valor = 9003 y tv=70:8999)
 
-    <https://servicios.ine.es/wstempus/js/ES/DATOS_TABLA/50913?nult=2&tv=3:74&tv=762:304092&tv=70:9003&tv=70:8999>
+    <https://servicios.ine.es/wstempus/js/ES/DATOS_TABLA/50913?nult=2&tip=A&tv=3:74&tv=762:304092&tv=70:9003&tv=70:8999>
 
 ### Tablas pc-axis
 
