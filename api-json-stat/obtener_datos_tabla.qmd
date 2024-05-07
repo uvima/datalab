@@ -40,13 +40,13 @@ Para poder filtrar es necesario conocer los códigos identificadores numéricos 
 
 3.  Filtrar por la variables y valores que nos interesan:
 
-    Por ejemplo, variación anual (id_variable = 3, id_valor = 74 y tv=3:74) del índice general (id_variable = 762, id_valor = 304092 y tv=762:304092) de la Comunidad de Madrid (id_variable = 70, id_valor = 9009 y tv=70:9009)
+    Por ejemplo, variación anual (id_variable = 3, id_valor = 74 y tv=3:74) del índice general (id_variable = 762, id_valor = 304092 y tv=762:304092) de Castilla y León (id_variable = 70, id_valor = 9003 y tv=70:9003)
 
-    <https://servicios.ine.es/wstempus/jsstat/ES/DATASET/50913?nult=2&tv=3:74&tv=762:304092&tv=70:9009>
+    <https://servicios.ine.es/wstempus/jsstat/ES/DATASET/50913?nult=2&tv=3:74&tv=762:304092&tv=70:9003>
 
-    Si queremos filtrar por varios valores de una misma variable, tenemos que incluir tantos parámetros tv como valores. Por ejemplo, para obtener datos tanto de la Comunidad de Madrid como del Principado de Asturias (id_variable = 70, id_valor = 8999 y tv=70:8999)
+    Si queremos filtrar por varios valores de una misma variable, tenemos que incluir tantos parámetros tv como valores. Por ejemplo, para obtener datos tanto de Castilla y León como del Principado de Asturias (id_variable = 70, id_valor = 9003 y tv=70:8999)
 
-    <https://servicios.ine.es/wstempus/jsstat/ES/DATASET/50913?nult=2&tv=3:74&tv=762:304092&tv=70:9009&tv=70:8999>
+    <https://servicios.ine.es/wstempus/jsstat/ES/DATASET/50913?nult=2&tv=3:74&tv=762:304092&tv=70:9003&tv=70:8999>
 
 ### Tablas pc-axis
 
