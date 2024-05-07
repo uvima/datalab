@@ -13,7 +13,7 @@ website:
         text: API JSON-stat
       - file: api-censo/inicio.qmd
         text: "API Censos 2021"
-      - href: https://uvima.github.io/ineapir/
+      - href: https://es-ine.github.io/ineapir/
         text: "INEapir"
 
 

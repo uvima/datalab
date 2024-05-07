@@ -25,4 +25,4 @@ Toda la información publicada por el INE, independientemente de la fuente, va a
 
 Se dispone del paquete INEapir para interactuar con la API JSON.
 
-[![](/img/hex_logo.png){fig-alt="INEapir" fig-align="center" width="25%"}](https://github.com/uvima/ineapir)
+[![](/img/hex_logo.png){fig-alt="INEapir" fig-align="center" width="25%"}](https://github.com/es-ine/ineapir)
