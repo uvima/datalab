@@ -37,8 +37,6 @@ Las salidas resultantes de los datos se configuran como cruces de categorías de
 | hog          | ID_RESIDENCIA_N1    | CC.AA. de residencia                                                     | Autonomous Community                                             |
 | hog          | ID_RESIDENCIA_N2    | Provincia de residencia                                                  | Province of residence                                            |
 | hog          | ID_RESIDENCIA_N3    | Municipio de residencia                                                  | Municipality of residence                                        |
-| hog          | ID_RESIDENCIA_N4    | Distrito                                                                 | District                                                         |
-| hog          | ID_RESIDENCIA_N5    | Sección                                                                  | Section                                                          |
 | hog          | ID_SUP_OCU_VIV      | Superficie por ocupante                                                  | Useful floor space per occupant                                  |
 | hog          | ID_SUP_VIV          | Superficie                                                               | Useful floor space                                               |
 | hog          | ID_TAM_HOG_6        | Tamaño del hogar                                                         | Size of the household                                            |
@@ -75,8 +73,6 @@ Las salidas resultantes de los datos se configuran como cruces de categorías de
 | nuc          | ID_RESIDENCIA_N1        | CC.AA. de residencia                             | Autonomous Community                                     |
 | nuc          | ID_RESIDENCIA_N2        | Provincia de residencia                          | Province of residence                                    |
 | nuc          | ID_RESIDENCIA_N3        | Municipio de residencia                          | Municipality of residence                                |
-| nuc          | ID_RESIDENCIA_N4        | Distrito                                         | District                                                 |
-| nuc          | ID_RESIDENCIA_N5        | Sección                                          | Section                                                  |
 | nuc          | ID_SUP_OCU_VIV          | Superficie por ocupante                          | Useful floor space per occupant                          |
 | nuc          | ID_SUP_VIV              | Superficie                                       | Useful floor space                                       |
 | nuc          | ID_TAM_HOG_6            | Tamaño del hogar                                 | Size of the household                                    |
@@ -129,8 +125,6 @@ Las salidas resultantes de los datos se configuran como cruces de categorías de
 | per.estu     | ID_RESIDENCIA_N1    | CC.AA. de residencia                                    | Autonomous Community                                              |
 | per.estu     | ID_RESIDENCIA_N2    | Provincia de residencia                                 | Province of residence                                             |
 | per.estu     | ID_RESIDENCIA_N3    | Municipio de residencia                                 | Municipality of residence                                         |
-| per.estu     | ID_RESIDENCIA_N4    | Distrito                                                | District                                                          |
-| per.estu     | ID_RESIDENCIA_N5    | Sección                                                 | Section                                                           |
 | per.estu     | ID_SEXO             | Sexo                                                    | Sex                                                               |
 | per.estu     | ID_TAM_MUN_11       | Tamaño de municipio de residencia                       | Size of municipality of residence                                 |
 | per.estu     | ID_TAM_MUN_12       | Tamaño de municipio de nacimiento                       | Size of municipality of birth                                     |
@@ -258,8 +252,6 @@ Las salidas resultantes de los datos se configuran como cruces de categorías de
 | per.ocu      | ID_RESIDENCIA_N1         | CC.AA. de residencia                                                      | Autonomous Community                                                   |
 | per.ocu      | ID_RESIDENCIA_N2         | Provincia de residencia                                                   | Province of residence                                                  |
 | per.ocu      | ID_RESIDENCIA_N3         | Municipio de residencia                                                   | Municipality of residence                                              |
-| per.ocu      | ID_RESIDENCIA_N4         | Distrito                                                                  | District                                                               |
-| per.ocu      | ID_RESIDENCIA_N5         | Sección                                                                   | Section                                                                |
 | per.ocu      | ID_SEXO                  | Sexo                                                                      | Sex                                                                    |
 | per.ocu      | ID_SEXO_CON              | Sexo del cónyuge                                                          | Sex of spouse or partner                                               |
 | per.ocu      | ID_SEXO_MAD              | Sexo del progenitor 1                                                     | Sex of parent 1                                                        |
@@ -358,8 +350,6 @@ Las salidas resultantes de los datos se configuran como cruces de categorías de
 | per.ppal     | ID_RESIDENCIA_N1    | CC.AA. de residencia                                    | Autonomous Community                                              |
 | per.ppal     | ID_RESIDENCIA_N2    | Provincia de residencia                                 | Province of residence                                             |
 | per.ppal     | ID_RESIDENCIA_N3    | Municipio de residencia                                 | Municipality of residence                                         |
-| per.ppal     | ID_RESIDENCIA_N4    | Distrito                                                | District                                                          |
-| per.ppal     | ID_RESIDENCIA_N5    | Sección                                                 | Section                                                           |
 | per.ppal     | ID_SEXO             | Sexo                                                    | Sex                                                               |
 | per.ppal     | ID_TAM_MUN_11       | Tamaño de municipio de residencia                       | Size of municipality of residence                                 |
 | per.ppal     | ID_TAM_MUN_12       | Tamaño de municipio de nacimiento                       | Size of municipality of birth                                     |
@@ -392,8 +382,6 @@ Las salidas resultantes de los datos se configuran como cruces de categorías de
 | viv.fam      | ID_RESIDENCIA_N1       | CC.AA. de residencia                          | Autonomous Community                                     |
 | viv.fam      | ID_RESIDENCIA_N2       | Provincia de residencia                       | Province of residence                                    |
 | viv.fam      | ID_RESIDENCIA_N3       | Municipio de residencia                       | Municipality of residence                                |
-| viv.fam      | ID_RESIDENCIA_N4       | Distrito                                      | District                                                 |
-| viv.fam      | ID_RESIDENCIA_N5       | Sección                                       | Section                                                  |
 | viv.fam      | ID_SUP_OCU_VIV         | Superficie por ocupante                       | Useful floor space per occupant                          |
 | viv.fam      | ID_SUP_VIV             | Superficie                                    | Useful floor space                                       |
 | viv.fam      | ID_TAM_HOG_6           | Tamaño del hogar                              | Size of the household                                    |
@@ -446,8 +434,6 @@ Las salidas resultantes de los datos se configuran como cruces de categorías de
 | viv.ppal     | ID_RESIDENCIA_N1    | CC.AA. de residencia                                    | Autonomous Community                                              |
 | viv.ppal     | ID_RESIDENCIA_N2    | Provincia de residencia                                 | Province of residence                                             |
 | viv.ppal     | ID_RESIDENCIA_N3    | Municipio de residencia                                 | Municipality of residence                                         |
-| viv.ppal     | ID_RESIDENCIA_N4    | Distrito                                                | District                                                          |
-| viv.ppal     | ID_RESIDENCIA_N5    | Sección                                                 | Section                                                           |
 | viv.ppal     | ID_SEXO             | Sexo                                                    | Sex                                                               |
 | viv.ppal     | ID_SITU             | Situación profesional                                   | Status in employment                                              |
 | viv.ppal     | ID_TAM_MUN_11       | Tamaño de municipio de residencia                       | Size of municipality of residence                                 |
