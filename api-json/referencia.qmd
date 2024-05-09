@@ -74,7 +74,7 @@ Obtener todos los valores de un grupo específico para una tabla dada
 
 Obtener una serie específica
 
-### [SERIES_OPERACION](series_operacion.html)
+### [SERIES_OPERACION](funciones/series_operacion.html)
 
 Obtener todas las series de una operación
 
