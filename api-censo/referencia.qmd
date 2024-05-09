@@ -4,7 +4,7 @@ title: "Referencia de la API"
 
 Únicamente se considera el método POST para recuperar la información. La petición devuelve los datos que corresponden a una selección de un mínimo de 1 variable y hasta un máximo de 4 variables por tabla.
 
-Las salidas resultantes de los datos se configuran como cruces de categorías de las variables. Los identificadores de las tablas, las variables, las unidades de medida y el idioma empleado en la petición son los que figuran en los ficheros Excel. La no utilización de esos identificadores no generará resultados en la respuesta. Los cruces se expresan mediante parámetros que se incluyen en la expresión URL que define la petición.
+Las salidas resultantes de los datos se configuran como cruces de categorías de las variables. Los identificadores de las [tablas](referencia.html#lista-de-tablas-disponibles), las [variables](referencia.html#lista-de-variables-disponibles-para-cada-tabla), las [unidades de medida](referencia.html#lista-de-unidades-de-medida-métricas-disponibles-para-cada-tabla) y el [idioma](referencia.html#lista-de-idiomas-en-los-que-se-puede-mostrar-el-resultado-de-la-consulta) empleado en la petición son los que figuran a continuación. La no utilización de esos identificadores no generará resultados en la respuesta. Los cruces se expresan mediante parámetros que se incluyen en la expresión URL que define la petición.
 
 ## Lista de tablas disponibles
 
@@ -24,7 +24,7 @@ Las salidas resultantes de los datos se configuran como cruces de categorías de
 ### **Hogares (hog)**
 
 |              |                     |                                                                          |                                                                  |
-|-----------------|-----------------|---------------------|------------------|
+|------------------|------------------|-------------------|------------------|
 | **ID tabla** | **ID variable**     | **Descripción variable - ES**                                            | **Descripción variable - EN**                                    |
 | hog          | ID_ACTI_HOG_1       | Número de miembros de 16 a 64 años que están trabajando                  | Number of employed  members  from 16 to 64 years old             |
 | hog          | ID_ACTI_HOG_2       | Número de miembros de 16 a 64 años que están parados                     | Number of unemployed  members  from 16 to 64 years old           |
@@ -60,7 +60,7 @@ Las salidas resultantes de los datos se configuran como cruces de categorías de
 ### **Parejas y otros núcleos familiares (nuc)**
 
 |              |                         |                                                  |                                                          |
-|-----------------|-----------------|-----------------|---------------------|
+|------------------|------------------|------------------|--------------------|
 | **ID tabla** | **ID variable**         | **Descripción variable - ES**                    | **Descripción variable - EN**                            |
 | nuc          | ID_ANO_CONS_GR11        | Año de construcción (agregado)                   | Year of construction  (aggregated)                       |
 | nuc          | ID_CLASE_VIV_FAM        | Clase de vivienda familiar                       | Class of main family dwelling                            |
@@ -89,7 +89,7 @@ Las salidas resultantes de los datos se configuran como cruces de categorías de
 ### **Personas empadronadas en establecimientos colectivos (per.estu)**
 
 |              |                     |                                                         |                                                                   |
-|-----------------|-----------------|------------------|---------------------|
+|------------------|------------------|------------------|-------------------|
 | **ID tabla** | **ID variable**     | **Descripción variable - ES**                           | **Descripción variable - EN**                                     |
 | per.estu     | ID_EDAD             | Edad año a año                                          | Age year to year                                                  |
 | per.estu     | ID_ESCUR            | Nivel más alto de la enseñanza principal que cursa      | Highest level of the primary studies in course                    |
@@ -142,7 +142,7 @@ Las salidas resultantes de los datos se configuran como cruces de categorías de
 ### **Personas residentes en viviendas familiares (per.ocu)**
 
 |              |                          |                                                                           |                                                                        |
-|-----------------|-----------------|--------------------|-------------------|
+|------------------|------------------|-------------------|------------------|
 | **ID tabla** | **ID variable**          | **Descripción variable - ES**                                             | **Descripción variable - EN**                                          |
 | per.ocu      | ID_ACT5                  | Actividad establecimiento (rama)                                          | Economic activity  (branch)                                            |
 | per.ocu      | ID_ANO_CONS_GR11         | Año de construcción (agregado)                                            | Year of construction  (aggregated)                                     |
@@ -300,7 +300,7 @@ Las salidas resultantes de los datos se configuran como cruces de categorías de
 ### **Total de personas (per.ppal)**
 
 |              |                     |                                                         |                                                                   |
-|-----------------|-----------------|------------------|---------------------|
+|------------------|------------------|------------------|-------------------|
 | **ID tabla** | **ID variable**     | **Descripción variable - ES**                           | **Descripción variable - EN**                                     |
 | per.ppal     | ID_CLASE_VIV        | Clase de vivienda                                       | Class of Dwelling                                                 |
 | per.ppal     | ID_EDAD             | Edad año a año                                          | Age year to year                                                  |
@@ -372,7 +372,7 @@ Las salidas resultantes de los datos se configuran como cruces de categorías de
 ### **Viviendas familiares (viv.fam)**
 
 |              |                        |                                               |                                                          |
-|-----------------|-----------------|-----------------|---------------------|
+|------------------|------------------|------------------|--------------------|
 | **ID tabla** | **ID variable**        | **Descripción variable - ES**                 | **Descripción variable - EN**                            |
 | viv.fam      | ID_ANO_CONS            | Año de construcción (todo)                    | Year of construction (detail)                            |
 | viv.fam      | ID_ANO_CONS_GR11       | Año de construcción (agregado)                | Year of construction  (aggregated)                       |
@@ -394,7 +394,7 @@ Las salidas resultantes de los datos se configuran como cruces de categorías de
 ### **Ocupados de 16 y más años (viv.ppal)**
 
 |              |                     |                                                         |                                                                   |
-|-----------------|-----------------|------------------|---------------------|
+|------------------|------------------|------------------|-------------------|
 | **ID tabla** | **ID variable**     | **Descripción variable - ES**                           | **Descripción variable - EN**                                     |
 | viv.ppal     | ID_ACT22            | Actividad establecimiento a 1 letra CNAE-09             | Economic activity at 1 letter CNAE-09                             |
 | viv.ppal     | ID_ACT273           | Actividad establecimiento a 3 dígitos CNAE-09           | Economic activity3-digit CNAE-09                                  |
@@ -449,7 +449,7 @@ Las salidas resultantes de los datos se configuran como cruces de categorías de
 ### **Hogares (hog)**
 
 |              |                         |                                       |                                       |
-|-----------------|-----------------|-------------------|-------------------|
+|------------------|------------------|------------------|------------------|
 | **ID tabla** | **ID unidad de medida** | **Descripción unidad de medida - ES** | **Descripción unidad de medida - EN** |
 | hog          | SHOGARES                | Número de Hogares                     | No. of Households                     |
 | hog          | MEDIA_SSUPERFICIE_OCU   | Superficie media por ocupante         | Average floor space by occupant       |
@@ -466,7 +466,7 @@ Las salidas resultantes de los datos se configuran como cruces de categorías de
 ### **Personas empadronadas en establecimientos colectivos (per.estu)**
 
 |              |                         |                                                          |                                                      |
-|-----------------|-----------------|--------------------|------------------|
+|------------------|------------------|-------------------|------------------|
 | **ID tabla** | **ID unidad de medida** | **Descripción unidad de medida - ES**                    | **Descripción unidad de medida - EN**                |
 | per.estu     | SPERSONAS               | Personas                                                 | People                                               |
 | per.estu     | MEDIA_SEDAD             | Edad media                                               | Average age                                          |
@@ -482,7 +482,7 @@ Las salidas resultantes de los datos se configuran como cruces de categorías de
 ### **Personas residentes en viviendas familiares (per.ocu)**
 
 |              |                         |                                                          |                                                      |
-|-----------------|-----------------|--------------------|------------------|
+|------------------|------------------|-------------------|------------------|
 | **ID tabla** | **ID unidad de medida** | **Descripción unidad de medida - ES**                    | **Descripción unidad de medida - EN**                |
 | per.ocu      | SPERSONAS               | Personas                                                 | People                                               |
 | per.ocu      | MEDIA_SEDAD             | Edad media                                               | Average age                                          |
@@ -498,7 +498,7 @@ Las salidas resultantes de los datos se configuran como cruces de categorías de
 ### **Total de personas (per.ppal)**
 
 |              |                         |                                                          |                                                      |
-|-----------------|-----------------|--------------------|------------------|
+|------------------|------------------|-------------------|------------------|
 | **ID tabla** | **ID unidad de medida** | **Descripción unidad de medida - ES**                    | **Descripción unidad de medida - EN**                |
 | per.ppal     | SPERSONAS               | Personas                                                 | People                                               |
 | per.ppal     | MEDIA_SEDAD             | Edad media                                               | Average age                                          |
@@ -517,7 +517,7 @@ Las salidas resultantes de los datos se configuran como cruces de categorías de
 ### **Viviendas familiares (viv.fam)**
 
 |              |                         |                                        |                                        |
-|-----------------|-----------------|-------------------|-------------------|
+|------------------|------------------|------------------|------------------|
 | **ID tabla** | **ID unidad de medida** | **Descripción unidad de medida - ES**  | **Descripción unidad de medida - EN**  |
 | viv.fam      | SVIVIENDAS              | Número de viviendas                    | No. of dwellings                       |
 | viv.fam      | MEDIA_SANTIGUEDAD       | Edad media de la vivienda              | Average age of the dwelling            |
@@ -527,7 +527,7 @@ Las salidas resultantes de los datos se configuran como cruces de categorías de
 ### **Ocupados de 16 y más años (viv.ppal)**
 
 |              |                         |                                                          |                                                      |
-|-----------------|-----------------|--------------------|------------------|
+|------------------|------------------|-------------------|------------------|
 | **ID tabla** | **ID unidad de medida** | **Descripción unidad de medida - ES**                    | **Descripción unidad de medida - EN**                |
 | viv.ppal     | SPERSONAS               | Personas                                                 | People                                               |
 | viv.ppal     | MEDIA_SEDAD             | Edad media                                               | Average age                                          |
