@@ -2,12 +2,12 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.4.554">
+<meta name="generator" content="quarto-1.5.54">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>INE Data Lab - Referencia de la API</title>
+<title>Referencia de la API – INE Data Lab</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -33,7 +33,7 @@ div.sourceCode { overflow: auto; }
 }
 @media print {
 pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
 }
 pre.numberSource code
   { counter-reset: source-line 0; }
@@ -117,7 +117,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     </a>
   </div>
             <div id="quarto-search" class="" title="Search"></div>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
   <span class="navbar-toggler-icon"></span>
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
@@ -140,17 +140,17 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </li>  
 </ul>
           </div> <!-- /navcollapse -->
-          <div class="quarto-navbar-tools">
+            <div class="quarto-navbar-tools">
 </div>
       </div> <!-- /container-fluid -->
     </nav>
   <nav class="quarto-secondary-nav">
     <div class="container-fluid d-flex">
-      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
         <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../api-censo/referencia.html">Referencia de la API</a></li></ol></nav>
-        <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
   </nav>
@@ -248,7 +248,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>Las salidas resultantes de los datos se configuran como cruces de categorías de las variables. Los identificadores de las <a href="referencia.html#lista-de-tablas-disponibles">tablas</a>, las <a href="referencia.html#lista-de-variables-disponibles-para-cada-tabla">variables</a>, las <a href="referencia.html#lista-de-unidades-de-medida-métricas-disponibles-para-cada-tabla">unidades de medida</a> y el <a href="referencia.html#lista-de-idiomas-en-los-que-se-puede-mostrar-el-resultado-de-la-consulta">idioma</a> empleado en la petición son los que figuran a continuación. La no utilización de esos identificadores no generará resultados en la respuesta. Los cruces se expresan mediante parámetros que se incluyen en la expresión URL que define la petición.</p>
 <section id="lista-de-tablas-disponibles" class="level2">
 <h2 class="anchored" data-anchor-id="lista-de-tablas-disponibles">Lista de tablas disponibles</h2>
-<table class="table">
+<table class="caption-top table">
 <colgroup>
 <col style="width: 25%">
 <col style="width: 41%">
@@ -302,7 +302,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h2 class="anchored" data-anchor-id="lista-de-variables-disponibles-para-cada-tabla">Lista de variables disponibles para cada tabla</h2>
 <section id="hogares-hog" class="level3">
 <h3 class="anchored" data-anchor-id="hogares-hog"><strong>Hogares (hog)</strong></h3>
-<table class="table">
+<table class="caption-top table">
 <colgroup>
 <col style="width: 24%">
 <col style="width: 24%">
@@ -501,12 +501,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="parejas-y-otros-núcleos-familiares-nuc" class="level3">
 <h3 class="anchored" data-anchor-id="parejas-y-otros-núcleos-familiares-nuc"><strong>Parejas y otros núcleos familiares (nuc)</strong></h3>
-<table class="table">
+<table class="caption-top table">
 <colgroup>
 <col style="width: 24%">
 <col style="width: 24%">
 <col style="width: 24%">
-<col style="width: 27%">
+<col style="width: 26%">
 </colgroup>
 <tbody>
 <tr class="odd">
@@ -658,7 +658,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="personas-empadronadas-en-establecimientos-colectivos-per.estu" class="level3">
 <h3 class="anchored" data-anchor-id="personas-empadronadas-en-establecimientos-colectivos-per.estu"><strong>Personas empadronadas en establecimientos colectivos (per.estu)</strong></h3>
-<table class="table">
+<table class="caption-top table">
 <colgroup>
 <col style="width: 24%">
 <col style="width: 24%">
@@ -959,7 +959,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="personas-residentes-en-viviendas-familiares-per.ocu" class="level3">
 <h3 class="anchored" data-anchor-id="personas-residentes-en-viviendas-familiares-per.ocu"><strong>Personas residentes en viviendas familiares (per.ocu)</strong></h3>
-<table class="table">
+<table class="caption-top table">
 <colgroup>
 <col style="width: 24%">
 <col style="width: 24%">
@@ -1890,7 +1890,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="total-de-personas-per.ppal" class="level3">
 <h3 class="anchored" data-anchor-id="total-de-personas-per.ppal"><strong>Total de personas (per.ppal)</strong></h3>
-<table class="table">
+<table class="caption-top table">
 <colgroup>
 <col style="width: 24%">
 <col style="width: 24%">
@@ -2305,12 +2305,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="viviendas-familiares-viv.fam" class="level3">
 <h3 class="anchored" data-anchor-id="viviendas-familiares-viv.fam"><strong>Viviendas familiares (viv.fam)</strong></h3>
-<table class="table">
+<table class="caption-top table">
 <colgroup>
 <col style="width: 24%">
 <col style="width: 24%">
 <col style="width: 24%">
-<col style="width: 27%">
+<col style="width: 26%">
 </colgroup>
 <tbody>
 <tr class="odd">
@@ -2420,7 +2420,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="ocupados-de-16-y-más-años-viv.ppal" class="level3">
 <h3 class="anchored" data-anchor-id="ocupados-de-16-y-más-años-viv.ppal"><strong>Ocupados de 16 y más años (viv.ppal)</strong></h3>
-<table class="table">
+<table class="caption-top table">
 <colgroup>
 <col style="width: 24%">
 <col style="width: 24%">
@@ -2724,7 +2724,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h2 class="anchored" data-anchor-id="lista-de-unidades-de-medida-métricas-disponibles-para-cada-tabla">Lista de unidades de medida (métricas) disponibles para cada tabla</h2>
 <section id="hogares-hog-1" class="level3">
 <h3 class="anchored" data-anchor-id="hogares-hog-1"><strong>Hogares (hog)</strong></h3>
-<table class="table">
+<table class="caption-top table">
 <colgroup>
 <col style="width: 25%">
 <col style="width: 25%">
@@ -2761,7 +2761,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="parejas-y-otros-núcleos-familiares-nuc-1" class="level3">
 <h3 class="anchored" data-anchor-id="parejas-y-otros-núcleos-familiares-nuc-1"><strong>Parejas y otros núcleos familiares (nuc)</strong></h3>
-<table class="table">
+<table class="caption-top table">
 <colgroup>
 <col style="width: 24%">
 <col style="width: 24%">
@@ -2792,7 +2792,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="personas-empadronadas-en-establecimientos-colectivos-per.estu-1" class="level3">
 <h3 class="anchored" data-anchor-id="personas-empadronadas-en-establecimientos-colectivos-per.estu-1"><strong>Personas empadronadas en establecimientos colectivos (per.estu)</strong></h3>
-<table class="table">
+<table class="caption-top table">
 <colgroup>
 <col style="width: 24%">
 <col style="width: 24%">
@@ -2871,7 +2871,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="personas-residentes-en-viviendas-familiares-per.ocu-1" class="level3">
 <h3 class="anchored" data-anchor-id="personas-residentes-en-viviendas-familiares-per.ocu-1"><strong>Personas residentes en viviendas familiares (per.ocu)</strong></h3>
-<table class="table">
+<table class="caption-top table">
 <colgroup>
 <col style="width: 24%">
 <col style="width: 24%">
@@ -2950,7 +2950,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="total-de-personas-per.ppal-1" class="level3">
 <h3 class="anchored" data-anchor-id="total-de-personas-per.ppal-1"><strong>Total de personas (per.ppal)</strong></h3>
-<table class="table">
+<table class="caption-top table">
 <colgroup>
 <col style="width: 24%">
 <col style="width: 24%">
@@ -3047,7 +3047,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="viviendas-familiares-viv.fam-1" class="level3">
 <h3 class="anchored" data-anchor-id="viviendas-familiares-viv.fam-1"><strong>Viviendas familiares (viv.fam)</strong></h3>
-<table class="table">
+<table class="caption-top table">
 <colgroup>
 <col style="width: 25%">
 <col style="width: 25%">
@@ -3090,7 +3090,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="ocupados-de-16-y-más-años-viv.ppal-1" class="level3">
 <h3 class="anchored" data-anchor-id="ocupados-de-16-y-más-años-viv.ppal-1"><strong>Ocupados de 16 y más años (viv.ppal)</strong></h3>
-<table class="table">
+<table class="caption-top table">
 <colgroup>
 <col style="width: 24%">
 <col style="width: 24%">
@@ -3164,7 +3164,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="lista-de-idiomas-en-los-que-se-puede-mostrar-el-resultado-de-la-consulta" class="level2">
 <h2 class="anchored" data-anchor-id="lista-de-idiomas-en-los-que-se-puede-mostrar-el-resultado-de-la-consulta">Lista de idiomas en los que se puede mostrar el resultado de la consulta</h2>
-<table class="table">
+<table class="caption-top table">
 <tbody>
 <tr class="odd">
 <td><strong>ID idioma</strong></td>
@@ -3186,7 +3186,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>La petición devuelve los datos que corresponden a una selección de un mínimo de 1 variable y hasta un máximo de 4 variables por tabla.</p>
 <p>Las salidas resultantes de los datos se configuran como cruces de categorías de las variables. Los identificadores de las tablas, las variables, las unidades de medida y el idioma empleado en la petición son los que figuran en los ficheros Excel. La no utilización de esos identificadores no generará resultados en la respuesta. Los cruces se expresan mediante parámetros que se incluyen en la expresión URL que define la petición.</p>
 <p><strong><em>Ejemplo</em></strong>: Petición de datos del número de personas por sexo y comunidad autónoma del dominio per.ppal en inglés:</p>
-<p><a href="https://www.ine.es/Censo2021/api" class="uri">https://www.ine.es/Censo2021/api</a></p>
+<p><strong><em>Endpoint</em></strong></p>
+<p>https://www.ine.es/Censo2021/api</p>
 <p><strong><em>Cabeceras de la petición</em></strong></p>
 <p>POST /</p>
 <p>Accept : application/json</p>
@@ -3328,18 +3329,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
     return false;
   }
-  const clipboard = new window.ClipboardJS('.code-copy-button', {
-    text: function(trigger) {
-      const codeEl = trigger.previousElementSibling.cloneNode(true);
-      for (const childEl of codeEl.children) {
-        if (isCodeAnnotation(childEl)) {
-          childEl.remove();
-        }
-      }
-      return codeEl.innerText;
-    }
-  });
-  clipboard.on('success', function(e) {
+  const onCopySuccess = function(e) {
     // button target
     const button = e.trigger;
     // don't keep focus
@@ -3371,7 +3361,29 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }, 1000);
     // clear code selection
     e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
   });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    // For code content inside modals, clipBoardJS needs to be initialized with a container option
+    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
     var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
     var mailtoRegex = new RegExp(/^mailto:/);
       var filterRegex = new RegExp("https:\/\/uvima\.github\.io\/datalab\/");
@@ -3379,7 +3391,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
         return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
     }
     // Inspect non-navigation links and adorn them if external
- 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool)');
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
     for (var i=0; i<links.length; i++) {
       const link = links[i];
       if (!isInternal(link.href)) {
