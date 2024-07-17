@@ -58,7 +58,3 @@ Devuelve todas las operaciones disponibles que contengan solamente resultados na
 Devuelve las operaciones disponibles (primeros 500 resultados)
 
 <https://servicios.ine.es/wstempus/js/ES/OPERACIONES_DISPONIBLES?page=1>
-
-Devuelve las operaciones disponibles (500 segundos resultados)
-
-<https://servicios.ine.es/wstempus/js/ES/OPERACIONES_DISPONIBLES?page=2>

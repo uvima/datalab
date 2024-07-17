@@ -82,7 +82,7 @@ Por ejemplo, los valores de la variable “Grupos ECOICOP" (Id=762) para la oper
 
 ## Obtener información de tablas
 
-En lo que se refiere a las tablas, se puede obtener un listado de las tablas de una operación con la función [TABLAS_OPERACION](funciones/tabla_operacion.html) y también las variables y valores que la definen con las funciones [GRUPOS_TABLA](funciones/grupos_tabla.html) y [VALORES_GRUPOSTABLA](funciones/valores_grupostabla.html).
+En lo que se refiere a las tablas, se puede obtener un listado de las tablas de una operación con la función [TABLAS_OPERACION](funciones/tablas_operacion.html) y también las variables y valores que la definen con las funciones [GRUPOS_TABLA](funciones/grupos_tabla.html) y [VALORES_GRUPOSTABLA](funciones/valores_grupostabla.html).
 
 **Obtener todas las tablas de una operación**
 

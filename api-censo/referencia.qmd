@@ -60,7 +60,7 @@ Las salidas resultantes de los datos se configuran como cruces de categorías de
 ### **Parejas y otros núcleos familiares (nuc)**
 
 |              |                         |                                                  |                                                          |
-|------------------|------------------|------------------|--------------------|
+|------------------|------------------|------------------|-------------------|
 | **ID tabla** | **ID variable**         | **Descripción variable - ES**                    | **Descripción variable - EN**                            |
 | nuc          | ID_ANO_CONS_GR11        | Año de construcción (agregado)                   | Year of construction  (aggregated)                       |
 | nuc          | ID_CLASE_VIV_FAM        | Clase de vivienda familiar                       | Class of main family dwelling                            |
@@ -372,7 +372,7 @@ Las salidas resultantes de los datos se configuran como cruces de categorías de
 ### **Viviendas familiares (viv.fam)**
 
 |              |                        |                                               |                                                          |
-|------------------|------------------|------------------|--------------------|
+|------------------|------------------|------------------|-------------------|
 | **ID tabla** | **ID variable**        | **Descripción variable - ES**                 | **Descripción variable - EN**                            |
 | viv.fam      | ID_ANO_CONS            | Año de construcción (todo)                    | Year of construction (detail)                            |
 | viv.fam      | ID_ANO_CONS_GR11       | Año de construcción (agregado)                | Year of construction  (aggregated)                       |
@@ -555,7 +555,9 @@ Las salidas resultantes de los datos se configuran como cruces de categorías de
 
 ***Ejemplo***: Petición de datos del número de personas por sexo y comunidad autónoma del dominio per.ppal en inglés:
 
-<https://www.ine.es/Censo2021/api>
+***Endpoint***
+
+https://www.ine.es/Censo2021/api
 
 ***Cabeceras de la petición***
 
