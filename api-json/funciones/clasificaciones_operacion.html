@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>PUBLICACIONFECHA_PUBLICACION – INE Data Lab</title>
+<title>CLASIFICACIONES_OPERACION – INE Data Lab</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -116,7 +116,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../api-json/funciones/clasificaciones.html">Lista de funciones</a></li><li class="breadcrumb-item"><a href="../../api-json/funciones/publicacionfecha_publicacion.html">PUBLICACIONFECHA_PUBLICACION</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../api-json/funciones/clasificaciones.html">Lista de funciones</a></li><li class="breadcrumb-item"><a href="../../api-json/funciones/clasificaciones_operacion.html">CLASIFICACIONES_OPERACION</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -162,7 +162,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../api-json/funciones/clasificaciones_operacion.html" class="sidebar-item-text sidebar-link">
+  <a href="../../api-json/funciones/clasificaciones_operacion.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">CLASIFICACIONES_OPERACION</span></a>
   </div>
 </li>
@@ -222,7 +222,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../api-json/funciones/publicacionfecha_publicacion.html" class="sidebar-item-text sidebar-link active">
+  <a href="../../api-json/funciones/publicacionfecha_publicacion.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">PUBLICACIONFECHA_PUBLICACION</span></a>
   </div>
 </li>
@@ -335,11 +335,7 @@ ul.task-list li input[type="checkbox"] {
    
   <ul>
   <li><a href="#input" id="toc-input" class="nav-link active" data-scroll-target="#input">Input</a></li>
-  <li><a href="#parámetros" id="toc-parámetros" class="nav-link" data-scroll-target="#parámetros">Parámetros</a>
-  <ul class="collapse">
-  <li><a href="#det" id="toc-det" class="nav-link" data-scroll-target="#det"><strong>det</strong></a></li>
-  <li><a href="#tip" id="toc-tip" class="nav-link" data-scroll-target="#tip"><strong>tip</strong></a></li>
-  </ul></li>
+  <li><a href="#parámetros" id="toc-parámetros" class="nav-link" data-scroll-target="#parámetros">Parámetros</a></li>
   <li><a href="#salida" id="toc-salida" class="nav-link" data-scroll-target="#salida">Salida</a></li>
   <li><a href="#ejemplos" id="toc-ejemplos" class="nav-link" data-scroll-target="#ejemplos">Ejemplos</a></li>
   </ul>
@@ -348,9 +344,9 @@ ul.task-list li input[type="checkbox"] {
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../api-json/funciones/clasificaciones.html">Lista de funciones</a></li><li class="breadcrumb-item"><a href="../../api-json/funciones/publicacionfecha_publicacion.html">PUBLICACIONFECHA_PUBLICACION</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../api-json/funciones/clasificaciones.html">Lista de funciones</a></li><li class="breadcrumb-item"><a href="../../api-json/funciones/clasificaciones_operacion.html">CLASIFICACIONES_OPERACION</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">PUBLICACIONFECHA_PUBLICACION</h1>
+<h1 class="title">CLASIFICACIONES_OPERACION</h1>
 </div>
 
 
@@ -367,34 +363,23 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>Obtener las fechas de publicación para una publicación dada.</p>
+<p>Obtener todas las clasificaciones de una operación dada</p>
 <section id="input" class="level2">
 <h2 class="anchored" data-anchor-id="input">Input</h2>
-<p>Código identificativo de la publicación. Para obtener una lista de las publicaciones vea <a href="publicaciones.html">PUBLICACIONES</a> o <a href="publicaciones_operacion.html">PUBLICACIONES_OPERACION</a></p>
+<p>Código identificador de la operación. Para consultar las operaciones disponibles vea <a href="operaciones_disponibles.html">OPERACIONES_DISPONIBLES</a>.</p>
 </section>
 <section id="parámetros" class="level2">
 <h2 class="anchored" data-anchor-id="parámetros">Parámetros</h2>
-<section id="det" class="level3">
-<h3 class="anchored" data-anchor-id="det"><strong>det</strong></h3>
-<p>Ofrece mayor nivel de detalle de la información mostrada. Valores válidos del parámetro: 0, 1 y 2</p>
-</section>
-<section id="tip" class="level3">
-<h3 class="anchored" data-anchor-id="tip"><strong>tip</strong></h3>
-<p>Obtener la respuesta de las peticiones de modo más amigable. Valor ’A</p>
-</section>
+<p>Ninguno</p>
 </section>
 <section id="salida" class="level2">
 <h2 class="anchored" data-anchor-id="salida">Salida</h2>
-<p>Información de todas las publicaciones de una operación: identificador Tempus3 de la publicación, nombre, identificador Tempus3 de la periodicidad e identificador Tempus3 de la publicación fecha.</p>
+<p>Información de las clasificaciones de una operación: identificador Tempus3, nombre de la clasificación y fecha.</p>
 </section>
 <section id="ejemplos" class="level2">
 <h2 class="anchored" data-anchor-id="ejemplos">Ejemplos</h2>
-<p>Obtener las fechas de la publicación “Índice de Precios de Consumo” (Id=8)</p>
-<p><a href="https://servicios.ine.es/wstempus/js/ES/PUBLICACIONFECHA_PUBLICACION/8" class="uri">https://servicios.ine.es/wstempus/js/ES/PUBLICACIONFECHA_PUBLICACION/8</a></p>
-<p>Consulta con máximo nivel de detalle</p>
-<p><a href="https://servicios.ine.es/wstempus/js/ES/PUBLICACIONFECHA_PUBLICACION/8?det=2" class="uri">https://servicios.ine.es/wstempus/js/ES/PUBLICACIONFECHA_PUBLICACION/8?det=2</a></p>
-<p>Consulta con salida amigable</p>
-<p><a href="https://servicios.ine.es/wstempus/js/ES/PUBLICACIONFECHA_PUBLICACION/8?tip=A" class="uri">https://servicios.ine.es/wstempus/js/ES/PUBLICACIONFECHA_PUBLICACION/8?tip=A</a></p>
+<p>Clasificaciones para la operación IPC (IOE30138 / IPC / 25).</p>
+<p><a href="https://servicios.ine.es/wstempus/js/ES/CLASIFICACIONES_OPERACION/25" class="uri">https://servicios.ine.es/wstempus/js/ES/CLASIFICACIONES_OPERACION/25</a></p>
 
 
 </section>
