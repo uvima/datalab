@@ -1,0 +1,24 @@
+---
+title: "CLASIFICACIONES"
+sidebar: api-json
+---
+
+Obtener todas las clasificaciones disponibles
+
+## Input
+
+Ninguno
+
+## Parámetros
+
+Niguno
+
+## Salida
+
+Información de todas las clasificaciones del Sistema: identificador Tempus3, nombre de la clasificación y fecha.
+
+## Ejemplos
+
+Devuelve las clasificaciones disponibles
+
+<https://servicios.ine.es/wstempus/js/ES/CLASIFICACIONES>

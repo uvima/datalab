@@ -7,13 +7,17 @@ Obtener todos los valores para una variable específica
 
 ## Input
 
-Código identificador de la variable. Para consultar las variables disponibles vea [VARIABLES](variables.html)
+Código identificador de la variable. Para consultar las variables disponibles vea [VARIABLES](variables.html).
 
 ## Parámetros
 
 ### **det**
 
 Ofrece mayor nivel de detalle de la información mostrada. Valores válidos del parámetro: 0, 1 y 2
+
+### **clasif**
+
+Obtener valores para una determinada clasificación. Para consultar las clasificaciones vea [CLASIFICACIONES](clasificaciones.html).
 
 ## Salida
 
@@ -28,3 +32,7 @@ Devuelve los valores de la variable Provincias (Id=115)
 Consulta con máximo nivel de detalle
 
 <https://servicios.ine.es/wstempus/js/ES/VALORES_VARIABLE/115?det=2>
+
+Consulta de municipios de 2019
+
+<https://servicios.ine.es/wstempus/js/ES/VALORES_VARIABLE/19?&clasif=107>

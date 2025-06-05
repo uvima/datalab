@@ -1,0 +1,30 @@
+---
+title: "VALORES_HIJOS"
+sidebar: api-json
+---
+
+Obtener los valores hijo de un valor padre dado dentro de una estructura jerárquica.
+
+## Input
+
+Códigos identificadores de la variable y del valor. Para consultar las variables disponibles vea [VARIABLES](variables.html) y para consultar los valores de una variable vea [VALORES_VARIABLE](valores_variable.html).
+
+## Parámetros
+
+### **det**
+
+Ofrece mayor nivel de detalle de la información mostrada. Valores válidos del parámetro: 0, 1 y 2
+
+## Salida
+
+Información de los valores hijo de un valor dentro de una estructura jerárquica: identificador Tempus3 del valor, objeto variable Tempus3 a la que pertenece, nombre del valor y código oficial, identificadores de valores padre.
+
+## Ejemplos
+
+Provincias (hijos de Comunidades Autónomas) de Andalucía (variable 70 e Id=8997).
+
+<https://servicios.ine.es/wstempus/js/ES/VALORES_HIJOS/70/8997>
+
+Misma consulta pero con mas detalle de salida
+
+<https://servicios.ine.es/wstempus/js/ES/VALORES_HIJOS/70/8997?det=2>

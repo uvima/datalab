@@ -1,0 +1,24 @@
+---
+title: "CLASIFICACIONES_OPERACION"
+sidebar: api-json
+---
+
+Obtener todas las clasificaciones de una operación dada
+
+## Input
+
+Código identificador de la operación. Para consultar las operaciones disponibles vea [OPERACIONES_DISPONIBLES](operaciones_disponibles.html).
+
+## Parámetros
+
+Ninguno
+
+## Salida
+
+Información de las clasificaciones de una operación: identificador Tempus3, nombre de la clasificación y fecha.
+
+## Ejemplos
+
+Clasificaciones para la operación IPC (IOE30138 / IPC / 25).
+
+<https://servicios.ine.es/wstempus/js/ES/CLASIFICACIONES_OPERACION/25>

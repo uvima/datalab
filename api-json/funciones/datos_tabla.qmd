@@ -27,6 +27,10 @@ Ofrece mayor nivel de detalle de la información mostrada. Valores válidos son 
 
 Parámetro para filtrar, utilizado con el formato [tv=id_variable:id_valor]{.underline}. Más información en [Como filtrar datos de una tabla](../obtener_datos_tabla.html#como-filtrar-datos-de-una-tabla).
 
+### **date**
+
+Obtener los datos entre dos fechas. El formato es date=aaaammdd:aaaammdd
+
 ## Salida
 
 Información y datos de las series contenidas en la tabla: Nombre de la serie, identificador Tempu3 de la unidad, identificador Tempus3 de la escala, fecha, identificador Tempus3 del tipo de dato, identificador Tempus3 del periodo, año y valor (dato).
@@ -60,3 +64,11 @@ Devuelve el último periodo de la tabla con Id=50902 con salida amigable y metad
 Devuelve el último periodo de la tabla con Id=50902 y nivel de detalle 2
 
 <https://servicios.ine.es/wstempus/js/ES/DATOS_TABLA/50902?nult=1&det=2>
+
+Devuelve los datos entre el 01/01/2024 y el 31/12/2024
+
+<https://servicios.ine.es/wstempus/js/ES/DATOS_TABLA/50902?date=20240101:20241231>
+
+Devuelve los datos a partir del 01/01/2025
+
+<https://servicios.ine.es/wstempus/js/ES/DATOS_TABLA/50902?date=20250101:>
